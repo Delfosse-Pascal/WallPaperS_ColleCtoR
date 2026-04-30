@@ -63,11 +63,16 @@
 
 # OS / IDE
 Thumbs.db
+Thumbs*.db
+photothumb.db
+*.db
 .DS_Store
 desktop.ini
 *.lnk
 .vscode/
 .idea/
+__pycache__/
+*.pyc
 
 # Garde dossiers vides
 !.gitkeep

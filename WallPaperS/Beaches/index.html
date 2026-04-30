@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Beaches — page 1/3 — WallPaperS</title>
+<link rel="canonical" href="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/">
+<link rel="icon" href="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/Site_Web/favicondepascal.png" type="image/png">
+<link rel="icon" href="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/Site_Web/favicondepascal.ico" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/Site_Web/style.css">
+<script src="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/Site_Web/script.js"></script>
+<script src="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/Site_Web/menu.js" defer></script>
+<link rel="stylesheet" href="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/Site_Web/basedusite.css">
+<script src="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/Site_Web/couleurs.js"></script>
+<style>
+:root {
+  --bg: linear-gradient(135deg,#0b3d2e,#13261d);
+  --fg: #f5f5f5;
+  --card-bg: rgba(255,255,255,0.05);
+  --card-border: rgba(255,255,255,0.12);
+  --accent: #4caf50;
+  --accent2: #a8d878;
+  --shadow: 0 10px 30px rgba(0,0,0,.5);
+}
+:root[data-theme="light"] {
+  --bg: linear-gradient(135deg,#d4f1c8,#eef9e3);
+  --fg: #1a1a1a;
+  --card-bg: rgba(255,255,255,0.55);
+  --card-border: rgba(0,0,0,0.08);
+  --shadow: 0 10px 30px rgba(0,0,0,.15);
+}
+* { box-sizing: border-box; }
+html, body { margin:0; padding:0; min-height:100vh; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: var(--fg);
+  background: var(--bg);
+  background-size: 400% 400%;
+  animation: bgShift 22s ease infinite;
+  overflow-x: hidden;
+}
+@keyframes bgShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.topbar {
+  position: sticky; top:0; z-index:50;
+  display: flex; gap:.6rem; padding:.7rem 1rem;
+  backdrop-filter: blur(10px);
+  background: rgba(0,0,0,.25);
+  border-bottom: 1px solid var(--card-border);
+}
+:root[data-theme="light"] .topbar { background: rgba(255,255,255,.45); }
+.btn {
+  border: 1px solid var(--card-border);
+  background: var(--card-bg);
+  color: var(--fg);
+  padding: .5rem .9rem;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: .9rem;
+  text-decoration: none;
+  transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+}
+.btn:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(0,0,0,.3); background: var(--accent); color:#000; }
+.title {
+  font-size: clamp(1.6rem, 4vw, 3rem);
+  text-align: center;
+  margin: 1.5rem 1rem .3rem;
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  letter-spacing: .03em;
+}
+.subtitle { text-align:center; opacity:.8; margin: 0 1rem 1.2rem; }
+.gallery {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  padding: 1rem;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+.gallery a {
+  display:block; position:relative;
+  border-radius: 14px; overflow: hidden;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  box-shadow: var(--shadow);
+  cursor: zoom-in;
+  transition: transform .35s cubic-bezier(.2,.7,.2,1.2), box-shadow .3s;
+  animation: tileIn .6s ease both;
+}
+.gallery a:nth-child(odd) { animation-delay: .05s; }
+.gallery a:nth-child(even) { animation-delay: .15s; }
+.gallery a:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 18px 50px rgba(0,0,0,.55), 0 0 0 2px var(--accent);
+}
+.gallery img {
+  width: 100%; height: 220px; object-fit: cover; display:block;
+  transition: transform .6s ease;
+}
+.gallery a:hover img { transform: scale(1.08); }
+@keyframes tileIn {
+  from { opacity:0; transform: translateY(20px) scale(.98); }
+  to   { opacity:1; transform: none; }
+}
+
+.folders {
+  display: grid; gap: 18px;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  padding: 1rem; max-width: 1600px; margin: 0 auto;
+}
+.folder-card {
+  display:flex; flex-direction: column; justify-content: space-between;
+  padding: 1rem 1.2rem; min-height: 140px;
+  border-radius: 18px;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  box-shadow: var(--shadow);
+  text-decoration: none; color: var(--fg);
+  position: relative; overflow: hidden;
+  transition: transform .3s, box-shadow .3s;
+  animation: cardIn .7s ease both;
+}
+.folder-card::before {
+  content:""; position:absolute; inset:-2px;
+  background: linear-gradient(120deg, var(--accent), transparent 40%, var(--accent2));
+  opacity:.0; transition: opacity .4s; z-index:0;
+}
+.folder-card:hover::before { opacity:.25; }
+.folder-card:hover { transform: translateY(-5px) rotate(-.4deg); box-shadow: 0 16px 40px rgba(0,0,0,.45); }
+.folder-card > * { position: relative; z-index:1; }
+.folder-name { font-weight: 700; font-size: 1.15rem; }
+.folder-meta { opacity:.75; font-size:.85rem; margin-top: .4rem; }
+@keyframes cardIn {
+  from { opacity:0; transform: translateY(28px); }
+  to   { opacity:1; transform: none; }
+}
+
+.pager {
+  display:flex; justify-content:center; gap:.4rem; flex-wrap:wrap;
+  padding: 1.5rem 1rem 3rem;
+}
+.pager a, .pager span {
+  padding: .45rem .8rem; border-radius: 8px;
+  border: 1px solid var(--card-border);
+  background: var(--card-bg); color: var(--fg);
+  text-decoration: none; font-size: .9rem;
+}
+.pager .current { background: var(--accent); color:#000; border-color: var(--accent); }
+
+/* lightbox */
+.lightbox {
+  position: fixed; inset:0; background: rgba(0,0,0,.92);
+  display:none; align-items:center; justify-content:center; z-index:1000;
+  padding:2rem; cursor: zoom-out;
+  animation: fadeIn .25s ease;
+}
+.lightbox.active { display:flex; }
+.lightbox img {
+  max-width: 96vw; max-height: 92vh; object-fit: contain;
+  border-radius: 8px; box-shadow: 0 0 60px rgba(0,0,0,.8);
+  animation: zoomIn .3s ease;
+}
+.lightbox .hint { position:absolute; bottom:1rem; left:50%; transform:translateX(-50%);
+  color:#fff; opacity:.7; font-size:.85rem; }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes zoomIn { from { opacity:0; transform: scale(.9); } to { opacity:1; transform:none; } }
+
+/* Theme-specific decorative animations */
+.deco { position: fixed; inset:0; pointer-events:none; z-index:0; }
+.deco span { position:absolute; border-radius:50%; filter: blur(40px); opacity:.45; }
+</style>
+</head>
+<body>
+<nav class="social-menu">
+    <ul>
+      <li><a href="https://fr.pinterest.com/pascal509/mes-tableaux-tous-genre/" target="_blank" rel="noopener">Pinterest</a></li>
+      <li><a href="https://www.flickr.com/photos/delfossepascal" target="_blank" rel="noopener">Flickr</a></li>
+      <li><a href="https://www.tumblr.com/lestoilesdepascal" target="_blank" rel="noopener">Tumblr</a></li>
+      <li><a href="https://x.com/PascalDelfossee" target="_blank" rel="noopener">X</a></li>
+      <li><a href="https://www.youtube.com/c/DelfossePascal" target="_blank" rel="noopener">YouTube</a></li>
+    </ul>
+  </nav>
+<header></header>
+<div class="deco" aria-hidden="true">
+<span style="width:380px;height:380px;background:#4caf50;top:-100px;left:-80px;animation:swayA 18s ease-in-out infinite alternate"></span>
+<span style="width:480px;height:480px;background:#a8d878;bottom:-160px;right:-100px;animation:swayB 22s ease-in-out infinite alternate"></span>
+<span style="width:260px;height:260px;background:#4caf50;top:40%;left:50%;animation:swayC 26s ease-in-out infinite alternate"></span>
+</div>
+<style>
+@keyframes swayA { from { transform: translate(0,0) scale(1); } to { transform: translate(140px,80px) scale(1.25); } }
+@keyframes swayB { from { transform: translate(0,0) scale(1); } to { transform: translate(-160px,-90px) scale(1.15); } }
+@keyframes swayC { from { transform: translate(-50%,-50%) scale(.8); } to { transform: translate(-30%,-70%) scale(1.3); } }
+</style>
+<div class="topbar">
+  <a class="btn" href="../../index.html" title="Accueil">Accueil</a>
+  <a class="btn" href="../index.html" title="Dossier parent">Parent</a>
+  <span style="flex:1"></span>
+  <button class="btn" id="themeToggle" type="button">Clair</button>
+</div>
+<h1 class="title">Beaches — page 1/3</h1>
+<p class="subtitle">Thème : Forest</p>
+<section class="gallery">
+<a href="Aitutaki%2C%20Cook%20Islands%20-%201600x1200%20-%20ID%2043804%5Bwww.DragonW.net%5D.jpg" data-full="Aitutaki%2C%20Cook%20Islands%20-%201600x1200%20-%20ID%2043804%5Bwww.DragonW.net%5D.jpg" title="Aitutaki, Cook Islands - 1600x1200 - ID 43804[www.DragonW.net]"><img src="Aitutaki%2C%20Cook%20Islands%20-%201600x1200%20-%20ID%2043804%5Bwww.DragonW.net%5D.jpg" alt="Aitutaki, Cook Islands - 1600x1200 - ID 43804[www.DragonW.net]" loading="lazy"></a>
+<a href="An%20Empty%20Hammock%2C%20Kauai%2C%20Hawaii%20-%201600x1200%20-%20ID%5Bwww.DragonW.net%5D.jpg" data-full="An%20Empty%20Hammock%2C%20Kauai%2C%20Hawaii%20-%201600x1200%20-%20ID%5Bwww.DragonW.net%5D.jpg" title="An Empty Hammock, Kauai, Hawaii - 1600x1200 - ID[www.DragonW.net]"><img src="An%20Empty%20Hammock%2C%20Kauai%2C%20Hawaii%20-%201600x1200%20-%20ID%5Bwww.DragonW.net%5D.jpg" alt="An Empty Hammock, Kauai, Hawaii - 1600x1200 - ID[www.DragonW.net]" loading="lazy"></a>
+<a href="An%20Empty%20Hammock%2C%20Kauai%2C%20Hawaii.jpg" data-full="An%20Empty%20Hammock%2C%20Kauai%2C%20Hawaii.jpg" title="An Empty Hammock, Kauai, Hawaii"><img src="An%20Empty%20Hammock%2C%20Kauai%2C%20Hawaii.jpg" alt="An Empty Hammock, Kauai, Hawaii" loading="lazy"></a>
+<a href="Anaura%20Bay%2C%20Gisborne%2C%20New%20Zealand%20-%201600x1200%20-%20%5Bwww.DragonW.net%5D.jpg" data-full="Anaura%20Bay%2C%20Gisborne%2C%20New%20Zealand%20-%201600x1200%20-%20%5Bwww.DragonW.net%5D.jpg" title="Anaura Bay, Gisborne, New Zealand - 1600x1200 - [www.DragonW.net]"><img src="Anaura%20Bay%2C%20Gisborne%2C%20New%20Zealand%20-%201600x1200%20-%20%5Bwww.DragonW.net%5D.jpg" alt="Anaura Bay, Gisborne, New Zealand - 1600x1200 - [www.DragonW.net]" loading="lazy"></a>
+<a href="Anse%20Patate%2C%20La%20Digue%2C%20Seychelles.jpg" data-full="Anse%20Patate%2C%20La%20Digue%2C%20Seychelles.jpg" title="Anse Patate, La Digue, Seychelles"><img src="Anse%20Patate%2C%20La%20Digue%2C%20Seychelles.jpg" alt="Anse Patate, La Digue, Seychelles" loading="lazy"></a>
+<a href="Balboa%20Pier%2C%20California%20-%201600x1200%20-%20ID%2027253%5Bwww.DragonW.net%5D.jpg" data-full="Balboa%20Pier%2C%20California%20-%201600x1200%20-%20ID%2027253%5Bwww.DragonW.net%5D.jpg" title="Balboa Pier, California - 1600x1200 - ID 27253[www.DragonW.net]"><img src="Balboa%20Pier%2C%20California%20-%201600x1200%20-%20ID%2027253%5Bwww.DragonW.net%5D.jpg" alt="Balboa Pier, California - 1600x1200 - ID 27253[www.DragonW.net]" loading="lazy"></a>
+<a href="Bandon%2C%20Oregon%20-%201600x1200%20-%20ID%2032511%5Bwww.DragonW.net%5D.jpg" data-full="Bandon%2C%20Oregon%20-%201600x1200%20-%20ID%2032511%5Bwww.DragonW.net%5D.jpg" title="Bandon, Oregon - 1600x1200 - ID 32511[www.DragonW.net]"><img src="Bandon%2C%20Oregon%20-%201600x1200%20-%20ID%2032511%5Bwww.DragonW.net%5D.jpg" alt="Bandon, Oregon - 1600x1200 - ID 32511[www.DragonW.net]" loading="lazy"></a>
+<a href="Blue%20Lagoon%20Resort%20Beach%2C%20Micronesia.jpg" data-full="Blue%20Lagoon%20Resort%20Beach%2C%20Micronesia.jpg" title="Blue Lagoon Resort Beach, Micronesia"><img src="Blue%20Lagoon%20Resort%20Beach%2C%20Micronesia.jpg" alt="Blue Lagoon Resort Beach, Micronesia" loading="lazy"></a>
+<a href="Boardman%20State%20Park%2C%20near%20Brookings-Harbor%2C%20Oreg%5Bwww.DragonW.net%5D.jpg" data-full="Boardman%20State%20Park%2C%20near%20Brookings-Harbor%2C%20Oreg%5Bwww.DragonW.net%5D.jpg" title="Boardman State Park, near Brookings-Harbor, Oreg[www.DragonW.net]"><img src="Boardman%20State%20Park%2C%20near%20Brookings-Harbor%2C%20Oreg%5Bwww.DragonW.net%5D.jpg" alt="Boardman State Park, near Brookings-Harbor, Oreg[www.DragonW.net]" loading="lazy"></a>
+<a href="Boathouse%20at%20Dawn%2C%20Fiji%20-%201600x1200%20-%20ID%2027249%5Bwww.DragonW.net%5D.jpg" data-full="Boathouse%20at%20Dawn%2C%20Fiji%20-%201600x1200%20-%20ID%2027249%5Bwww.DragonW.net%5D.jpg" title="Boathouse at Dawn, Fiji - 1600x1200 - ID 27249[www.DragonW.net]"><img src="Boathouse%20at%20Dawn%2C%20Fiji%20-%201600x1200%20-%20ID%2027249%5Bwww.DragonW.net%5D.jpg" alt="Boathouse at Dawn, Fiji - 1600x1200 - ID 27249[www.DragonW.net]" loading="lazy"></a>
+<a href="Cabo%20San%20Lucas%2C%20Baja%20California%2C%20Mexico%20-%201600x1%5Bwww.DragonW.net%5D.jpg" data-full="Cabo%20San%20Lucas%2C%20Baja%20California%2C%20Mexico%20-%201600x1%5Bwww.DragonW.net%5D.jpg" title="Cabo San Lucas, Baja California, Mexico - 1600x1[www.DragonW.net]"><img src="Cabo%20San%20Lucas%2C%20Baja%20California%2C%20Mexico%20-%201600x1%5Bwww.DragonW.net%5D.jpg" alt="Cabo San Lucas, Baja California, Mexico - 1600x1[www.DragonW.net]" loading="lazy"></a>
+<a href="Cape%20Hatteras%20National%20Seashore%2C%20North%20Carolina%20%5Bwww.DragonW.net%5D.jpg" data-full="Cape%20Hatteras%20National%20Seashore%2C%20North%20Carolina%20%5Bwww.DragonW.net%5D.jpg" title="Cape Hatteras National Seashore, North Carolina [www.DragonW.net]"><img src="Cape%20Hatteras%20National%20Seashore%2C%20North%20Carolina%20%5Bwww.DragonW.net%5D.jpg" alt="Cape Hatteras National Seashore, North Carolina [www.DragonW.net]" loading="lazy"></a>
+<a href="Cape%20of%20Good%20Hope%2C%20South%20Africa%20-%201600x1200%20-%20ID%5Bwww.DragonW.net%5D.jpg" data-full="Cape%20of%20Good%20Hope%2C%20South%20Africa%20-%201600x1200%20-%20ID%5Bwww.DragonW.net%5D.jpg" title="Cape of Good Hope, South Africa - 1600x1200 - ID[www.DragonW.net]"><img src="Cape%20of%20Good%20Hope%2C%20South%20Africa%20-%201600x1200%20-%20ID%5Bwww.DragonW.net%5D.jpg" alt="Cape of Good Hope, South Africa - 1600x1200 - ID[www.DragonW.net]" loading="lazy"></a>
+<a href="Carmel%20Coast%2C%20California%20-%201600x1200%20-%20ID%2038032%5Bwww.DragonW.net%5D.jpg" data-full="Carmel%20Coast%2C%20California%20-%201600x1200%20-%20ID%2038032%5Bwww.DragonW.net%5D.jpg" title="Carmel Coast, California - 1600x1200 - ID 38032[www.DragonW.net]"><img src="Carmel%20Coast%2C%20California%20-%201600x1200%20-%20ID%2038032%5Bwww.DragonW.net%5D.jpg" alt="Carmel Coast, California - 1600x1200 - ID 38032[www.DragonW.net]" loading="lazy"></a>
+<a href="Cascade%20Head%2C%20Oregon%20-%201600x1200%20-%20ID%2032182%5Bwww.DragonW.net%5D.jpg" data-full="Cascade%20Head%2C%20Oregon%20-%201600x1200%20-%20ID%2032182%5Bwww.DragonW.net%5D.jpg" title="Cascade Head, Oregon - 1600x1200 - ID 32182[www.DragonW.net]"><img src="Cascade%20Head%2C%20Oregon%20-%201600x1200%20-%20ID%2032182%5Bwww.DragonW.net%5D.jpg" alt="Cascade Head, Oregon - 1600x1200 - ID 32182[www.DragonW.net]" loading="lazy"></a>
+<a href="Cayo%20Largo%2C%20Cuba%20-%201600x1200%20-%20ID%2042357%5Bwww.DragonW.net%5D.jpg" data-full="Cayo%20Largo%2C%20Cuba%20-%201600x1200%20-%20ID%2042357%5Bwww.DragonW.net%5D.jpg" title="Cayo Largo, Cuba - 1600x1200 - ID 42357[www.DragonW.net]"><img src="Cayo%20Largo%2C%20Cuba%20-%201600x1200%20-%20ID%2042357%5Bwww.DragonW.net%5D.jpg" alt="Cayo Largo, Cuba - 1600x1200 - ID 42357[www.DragonW.net]" loading="lazy"></a>
+<a href="Central%20Coast%20Sunrise%2C%20California%20-%201600x1200%20-%20%5Bwww.DragonW.net%5D.jpg" data-full="Central%20Coast%20Sunrise%2C%20California%20-%201600x1200%20-%20%5Bwww.DragonW.net%5D.jpg" title="Central Coast Sunrise, California - 1600x1200 - [www.DragonW.net]"><img src="Central%20Coast%20Sunrise%2C%20California%20-%201600x1200%20-%20%5Bwww.DragonW.net%5D.jpg" alt="Central Coast Sunrise, California - 1600x1200 - [www.DragonW.net]" loading="lazy"></a>
+<a href="Chesapeake%20Bay%2C%20Maryland%20-%201600x1200%20-%20ID%2031848%5Bwww.DragonW.net%5D.jpg" data-full="Chesapeake%20Bay%2C%20Maryland%20-%201600x1200%20-%20ID%2031848%5Bwww.DragonW.net%5D.jpg" title="Chesapeake Bay, Maryland - 1600x1200 - ID 31848[www.DragonW.net]"><img src="Chesapeake%20Bay%2C%20Maryland%20-%201600x1200%20-%20ID%2031848%5Bwww.DragonW.net%5D.jpg" alt="Chesapeake Bay, Maryland - 1600x1200 - ID 31848[www.DragonW.net]" loading="lazy"></a>
+<a href="Chesapeake%20Bay%2C%20Maryland%20-%201600x1200%20-%20ID%2039902%5Bwww.DragonW.net%5D.jpg" data-full="Chesapeake%20Bay%2C%20Maryland%20-%201600x1200%20-%20ID%2039902%5Bwww.DragonW.net%5D.jpg" title="Chesapeake Bay, Maryland - 1600x1200 - ID 39902[www.DragonW.net]"><img src="Chesapeake%20Bay%2C%20Maryland%20-%201600x1200%20-%20ID%2039902%5Bwww.DragonW.net%5D.jpg" alt="Chesapeake Bay, Maryland - 1600x1200 - ID 39902[www.DragonW.net]" loading="lazy"></a>
+<a href="Cliffs%20and%20Sky%20Reflections%2C%20Coos%20County%2C%20Oregon%20%5Bwww.DragonW.net%5D.jpg" data-full="Cliffs%20and%20Sky%20Reflections%2C%20Coos%20County%2C%20Oregon%20%5Bwww.DragonW.net%5D.jpg" title="Cliffs and Sky Reflections, Coos County, Oregon [www.DragonW.net]"><img src="Cliffs%20and%20Sky%20Reflections%2C%20Coos%20County%2C%20Oregon%20%5Bwww.DragonW.net%5D.jpg" alt="Cliffs and Sky Reflections, Coos County, Oregon [www.DragonW.net]" loading="lazy"></a>
+<a href="Coast%20of%20Victoria%2C%20Australia%20-%201600x1200%20-%20ID%2024%5Bwww.DragonW.net%5D.jpg" data-full="Coast%20of%20Victoria%2C%20Australia%20-%201600x1200%20-%20ID%2024%5Bwww.DragonW.net%5D.jpg" title="Coast of Victoria, Australia - 1600x1200 - ID 24[www.DragonW.net]"><img src="Coast%20of%20Victoria%2C%20Australia%20-%201600x1200%20-%20ID%2024%5Bwww.DragonW.net%5D.jpg" alt="Coast of Victoria, Australia - 1600x1200 - ID 24[www.DragonW.net]" loading="lazy"></a>
+<a href="Coastal%20Sunset%2C%20Face%20Rock%20State%20Park%2C%20Bandon%2C%20Or%5Bwww.DragonW.net%5D.jpg" data-full="Coastal%20Sunset%2C%20Face%20Rock%20State%20Park%2C%20Bandon%2C%20Or%5Bwww.DragonW.net%5D.jpg" title="Coastal Sunset, Face Rock State Park, Bandon, Or[www.DragonW.net]"><img src="Coastal%20Sunset%2C%20Face%20Rock%20State%20Park%2C%20Bandon%2C%20Or%5Bwww.DragonW.net%5D.jpg" alt="Coastal Sunset, Face Rock State Park, Bandon, Or[www.DragonW.net]" loading="lazy"></a>
+<a href="Colombo%2C%20Sri%20Lanka%20-%201600x1200%20-%20ID%2044857%5Bwww.DragonW.net%5D.jpg" data-full="Colombo%2C%20Sri%20Lanka%20-%201600x1200%20-%20ID%2044857%5Bwww.DragonW.net%5D.jpg" title="Colombo, Sri Lanka - 1600x1200 - ID 44857[www.DragonW.net]"><img src="Colombo%2C%20Sri%20Lanka%20-%201600x1200%20-%20ID%2044857%5Bwww.DragonW.net%5D.jpg" alt="Colombo, Sri Lanka - 1600x1200 - ID 44857[www.DragonW.net]" loading="lazy"></a>
+<a href="Cool%20Waters%2C%20Oregon%20-%201600x1200%20-%20ID%2026406%20-%20PRE%5Bwww.DragonW.net%5D.jpg" data-full="Cool%20Waters%2C%20Oregon%20-%201600x1200%20-%20ID%2026406%20-%20PRE%5Bwww.DragonW.net%5D.jpg" title="Cool Waters, Oregon - 1600x1200 - ID 26406 - PRE[www.DragonW.net]"><img src="Cool%20Waters%2C%20Oregon%20-%201600x1200%20-%20ID%2026406%20-%20PRE%5Bwww.DragonW.net%5D.jpg" alt="Cool Waters, Oregon - 1600x1200 - ID 26406 - PRE[www.DragonW.net]" loading="lazy"></a>
+<a href="Copie%20de%20Aitutaki%2C%20Cook%20Islands%20-%201600x1200%20-%20ID%2043804%5Bwww.DragonW.net%5D.jpg" data-full="Copie%20de%20Aitutaki%2C%20Cook%20Islands%20-%201600x1200%20-%20ID%2043804%5Bwww.DragonW.net%5D.jpg" title="Copie de Aitutaki, Cook Islands - 1600x1200 - ID 43804[www.DragonW.net]"><img src="Copie%20de%20Aitutaki%2C%20Cook%20Islands%20-%201600x1200%20-%20ID%2043804%5Bwww.DragonW.net%5D.jpg" alt="Copie de Aitutaki, Cook Islands - 1600x1200 - ID 43804[www.DragonW.net]" loading="lazy"></a>
+<a href="Copie%20de%20An%20Empty%20Hammock%2C%20Kauai%2C%20Hawaii%20-%201600x1200%20-%20ID%5Bwww.DragonW.net%5D.jpg" data-full="Copie%20de%20An%20Empty%20Hammock%2C%20Kauai%2C%20Hawaii%20-%201600x1200%20-%20ID%5Bwww.DragonW.net%5D.jpg" title="Copie de An Empty Hammock, Kauai, Hawaii - 1600x1200 - ID[www.DragonW.net]"><img src="Copie%20de%20An%20Empty%20Hammock%2C%20Kauai%2C%20Hawaii%20-%201600x1200%20-%20ID%5Bwww.DragonW.net%5D.jpg" alt="Copie de An Empty Hammock, Kauai, Hawaii - 1600x1200 - ID[www.DragonW.net]" loading="lazy"></a>
+<a href="Copie%20de%20Anaura%20Bay%2C%20Gisborne%2C%20New%20Zealand%20-%201600x1200%20-%20%5Bwww.DragonW.net%5D.jpg" data-full="Copie%20de%20Anaura%20Bay%2C%20Gisborne%2C%20New%20Zealand%20-%201600x1200%20-%20%5Bwww.DragonW.net%5D.jpg" title="Copie de Anaura Bay, Gisborne, New Zealand - 1600x1200 - [www.DragonW.net]"><img src="Copie%20de%20Anaura%20Bay%2C%20Gisborne%2C%20New%20Zealand%20-%201600x1200%20-%20%5Bwww.DragonW.net%5D.jpg" alt="Copie de Anaura Bay, Gisborne, New Zealand - 1600x1200 - [www.DragonW.net]" loading="lazy"></a>
+<a href="Copie%20de%20Balboa%20Pier%2C%20California%20-%201600x1200%20-%20ID%2027253%5Bwww.DragonW.net%5D.jpg" data-full="Copie%20de%20Balboa%20Pier%2C%20California%20-%201600x1200%20-%20ID%2027253%5Bwww.DragonW.net%5D.jpg" title="Copie de Balboa Pier, California - 1600x1200 - ID 27253[www.DragonW.net]"><img src="Copie%20de%20Balboa%20Pier%2C%20California%20-%201600x1200%20-%20ID%2027253%5Bwww.DragonW.net%5D.jpg" alt="Copie de Balboa Pier, California - 1600x1200 - ID 27253[www.DragonW.net]" loading="lazy"></a>
+<a href="Copie%20de%20Bandon%2C%20Oregon%20-%201600x1200%20-%20ID%2032511%5Bwww.DragonW.net%5D.jpg" data-full="Copie%20de%20Bandon%2C%20Oregon%20-%201600x1200%20-%20ID%2032511%5Bwww.DragonW.net%5D.jpg" title="Copie de Bandon, Oregon - 1600x1200 - ID 32511[www.DragonW.net]"><img src="Copie%20de%20Bandon%2C%20Oregon%20-%201600x1200%20-%20ID%2032511%5Bwww.DragonW.net%5D.jpg" alt="Copie de Bandon, Oregon - 1600x1200 - ID 32511[www.DragonW.net]" loading="lazy"></a>
+<a href="Copie%20de%20Boardman%20State%20Park%2C%20near%20Brookings-Harbor%2C%20Oreg%5Bwww.DragonW.net%5D.jpg" data-full="Copie%20de%20Boardman%20State%20Park%2C%20near%20Brookings-Harbor%2C%20Oreg%5Bwww.DragonW.net%5D.jpg" title="Copie de Boardman State Park, near Brookings-Harbor, Oreg[www.DragonW.net]"><img src="Copie%20de%20Boardman%20State%20Park%2C%20near%20Brookings-Harbor%2C%20Oreg%5Bwww.DragonW.net%5D.jpg" alt="Copie de Boardman State Park, near Brookings-Harbor, Oreg[www.DragonW.net]" loading="lazy"></a>
+<a href="Copie%20de%20Boathouse%20at%20Dawn%2C%20Fiji%20-%201600x1200%20-%20ID%2027249%5Bwww.DragonW.net%5D.jpg" data-full="Copie%20de%20Boathouse%20at%20Dawn%2C%20Fiji%20-%201600x1200%20-%20ID%2027249%5Bwww.DragonW.net%5D.jpg" title="Copie de Boathouse at Dawn, Fiji - 1600x1200 - ID 27249[www.DragonW.net]"><img src="Copie%20de%20Boathouse%20at%20Dawn%2C%20Fiji%20-%201600x1200%20-%20ID%2027249%5Bwww.DragonW.net%5D.jpg" alt="Copie de Boathouse at Dawn, Fiji - 1600x1200 - ID 27249[www.DragonW.net]" loading="lazy"></a>
+<a href="Copie%20de%20Cabo%20San%20Lucas%2C%20Baja%20California%2C%20Mexico%20-%201600x1%5Bwww.DragonW.net%5D.jpg" data-full="Copie%20de%20Cabo%20San%20Lucas%2C%20Baja%20California%2C%20Mexico%20-%201600x1%5Bwww.DragonW.net%5D.jpg" title="Copie de Cabo San Lucas, Baja California, Mexico - 1600x1[www.DragonW.net]"><img src="Copie%20de%20Cabo%20San%20Lucas%2C%20Baja%20California%2C%20Mexico%20-%201600x1%5Bwww.DragonW.net%5D.jpg" alt="Copie de Cabo San Lucas, Baja California, Mexico - 1600x1[www.DragonW.net]" loading="lazy"></a>
+<a href="Copie%20de%20Cape%20of%20Good%20Hope%2C%20South%20Africa%20-%201600x1200%20-%20ID%5Bwww.DragonW.net%5D.jpg" data-full="Copie%20de%20Cape%20of%20Good%20Hope%2C%20South%20Africa%20-%201600x1200%20-%20ID%5Bwww.DragonW.net%5D.jpg" title="Copie de Cape of Good Hope, South Africa - 1600x1200 - ID[www.DragonW.net]"><img src="Copie%20de%20Cape%20of%20Good%20Hope%2C%20South%20Africa%20-%201600x1200%20-%20ID%5Bwww.DragonW.net%5D.jpg" alt="Copie de Cape of Good Hope, South Africa - 1600x1200 - ID[www.DragonW.net]" loading="lazy"></a>
+<a href="Copie%20de%20Carmel%20Coast%2C%20California%20-%201600x1200%20-%20ID%2038032%5Bwww.DragonW.net%5D.jpg" data-full="Copie%20de%20Carmel%20Coast%2C%20California%20-%201600x1200%20-%20ID%2038032%5Bwww.DragonW.net%5D.jpg" title="Copie de Carmel Coast, California - 1600x1200 - ID 38032[www.DragonW.net]"><img src="Copie%20de%20Carmel%20Coast%2C%20California%20-%201600x1200%20-%20ID%2038032%5Bwww.DragonW.net%5D.jpg" alt="Copie de Carmel Coast, California - 1600x1200 - ID 38032[www.DragonW.net]" loading="lazy"></a>
+<a href="Copie%20de%20Cayo%20Largo%2C%20Cuba%20-%201600x1200%20-%20ID%2042357%5Bwww.DragonW.net%5D.jpg" data-full="Copie%20de%20Cayo%20Largo%2C%20Cuba%20-%201600x1200%20-%20ID%2042357%5Bwww.DragonW.net%5D.jpg" title="Copie de Cayo Largo, Cuba - 1600x1200 - ID 42357[www.DragonW.net]"><img src="Copie%20de%20Cayo%20Largo%2C%20Cuba%20-%201600x1200%20-%20ID%2042357%5Bwww.DragonW.net%5D.jpg" alt="Copie de Cayo Largo, Cuba - 1600x1200 - ID 42357[www.DragonW.net]" loading="lazy"></a>
+<a href="Copie%20de%20Central%20Coast%20Sunrise%2C%20California%20-%201600x1200%20-%20%5Bwww.DragonW.net%5D.jpg" data-full="Copie%20de%20Central%20Coast%20Sunrise%2C%20California%20-%201600x1200%20-%20%5Bwww.DragonW.net%5D.jpg" title="Copie de Central Coast Sunrise, California - 1600x1200 - [www.DragonW.net]"><img src="Copie%20de%20Central%20Coast%20Sunrise%2C%20California%20-%201600x1200%20-%20%5Bwww.DragonW.net%5D.jpg" alt="Copie de Central Coast Sunrise, California - 1600x1200 - [www.DragonW.net]" loading="lazy"></a>
+<a href="Copie%20de%20Chesapeake%20Bay%2C%20Maryland%20-%201600x1200%20-%20ID%2031848%5Bwww.DragonW.net%5D.jpg" data-full="Copie%20de%20Chesapeake%20Bay%2C%20Maryland%20-%201600x1200%20-%20ID%2031848%5Bwww.DragonW.net%5D.jpg" title="Copie de Chesapeake Bay, Maryland - 1600x1200 - ID 31848[www.DragonW.net]"><img src="Copie%20de%20Chesapeake%20Bay%2C%20Maryland%20-%201600x1200%20-%20ID%2031848%5Bwww.DragonW.net%5D.jpg" alt="Copie de Chesapeake Bay, Maryland - 1600x1200 - ID 31848[www.DragonW.net]" loading="lazy"></a>
+<a href="Copie%20de%20Cliffs%20and%20Sky%20Reflections%2C%20Coos%20County%2C%20Oregon%20%5Bwww.DragonW.net%5D.jpg" data-full="Copie%20de%20Cliffs%20and%20Sky%20Reflections%2C%20Coos%20County%2C%20Oregon%20%5Bwww.DragonW.net%5D.jpg" title="Copie de Cliffs and Sky Reflections, Coos County, Oregon [www.DragonW.net]"><img src="Copie%20de%20Cliffs%20and%20Sky%20Reflections%2C%20Coos%20County%2C%20Oregon%20%5Bwww.DragonW.net%5D.jpg" alt="Copie de Cliffs and Sky Reflections, Coos County, Oregon [www.DragonW.net]" loading="lazy"></a>
+<a href="Copie%20de%20Coast%20of%20Victoria%2C%20Australia%20-%201600x1200%20-%20ID%2024%5Bwww.DragonW.net%5D.jpg" data-full="Copie%20de%20Coast%20of%20Victoria%2C%20Australia%20-%201600x1200%20-%20ID%2024%5Bwww.DragonW.net%5D.jpg" title="Copie de Coast of Victoria, Australia - 1600x1200 - ID 24[www.DragonW.net]"><img src="Copie%20de%20Coast%20of%20Victoria%2C%20Australia%20-%201600x1200%20-%20ID%2024%5Bwww.DragonW.net%5D.jpg" alt="Copie de Coast of Victoria, Australia - 1600x1200 - ID 24[www.DragonW.net]" loading="lazy"></a>
+<a href="Copie%20de%20Colombo%2C%20Sri%20Lanka%20-%201600x1200%20-%20ID%2044857%5Bwww.DragonW.net%5D.jpg" data-full="Copie%20de%20Colombo%2C%20Sri%20Lanka%20-%201600x1200%20-%20ID%2044857%5Bwww.DragonW.net%5D.jpg" title="Copie de Colombo, Sri Lanka - 1600x1200 - ID 44857[www.DragonW.net]"><img src="Copie%20de%20Colombo%2C%20Sri%20Lanka%20-%201600x1200%20-%20ID%2044857%5Bwww.DragonW.net%5D.jpg" alt="Copie de Colombo, Sri Lanka - 1600x1200 - ID 44857[www.DragonW.net]" loading="lazy"></a>
+<a href="Copie%20de%20Cool%20Waters%2C%20Oregon%20-%201600x1200%20-%20ID%2026406%20-%20PRE%5Bwww.DragonW.net%5D.jpg" data-full="Copie%20de%20Cool%20Waters%2C%20Oregon%20-%201600x1200%20-%20ID%2026406%20-%20PRE%5Bwww.DragonW.net%5D.jpg" title="Copie de Cool Waters, Oregon - 1600x1200 - ID 26406 - PRE[www.DragonW.net]"><img src="Copie%20de%20Cool%20Waters%2C%20Oregon%20-%201600x1200%20-%20ID%2026406%20-%20PRE%5Bwww.DragonW.net%5D.jpg" alt="Copie de Cool Waters, Oregon - 1600x1200 - ID 26406 - PRE[www.DragonW.net]" loading="lazy"></a>
+<a href="Copie%20de%20Crystal%20Waters%20-%201600x1200%20-%20ID%2026861%5Bwww.DragonW.net%5D.jpg" data-full="Copie%20de%20Crystal%20Waters%20-%201600x1200%20-%20ID%2026861%5Bwww.DragonW.net%5D.jpg" title="Copie de Crystal Waters - 1600x1200 - ID 26861[www.DragonW.net]"><img src="Copie%20de%20Crystal%20Waters%20-%201600x1200%20-%20ID%2026861%5Bwww.DragonW.net%5D.jpg" alt="Copie de Crystal Waters - 1600x1200 - ID 26861[www.DragonW.net]" loading="lazy"></a>
+<a href="Copie%20de%20Dunes%20at%20Dawn%2C%20Destin%2C%20Florida%20-%201600x1200%20-%20ID%20%5Bwww.DragonW.net%5D.jpg" data-full="Copie%20de%20Dunes%20at%20Dawn%2C%20Destin%2C%20Florida%20-%201600x1200%20-%20ID%20%5Bwww.DragonW.net%5D.jpg" title="Copie de Dunes at Dawn, Destin, Florida - 1600x1200 - ID [www.DragonW.net]"><img src="Copie%20de%20Dunes%20at%20Dawn%2C%20Destin%2C%20Florida%20-%201600x1200%20-%20ID%20%5Bwww.DragonW.net%5D.jpg" alt="Copie de Dunes at Dawn, Destin, Florida - 1600x1200 - ID [www.DragonW.net]" loading="lazy"></a>
+<a href="Copie%20de%20Dunes%20Beach%2C%20Half%20Moon%20Bay%2C%20California%20-%201600x12%5Bwww.DragonW.net%5D.jpg" data-full="Copie%20de%20Dunes%20Beach%2C%20Half%20Moon%20Bay%2C%20California%20-%201600x12%5Bwww.DragonW.net%5D.jpg" title="Copie de Dunes Beach, Half Moon Bay, California - 1600x12[www.DragonW.net]"><img src="Copie%20de%20Dunes%20Beach%2C%20Half%20Moon%20Bay%2C%20California%20-%201600x12%5Bwww.DragonW.net%5D.jpg" alt="Copie de Dunes Beach, Half Moon Bay, California - 1600x12[www.DragonW.net]" loading="lazy"></a>
+<a href="Copie%20de%20Evening%20Falls%20over%20Sea%20Stacks%2C%20Ecola%20State%20Park%2C%5Bwww.DragonW.net%5D.jpg" data-full="Copie%20de%20Evening%20Falls%20over%20Sea%20Stacks%2C%20Ecola%20State%20Park%2C%5Bwww.DragonW.net%5D.jpg" title="Copie de Evening Falls over Sea Stacks, Ecola State Park,[www.DragonW.net]"><img src="Copie%20de%20Evening%20Falls%20over%20Sea%20Stacks%2C%20Ecola%20State%20Park%2C%5Bwww.DragonW.net%5D.jpg" alt="Copie de Evening Falls over Sea Stacks, Ecola State Park,[www.DragonW.net]" loading="lazy"></a>
+<a href="Copie%20de%20French%20Cul-de-Sac%2C%20Saint%20Martin%20-%201600x1200%20-%20ID%5Bwww.DragonW.net%5D.jpg" data-full="Copie%20de%20French%20Cul-de-Sac%2C%20Saint%20Martin%20-%201600x1200%20-%20ID%5Bwww.DragonW.net%5D.jpg" title="Copie de French Cul-de-Sac, Saint Martin - 1600x1200 - ID[www.DragonW.net]"><img src="Copie%20de%20French%20Cul-de-Sac%2C%20Saint%20Martin%20-%201600x1200%20-%20ID%5Bwww.DragonW.net%5D.jpg" alt="Copie de French Cul-de-Sac, Saint Martin - 1600x1200 - ID[www.DragonW.net]" loading="lazy"></a>
+<a href="Copie%20de%20Giant%27s%20Causeway%2C%20Northern%20Ireland%20-%201600x1200%20-%5Bwww.DragonW.net%5D.jpg" data-full="Copie%20de%20Giant%27s%20Causeway%2C%20Northern%20Ireland%20-%201600x1200%20-%5Bwww.DragonW.net%5D.jpg" title="Copie de Giant&#x27;s Causeway, Northern Ireland - 1600x1200 -[www.DragonW.net]"><img src="Copie%20de%20Giant%27s%20Causeway%2C%20Northern%20Ireland%20-%201600x1200%20-%5Bwww.DragonW.net%5D.jpg" alt="Copie de Giant&#x27;s Causeway, Northern Ireland - 1600x1200 -[www.DragonW.net]" loading="lazy"></a>
+<a href="Copie%20de%20Haena%20Beach%2C%20Kauai%2C%20Hawaii%20-%201600x1200%20-%20ID%204537%5Bwww.DragonW.net%5D.jpg" data-full="Copie%20de%20Haena%20Beach%2C%20Kauai%2C%20Hawaii%20-%201600x1200%20-%20ID%204537%5Bwww.DragonW.net%5D.jpg" title="Copie de Haena Beach, Kauai, Hawaii - 1600x1200 - ID 4537[www.DragonW.net]"><img src="Copie%20de%20Haena%20Beach%2C%20Kauai%2C%20Hawaii%20-%201600x1200%20-%20ID%204537%5Bwww.DragonW.net%5D.jpg" alt="Copie de Haena Beach, Kauai, Hawaii - 1600x1200 - ID 4537[www.DragonW.net]" loading="lazy"></a>
+<a href="Copie%20de%20Inviting%20Afternoon%20-%201600x1200%20-%20ID%2041234%5Bwww.DragonW.net%5D.jpg" data-full="Copie%20de%20Inviting%20Afternoon%20-%201600x1200%20-%20ID%2041234%5Bwww.DragonW.net%5D.jpg" title="Copie de Inviting Afternoon - 1600x1200 - ID 41234[www.DragonW.net]"><img src="Copie%20de%20Inviting%20Afternoon%20-%201600x1200%20-%20ID%2041234%5Bwww.DragonW.net%5D.jpg" alt="Copie de Inviting Afternoon - 1600x1200 - ID 41234[www.DragonW.net]" loading="lazy"></a>
+<a href="Copie%20de%20Island%20Beach%20State%20Park%2C%20New%20Jersey%20-%201600x1200%20%5Bwww.DragonW.net%5D.jpg" data-full="Copie%20de%20Island%20Beach%20State%20Park%2C%20New%20Jersey%20-%201600x1200%20%5Bwww.DragonW.net%5D.jpg" title="Copie de Island Beach State Park, New Jersey - 1600x1200 [www.DragonW.net]"><img src="Copie%20de%20Island%20Beach%20State%20Park%2C%20New%20Jersey%20-%201600x1200%20%5Bwww.DragonW.net%5D.jpg" alt="Copie de Island Beach State Park, New Jersey - 1600x1200 [www.DragonW.net]" loading="lazy"></a>
+<a href="Copie%20de%20La%20Digue%20Isle%2C%20Seychelles%20-%201600x1200%20-%20ID%2043808%5Bwww.DragonW.net%5D.jpg" data-full="Copie%20de%20La%20Digue%20Isle%2C%20Seychelles%20-%201600x1200%20-%20ID%2043808%5Bwww.DragonW.net%5D.jpg" title="Copie de La Digue Isle, Seychelles - 1600x1200 - ID 43808[www.DragonW.net]"><img src="Copie%20de%20La%20Digue%20Isle%2C%20Seychelles%20-%201600x1200%20-%20ID%2043808%5Bwww.DragonW.net%5D.jpg" alt="Copie de La Digue Isle, Seychelles - 1600x1200 - ID 43808[www.DragonW.net]" loading="lazy"></a>
+<a href="Copie%20de%20Lands%20End%20Beach%2C%20Golden%20Gate%20National%20Recreation%5Bwww.DragonW.net%5D.jpg" data-full="Copie%20de%20Lands%20End%20Beach%2C%20Golden%20Gate%20National%20Recreation%5Bwww.DragonW.net%5D.jpg" title="Copie de Lands End Beach, Golden Gate National Recreation[www.DragonW.net]"><img src="Copie%20de%20Lands%20End%20Beach%2C%20Golden%20Gate%20National%20Recreation%5Bwww.DragonW.net%5D.jpg" alt="Copie de Lands End Beach, Golden Gate National Recreation[www.DragonW.net]" loading="lazy"></a>
+<a href="Copie%20de%20Lanikai%20Beach%2C%20Oahu%2C%20Hawaii%20-%201600x1200%20-%20ID%20122%5Bwww.DragonW.net%5D.jpg" data-full="Copie%20de%20Lanikai%20Beach%2C%20Oahu%2C%20Hawaii%20-%201600x1200%20-%20ID%20122%5Bwww.DragonW.net%5D.jpg" title="Copie de Lanikai Beach, Oahu, Hawaii - 1600x1200 - ID 122[www.DragonW.net]"><img src="Copie%20de%20Lanikai%20Beach%2C%20Oahu%2C%20Hawaii%20-%201600x1200%20-%20ID%20122%5Bwww.DragonW.net%5D.jpg" alt="Copie de Lanikai Beach, Oahu, Hawaii - 1600x1200 - ID 122[www.DragonW.net]" loading="lazy"></a>
+<a href="Copie%20de%20Lost%20in%20Paradise%20-%201600x1200%20-%20ID%2039966%5Bwww.DragonW.net%5D.jpg" data-full="Copie%20de%20Lost%20in%20Paradise%20-%201600x1200%20-%20ID%2039966%5Bwww.DragonW.net%5D.jpg" title="Copie de Lost in Paradise - 1600x1200 - ID 39966[www.DragonW.net]"><img src="Copie%20de%20Lost%20in%20Paradise%20-%201600x1200%20-%20ID%2039966%5Bwww.DragonW.net%5D.jpg" alt="Copie de Lost in Paradise - 1600x1200 - ID 39966[www.DragonW.net]" loading="lazy"></a>
+<a href="Copie%20de%20Madeira%20Beach%2C%20Florida%20-%201600x1200%20-%20ID%2039634%5Bwww.DragonW.net%5D.jpg" data-full="Copie%20de%20Madeira%20Beach%2C%20Florida%20-%201600x1200%20-%20ID%2039634%5Bwww.DragonW.net%5D.jpg" title="Copie de Madeira Beach, Florida - 1600x1200 - ID 39634[www.DragonW.net]"><img src="Copie%20de%20Madeira%20Beach%2C%20Florida%20-%201600x1200%20-%20ID%2039634%5Bwww.DragonW.net%5D.jpg" alt="Copie de Madeira Beach, Florida - 1600x1200 - ID 39634[www.DragonW.net]" loading="lazy"></a>
+<a href="Copie%20de%20Moonset%20and%20Kittens%2C%20Sea%20Stacks%2C%20Bandon%2C%20Oregon%20%5Bwww.DragonW.net%5D.jpg" data-full="Copie%20de%20Moonset%20and%20Kittens%2C%20Sea%20Stacks%2C%20Bandon%2C%20Oregon%20%5Bwww.DragonW.net%5D.jpg" title="Copie de Moonset and Kittens, Sea Stacks, Bandon, Oregon [www.DragonW.net]"><img src="Copie%20de%20Moonset%20and%20Kittens%2C%20Sea%20Stacks%2C%20Bandon%2C%20Oregon%20%5Bwww.DragonW.net%5D.jpg" alt="Copie de Moonset and Kittens, Sea Stacks, Bandon, Oregon [www.DragonW.net]" loading="lazy"></a>
+<a href="Copie%20de%20Moonset%20over%20Coquille%20Point%2C%20Oregon%20Islands%2C%20Ore%5Bwww.DragonW.net%5D.jpg" data-full="Copie%20de%20Moonset%20over%20Coquille%20Point%2C%20Oregon%20Islands%2C%20Ore%5Bwww.DragonW.net%5D.jpg" title="Copie de Moonset over Coquille Point, Oregon Islands, Ore[www.DragonW.net]"><img src="Copie%20de%20Moonset%20over%20Coquille%20Point%2C%20Oregon%20Islands%2C%20Ore%5Bwww.DragonW.net%5D.jpg" alt="Copie de Moonset over Coquille Point, Oregon Islands, Ore[www.DragonW.net]" loading="lazy"></a>
+<a href="Copie%20de%20Moorea%20Island%20Sunset%2C%20French%20Polynesia%20-%201600x12%5Bwww.DragonW.net%5D.jpg" data-full="Copie%20de%20Moorea%20Island%20Sunset%2C%20French%20Polynesia%20-%201600x12%5Bwww.DragonW.net%5D.jpg" title="Copie de Moorea Island Sunset, French Polynesia - 1600x12[www.DragonW.net]"><img src="Copie%20de%20Moorea%20Island%20Sunset%2C%20French%20Polynesia%20-%201600x12%5Bwww.DragonW.net%5D.jpg" alt="Copie de Moorea Island Sunset, French Polynesia - 1600x12[www.DragonW.net]" loading="lazy"></a>
+<a href="Copie%20de%20Natural%20Bridges%20State%20Park%2C%20Santa%20Cruz%2C%20Californ%5Bwww.DragonW.net%5D.jpg" data-full="Copie%20de%20Natural%20Bridges%20State%20Park%2C%20Santa%20Cruz%2C%20Californ%5Bwww.DragonW.net%5D.jpg" title="Copie de Natural Bridges State Park, Santa Cruz, Californ[www.DragonW.net]"><img src="Copie%20de%20Natural%20Bridges%20State%20Park%2C%20Santa%20Cruz%2C%20Californ%5Bwww.DragonW.net%5D.jpg" alt="Copie de Natural Bridges State Park, Santa Cruz, Californ[www.DragonW.net]" loading="lazy"></a>
+<a href="Copie%20de%20New%20Providence%20Islands%2C%20Bahamas%20-%201600x1200%20-%20ID%5Bwww.DragonW.net%5D.jpg" data-full="Copie%20de%20New%20Providence%20Islands%2C%20Bahamas%20-%201600x1200%20-%20ID%5Bwww.DragonW.net%5D.jpg" title="Copie de New Providence Islands, Bahamas - 1600x1200 - ID[www.DragonW.net]"><img src="Copie%20de%20New%20Providence%20Islands%2C%20Bahamas%20-%201600x1200%20-%20ID%5Bwww.DragonW.net%5D.jpg" alt="Copie de New Providence Islands, Bahamas - 1600x1200 - ID[www.DragonW.net]" loading="lazy"></a>
+</section><nav class="pager" aria-label="Pagination">
+<span class="current">1</span>
+<a href="page-2.html">2</a>
+<a href="page-3.html">3</a>
+<a href="page-2.html">Suiv &raquo;</a>
+</nav>
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
+  <img alt="">
+  <span class="hint">Clic ou Échap pour fermer</span>
+</div>
+<script>
+(function(){
+  // Theme toggle
+  const root = document.documentElement;
+  const saved = localStorage.getItem('wp-theme');
+  if(saved) root.setAttribute('data-theme', saved);
+  const btn = document.getElementById('themeToggle');
+  function syncLabel(){ if(!btn) return;
+    btn.textContent = root.getAttribute('data-theme')==='light' ? 'Sombre' : 'Clair';
+  }
+  syncLabel();
+  if(btn) btn.addEventListener('click', () => {
+    const cur = root.getAttribute('data-theme')==='light' ? 'dark':'light';
+    root.setAttribute('data-theme', cur);
+    localStorage.setItem('wp-theme', cur);
+    syncLabel();
+  });
+  // Lightbox
+  const lb = document.getElementById('lightbox');
+  if(lb){
+    const lbImg = lb.querySelector('img');
+    document.querySelectorAll('.gallery a[data-full]').forEach(a => {
+      a.addEventListener('click', e => {
+        e.preventDefault();
+        lbImg.src = a.getAttribute('data-full');
+        lb.classList.add('active');
+        document.body.style.overflow='hidden';
+      });
+    });
+    function close(){
+      lb.classList.remove('active'); lbImg.src=''; document.body.style.overflow='';
+    }
+    lb.addEventListener('click', close);
+    document.addEventListener('keydown', e => { if(e.key==='Escape') close(); });
+  }
+})();
+</script>
+</body>
+</html>

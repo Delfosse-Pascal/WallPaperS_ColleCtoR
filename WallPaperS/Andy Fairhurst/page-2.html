@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Andy Fairhurst — page 2/2 — WallPaperS</title>
+<link rel="canonical" href="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/">
+<link rel="icon" href="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/Site_Web/favicondepascal.png" type="image/png">
+<link rel="icon" href="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/Site_Web/favicondepascal.ico" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/Site_Web/style.css">
+<script src="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/Site_Web/script.js"></script>
+<script src="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/Site_Web/menu.js" defer></script>
+<link rel="stylesheet" href="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/Site_Web/basedusite.css">
+<script src="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/Site_Web/couleurs.js"></script>
+<style>
+:root {
+  --bg: linear-gradient(135deg,#1a0033,#2a0050,#3d0066);
+  --fg: #f5f5f5;
+  --card-bg: rgba(255,255,255,0.05);
+  --card-border: rgba(255,255,255,0.12);
+  --accent: #ffd700;
+  --accent2: #9d4edd;
+  --shadow: 0 10px 30px rgba(0,0,0,.5);
+}
+:root[data-theme="light"] {
+  --bg: linear-gradient(135deg,#fff3d6,#fae3ff);
+  --fg: #1a1a1a;
+  --card-bg: rgba(255,255,255,0.55);
+  --card-border: rgba(0,0,0,0.08);
+  --shadow: 0 10px 30px rgba(0,0,0,.15);
+}
+* { box-sizing: border-box; }
+html, body { margin:0; padding:0; min-height:100vh; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: var(--fg);
+  background: var(--bg);
+  background-size: 400% 400%;
+  animation: bgShift 22s ease infinite;
+  overflow-x: hidden;
+}
+@keyframes bgShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.topbar {
+  position: sticky; top:0; z-index:50;
+  display: flex; gap:.6rem; padding:.7rem 1rem;
+  backdrop-filter: blur(10px);
+  background: rgba(0,0,0,.25);
+  border-bottom: 1px solid var(--card-border);
+}
+:root[data-theme="light"] .topbar { background: rgba(255,255,255,.45); }
+.btn {
+  border: 1px solid var(--card-border);
+  background: var(--card-bg);
+  color: var(--fg);
+  padding: .5rem .9rem;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: .9rem;
+  text-decoration: none;
+  transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+}
+.btn:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(0,0,0,.3); background: var(--accent); color:#000; }
+.title {
+  font-size: clamp(1.6rem, 4vw, 3rem);
+  text-align: center;
+  margin: 1.5rem 1rem .3rem;
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  letter-spacing: .03em;
+}
+.subtitle { text-align:center; opacity:.8; margin: 0 1rem 1.2rem; }
+.gallery {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  padding: 1rem;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+.gallery a {
+  display:block; position:relative;
+  border-radius: 14px; overflow: hidden;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  box-shadow: var(--shadow);
+  cursor: zoom-in;
+  transition: transform .35s cubic-bezier(.2,.7,.2,1.2), box-shadow .3s;
+  animation: tileIn .6s ease both;
+}
+.gallery a:nth-child(odd) { animation-delay: .05s; }
+.gallery a:nth-child(even) { animation-delay: .15s; }
+.gallery a:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 18px 50px rgba(0,0,0,.55), 0 0 0 2px var(--accent);
+}
+.gallery img {
+  width: 100%; height: 220px; object-fit: cover; display:block;
+  transition: transform .6s ease;
+}
+.gallery a:hover img { transform: scale(1.08); }
+@keyframes tileIn {
+  from { opacity:0; transform: translateY(20px) scale(.98); }
+  to   { opacity:1; transform: none; }
+}
+
+.folders {
+  display: grid; gap: 18px;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  padding: 1rem; max-width: 1600px; margin: 0 auto;
+}
+.folder-card {
+  display:flex; flex-direction: column; justify-content: space-between;
+  padding: 1rem 1.2rem; min-height: 140px;
+  border-radius: 18px;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  box-shadow: var(--shadow);
+  text-decoration: none; color: var(--fg);
+  position: relative; overflow: hidden;
+  transition: transform .3s, box-shadow .3s;
+  animation: cardIn .7s ease both;
+}
+.folder-card::before {
+  content:""; position:absolute; inset:-2px;
+  background: linear-gradient(120deg, var(--accent), transparent 40%, var(--accent2));
+  opacity:.0; transition: opacity .4s; z-index:0;
+}
+.folder-card:hover::before { opacity:.25; }
+.folder-card:hover { transform: translateY(-5px) rotate(-.4deg); box-shadow: 0 16px 40px rgba(0,0,0,.45); }
+.folder-card > * { position: relative; z-index:1; }
+.folder-name { font-weight: 700; font-size: 1.15rem; }
+.folder-meta { opacity:.75; font-size:.85rem; margin-top: .4rem; }
+@keyframes cardIn {
+  from { opacity:0; transform: translateY(28px); }
+  to   { opacity:1; transform: none; }
+}
+
+.pager {
+  display:flex; justify-content:center; gap:.4rem; flex-wrap:wrap;
+  padding: 1.5rem 1rem 3rem;
+}
+.pager a, .pager span {
+  padding: .45rem .8rem; border-radius: 8px;
+  border: 1px solid var(--card-border);
+  background: var(--card-bg); color: var(--fg);
+  text-decoration: none; font-size: .9rem;
+}
+.pager .current { background: var(--accent); color:#000; border-color: var(--accent); }
+
+/* lightbox */
+.lightbox {
+  position: fixed; inset:0; background: rgba(0,0,0,.92);
+  display:none; align-items:center; justify-content:center; z-index:1000;
+  padding:2rem; cursor: zoom-out;
+  animation: fadeIn .25s ease;
+}
+.lightbox.active { display:flex; }
+.lightbox img {
+  max-width: 96vw; max-height: 92vh; object-fit: contain;
+  border-radius: 8px; box-shadow: 0 0 60px rgba(0,0,0,.8);
+  animation: zoomIn .3s ease;
+}
+.lightbox .hint { position:absolute; bottom:1rem; left:50%; transform:translateX(-50%);
+  color:#fff; opacity:.7; font-size:.85rem; }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes zoomIn { from { opacity:0; transform: scale(.9); } to { opacity:1; transform:none; } }
+
+/* Theme-specific decorative animations */
+.deco { position: fixed; inset:0; pointer-events:none; z-index:0; }
+.deco span { position:absolute; border-radius:50%; filter: blur(40px); opacity:.45; }
+</style>
+</head>
+<body>
+<nav class="social-menu">
+    <ul>
+      <li><a href="https://fr.pinterest.com/pascal509/mes-tableaux-tous-genre/" target="_blank" rel="noopener">Pinterest</a></li>
+      <li><a href="https://www.flickr.com/photos/delfossepascal" target="_blank" rel="noopener">Flickr</a></li>
+      <li><a href="https://www.tumblr.com/lestoilesdepascal" target="_blank" rel="noopener">Tumblr</a></li>
+      <li><a href="https://x.com/PascalDelfossee" target="_blank" rel="noopener">X</a></li>
+      <li><a href="https://www.youtube.com/c/DelfossePascal" target="_blank" rel="noopener">YouTube</a></li>
+    </ul>
+  </nav>
+<header></header>
+<div class="deco" aria-hidden="true">
+<span style="width:380px;height:380px;background:#ffd700;top:-100px;left:-80px;animation:shineA 18s ease-in-out infinite alternate"></span>
+<span style="width:480px;height:480px;background:#9d4edd;bottom:-160px;right:-100px;animation:shineB 22s ease-in-out infinite alternate"></span>
+<span style="width:260px;height:260px;background:#ffd700;top:40%;left:50%;animation:shineC 26s ease-in-out infinite alternate"></span>
+</div>
+<style>
+@keyframes shineA { from { transform: translate(0,0) scale(1); } to { transform: translate(140px,80px) scale(1.25); } }
+@keyframes shineB { from { transform: translate(0,0) scale(1); } to { transform: translate(-160px,-90px) scale(1.15); } }
+@keyframes shineC { from { transform: translate(-50%,-50%) scale(.8); } to { transform: translate(-30%,-70%) scale(1.3); } }
+</style>
+<div class="topbar">
+  <a class="btn" href="../../index.html" title="Accueil">Accueil</a>
+  <a class="btn" href="../index.html" title="Dossier parent">Parent</a>
+  <span style="flex:1"></span>
+  <button class="btn" id="themeToggle" type="button">Clair</button>
+</div>
+<h1 class="title">Andy Fairhurst — page 2/2</h1>
+<p class="subtitle">Thème : Royal</p>
+<section class="gallery">
+<a href="Drag_Race.jpg" data-full="Drag_Race.jpg" title="Drag_Race"><img src="Drag_Race.jpg" alt="Drag_Race" loading="lazy"></a>
+<a href="Dragon_Alley.jpg" data-full="Dragon_Alley.jpg" title="Dragon_Alley"><img src="Dragon_Alley.jpg" alt="Dragon_Alley" loading="lazy"></a>
+<a href="e73539b85e84b1594a0784bb69bbdd71-d1hqd7j.jpg" data-full="e73539b85e84b1594a0784bb69bbdd71-d1hqd7j.jpg" title="e73539b85e84b1594a0784bb69bbdd71-d1hqd7j"><img src="e73539b85e84b1594a0784bb69bbdd71-d1hqd7j.jpg" alt="e73539b85e84b1594a0784bb69bbdd71-d1hqd7j" loading="lazy"></a>
+<a href="eb221294e752d7b21d6c5bd913f98808.jpg" data-full="eb221294e752d7b21d6c5bd913f98808.jpg" title="eb221294e752d7b21d6c5bd913f98808"><img src="eb221294e752d7b21d6c5bd913f98808.jpg" alt="eb221294e752d7b21d6c5bd913f98808" loading="lazy"></a>
+<a href="ee68163126379bba.jpg" data-full="ee68163126379bba.jpg" title="ee68163126379bba"><img src="ee68163126379bba.jpg" alt="ee68163126379bba" loading="lazy"></a>
+<a href="f1628ad044ebbcf83641934f802b4cd9.jpg" data-full="f1628ad044ebbcf83641934f802b4cd9.jpg" title="f1628ad044ebbcf83641934f802b4cd9"><img src="f1628ad044ebbcf83641934f802b4cd9.jpg" alt="f1628ad044ebbcf83641934f802b4cd9" loading="lazy"></a>
+<a href="f251f47ec95368acac5d30ef8988b0a5-d35l36i.jpg" data-full="f251f47ec95368acac5d30ef8988b0a5-d35l36i.jpg" title="f251f47ec95368acac5d30ef8988b0a5-d35l36i"><img src="f251f47ec95368acac5d30ef8988b0a5-d35l36i.jpg" alt="f251f47ec95368acac5d30ef8988b0a5-d35l36i" loading="lazy"></a>
+<a href="f266d410d0f44847bf14eb03000672bb.jpg" data-full="f266d410d0f44847bf14eb03000672bb.jpg" title="f266d410d0f44847bf14eb03000672bb"><img src="f266d410d0f44847bf14eb03000672bb.jpg" alt="f266d410d0f44847bf14eb03000672bb" loading="lazy"></a>
+<a href="f67887d428db1e93dd947443ff0793a2.jpg" data-full="f67887d428db1e93dd947443ff0793a2.jpg" title="f67887d428db1e93dd947443ff0793a2"><img src="f67887d428db1e93dd947443ff0793a2.jpg" alt="f67887d428db1e93dd947443ff0793a2" loading="lazy"></a>
+<a href="f983f956036f6de55fdc8f04df73de82-d325hna.jpg" data-full="f983f956036f6de55fdc8f04df73de82-d325hna.jpg" title="f983f956036f6de55fdc8f04df73de82-d325hna"><img src="f983f956036f6de55fdc8f04df73de82-d325hna.jpg" alt="f983f956036f6de55fdc8f04df73de82-d325hna" loading="lazy"></a>
+<a href="fast_face.jpg" data-full="fast_face.jpg" title="fast_face"><img src="fast_face.jpg" alt="fast_face" loading="lazy"></a>
+<a href="ffcf6df1f49715c40752c65b8a777209.jpg" data-full="ffcf6df1f49715c40752c65b8a777209.jpg" title="ffcf6df1f49715c40752c65b8a777209"><img src="ffcf6df1f49715c40752c65b8a777209.jpg" alt="ffcf6df1f49715c40752c65b8a777209" loading="lazy"></a>
+<a href="Fishing_On_The_Drinking_Dragon.jpg" data-full="Fishing_On_The_Drinking_Dragon.jpg" title="Fishing_On_The_Drinking_Dragon"><img src="Fishing_On_The_Drinking_Dragon.jpg" alt="Fishing_On_The_Drinking_Dragon" loading="lazy"></a>
+<a href="Harley_Quinn.jpg" data-full="Harley_Quinn.jpg" title="Harley_Quinn"><img src="Harley_Quinn.jpg" alt="Harley_Quinn" loading="lazy"></a>
+<a href="Hell_Hagges.jpg" data-full="Hell_Hagges.jpg" title="Hell_Hagges"><img src="Hell_Hagges.jpg" alt="Hell_Hagges" loading="lazy"></a>
+<a href="I_think__therefore_.jpg" data-full="I_think__therefore_.jpg" title="I_think__therefore_"><img src="I_think__therefore_.jpg" alt="I_think__therefore_" loading="lazy"></a>
+<a href="Incubus_Succubus.jpg" data-full="Incubus_Succubus.jpg" title="Incubus_Succubus"><img src="Incubus_Succubus.jpg" alt="Incubus_Succubus" loading="lazy"></a>
+<a href="Lazing_By_The_Sleeping_Dragon.jpg" data-full="Lazing_By_The_Sleeping_Dragon.jpg" title="Lazing_By_The_Sleeping_Dragon"><img src="Lazing_By_The_Sleeping_Dragon.jpg" alt="Lazing_By_The_Sleeping_Dragon" loading="lazy"></a>
+<a href="LC.jpg" data-full="LC.jpg" title="LC"><img src="LC.jpg" alt="LC" loading="lazy"></a>
+<a href="merry_chrimbo.jpg" data-full="merry_chrimbo.jpg" title="merry_chrimbo"><img src="merry_chrimbo.jpg" alt="merry_chrimbo" loading="lazy"></a>
+<a href="Old_Hippo_Drawing.jpg" data-full="Old_Hippo_Drawing.jpg" title="Old_Hippo_Drawing"><img src="Old_Hippo_Drawing.jpg" alt="Old_Hippo_Drawing" loading="lazy"></a>
+<a href="Old_Lioness_Drawing.jpg" data-full="Old_Lioness_Drawing.jpg" title="Old_Lioness_Drawing"><img src="Old_Lioness_Drawing.jpg" alt="Old_Lioness_Drawing" loading="lazy"></a>
+<a href="Old_Wolf_Drawing.jpg" data-full="Old_Wolf_Drawing.jpg" title="Old_Wolf_Drawing"><img src="Old_Wolf_Drawing.jpg" alt="Old_Wolf_Drawing" loading="lazy"></a>
+<a href="Portrait_Of_A_Devil.jpg" data-full="Portrait_Of_A_Devil.jpg" title="Portrait_Of_A_Devil"><img src="Portrait_Of_A_Devil.jpg" alt="Portrait_Of_A_Devil" loading="lazy"></a>
+<a href="Prince_Of_Persia.jpg" data-full="Prince_Of_Persia.jpg" title="Prince_Of_Persia"><img src="Prince_Of_Persia.jpg" alt="Prince_Of_Persia" loading="lazy"></a>
+<a href="Prince_Of_Persia_II.jpg" data-full="Prince_Of_Persia_II.jpg" title="Prince_Of_Persia_II"><img src="Prince_Of_Persia_II.jpg" alt="Prince_Of_Persia_II" loading="lazy"></a>
+<a href="Sausage_For_The_Sitting_Dragon.jpg" data-full="Sausage_For_The_Sitting_Dragon.jpg" title="Sausage_For_The_Sitting_Dragon"><img src="Sausage_For_The_Sitting_Dragon.jpg" alt="Sausage_For_The_Sitting_Dragon" loading="lazy"></a>
+<a href="Scout_Striders.jpg" data-full="Scout_Striders.jpg" title="Scout_Striders"><img src="Scout_Striders.jpg" alt="Scout_Striders" loading="lazy"></a>
+<a href="Scribble_Head.jpg" data-full="Scribble_Head.jpg" title="Scribble_Head"><img src="Scribble_Head.jpg" alt="Scribble_Head" loading="lazy"></a>
+<a href="Smaug_And_The_Thief.jpg" data-full="Smaug_And_The_Thief.jpg" title="Smaug_And_The_Thief"><img src="Smaug_And_The_Thief.jpg" alt="Smaug_And_The_Thief" loading="lazy"></a>
+<a href="Smaug_The_Magnificent.jpg" data-full="Smaug_The_Magnificent.jpg" title="Smaug_The_Magnificent"><img src="Smaug_The_Magnificent.jpg" alt="Smaug_The_Magnificent" loading="lazy"></a>
+<a href="Spiderman___Comic_Icon_II.jpg" data-full="Spiderman___Comic_Icon_II.jpg" title="Spiderman___Comic_Icon_II"><img src="Spiderman___Comic_Icon_II.jpg" alt="Spiderman___Comic_Icon_II" loading="lazy"></a>
+<a href="Superman___Comic_Icon_IV.jpg" data-full="Superman___Comic_Icon_IV.jpg" title="Superman___Comic_Icon_IV"><img src="Superman___Comic_Icon_IV.jpg" alt="Superman___Comic_Icon_IV" loading="lazy"></a>
+<a href="Superman_II_by_wildlifehoodoo.jpg" data-full="Superman_II_by_wildlifehoodoo.jpg" title="Superman_II_by_wildlifehoodoo"><img src="Superman_II_by_wildlifehoodoo.jpg" alt="Superman_II_by_wildlifehoodoo" loading="lazy"></a>
+<a href="sword.jpg" data-full="sword.jpg" title="sword"><img src="sword.jpg" alt="sword" loading="lazy"></a>
+<a href="The_Amazing_Bertons.jpg" data-full="The_Amazing_Bertons.jpg" title="The_Amazing_Bertons"><img src="The_Amazing_Bertons.jpg" alt="The_Amazing_Bertons" loading="lazy"></a>
+<a href="The_Bride.jpg" data-full="The_Bride.jpg" title="The_Bride"><img src="The_Bride.jpg" alt="The_Bride" loading="lazy"></a>
+<a href="the_giant__s_graveyard.jpg" data-full="the_giant__s_graveyard.jpg" title="the_giant__s_graveyard"><img src="the_giant__s_graveyard.jpg" alt="the_giant__s_graveyard" loading="lazy"></a>
+<a href="The_Goonies_And_The_Holy_Grail.jpg" data-full="The_Goonies_And_The_Holy_Grail.jpg" title="The_Goonies_And_The_Holy_Grail"><img src="The_Goonies_And_The_Holy_Grail.jpg" alt="The_Goonies_And_The_Holy_Grail" loading="lazy"></a>
+<a href="The_Joker.jpg" data-full="The_Joker.jpg" title="The_Joker"><img src="The_Joker.jpg" alt="The_Joker" loading="lazy"></a>
+<a href="The_Splashing_Dragon.jpg" data-full="The_Splashing_Dragon.jpg" title="The_Splashing_Dragon"><img src="The_Splashing_Dragon.jpg" alt="The_Splashing_Dragon" loading="lazy"></a>
+<a href="The_Town_On_The_Giant.jpg" data-full="The_Town_On_The_Giant.jpg" title="The_Town_On_The_Giant"><img src="The_Town_On_The_Giant.jpg" alt="The_Town_On_The_Giant" loading="lazy"></a>
+<a href="The_Wyrm_And_The_Wizard.jpg" data-full="The_Wyrm_And_The_Wizard.jpg" title="The_Wyrm_And_The_Wizard"><img src="The_Wyrm_And_The_Wizard.jpg" alt="The_Wyrm_And_The_Wizard" loading="lazy"></a>
+<a href="Tillydragon.jpg" data-full="Tillydragon.jpg" title="Tillydragon"><img src="Tillydragon.jpg" alt="Tillydragon" loading="lazy"></a>
+<a href="Welsh_Flag___The_Red_Dragon.jpg" data-full="Welsh_Flag___The_Red_Dragon.jpg" title="Welsh_Flag___The_Red_Dragon"><img src="Welsh_Flag___The_Red_Dragon.jpg" alt="Welsh_Flag___The_Red_Dragon" loading="lazy"></a>
+<a href="Willow.jpg" data-full="Willow.jpg" title="Willow"><img src="Willow.jpg" alt="Willow" loading="lazy"></a>
+<a href="Willow_Time_Pin_up.jpg" data-full="Willow_Time_Pin_up.jpg" title="Willow_Time_Pin_up"><img src="Willow_Time_Pin_up.jpg" alt="Willow_Time_Pin_up" loading="lazy"></a>
+<a href="Witchfinder_General__s_Bedroom.jpg" data-full="Witchfinder_General__s_Bedroom.jpg" title="Witchfinder_General__s_Bedroom"><img src="Witchfinder_General__s_Bedroom.jpg" alt="Witchfinder_General__s_Bedroom" loading="lazy"></a>
+<a href="Witchfinder_General__s_Garden.jpg" data-full="Witchfinder_General__s_Garden.jpg" title="Witchfinder_General__s_Garden"><img src="Witchfinder_General__s_Garden.jpg" alt="Witchfinder_General__s_Garden" loading="lazy"></a>
+<a href="Witchfinder_General__s_Hal.jpg" data-full="Witchfinder_General__s_Hal.jpg" title="Witchfinder_General__s_Hal"><img src="Witchfinder_General__s_Hal.jpg" alt="Witchfinder_General__s_Hal" loading="lazy"></a>
+<a href="Witchfinder_General__s_Kitchen.jpg" data-full="Witchfinder_General__s_Kitchen.jpg" title="Witchfinder_General__s_Kitchen"><img src="Witchfinder_General__s_Kitchen.jpg" alt="Witchfinder_General__s_Kitchen" loading="lazy"></a>
+<a href="Witchfinder_General__s_Parlour.jpg" data-full="Witchfinder_General__s_Parlour.jpg" title="Witchfinder_General__s_Parlour"><img src="Witchfinder_General__s_Parlour.jpg" alt="Witchfinder_General__s_Parlour" loading="lazy"></a>
+<a href="Witchfinder_Generals_Bathroom.jpg" data-full="Witchfinder_Generals_Bathroom.jpg" title="Witchfinder_Generals_Bathroom"><img src="Witchfinder_Generals_Bathroom.jpg" alt="Witchfinder_Generals_Bathroom" loading="lazy"></a>
+</section><nav class="pager" aria-label="Pagination">
+<a href="index.html">&laquo; Préc</a>
+<a href="index.html">1</a>
+<span class="current">2</span>
+</nav>
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
+  <img alt="">
+  <span class="hint">Clic ou Échap pour fermer</span>
+</div>
+<script>
+(function(){
+  // Theme toggle
+  const root = document.documentElement;
+  const saved = localStorage.getItem('wp-theme');
+  if(saved) root.setAttribute('data-theme', saved);
+  const btn = document.getElementById('themeToggle');
+  function syncLabel(){ if(!btn) return;
+    btn.textContent = root.getAttribute('data-theme')==='light' ? 'Sombre' : 'Clair';
+  }
+  syncLabel();
+  if(btn) btn.addEventListener('click', () => {
+    const cur = root.getAttribute('data-theme')==='light' ? 'dark':'light';
+    root.setAttribute('data-theme', cur);
+    localStorage.setItem('wp-theme', cur);
+    syncLabel();
+  });
+  // Lightbox
+  const lb = document.getElementById('lightbox');
+  if(lb){
+    const lbImg = lb.querySelector('img');
+    document.querySelectorAll('.gallery a[data-full]').forEach(a => {
+      a.addEventListener('click', e => {
+        e.preventDefault();
+        lbImg.src = a.getAttribute('data-full');
+        lb.classList.add('active');
+        document.body.style.overflow='hidden';
+      });
+    });
+    function close(){
+      lb.classList.remove('active'); lbImg.src=''; document.body.style.overflow='';
+    }
+    lb.addEventListener('click', close);
+    document.addEventListener('keydown', e => { if(e.key==='Escape') close(); });
+  }
+})();
+</script>
+</body>
+</html>

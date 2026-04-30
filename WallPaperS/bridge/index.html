@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>bridge — WallPaperS</title>
+<link rel="canonical" href="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/">
+<link rel="icon" href="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/Site_Web/favicondepascal.png" type="image/png">
+<link rel="icon" href="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/Site_Web/favicondepascal.ico" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/Site_Web/style.css">
+<script src="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/Site_Web/script.js"></script>
+<script src="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/Site_Web/menu.js" defer></script>
+<link rel="stylesheet" href="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/Site_Web/basedusite.css">
+<script src="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/Site_Web/couleurs.js"></script>
+<style>
+:root {
+  --bg: radial-gradient(circle at 20% 20%,#1a0033,#000);
+  --fg: #f5f5f5;
+  --card-bg: rgba(255,255,255,0.05);
+  --card-border: rgba(255,255,255,0.12);
+  --accent: #ff00d4;
+  --accent2: #00ffe7;
+  --shadow: 0 10px 30px rgba(0,0,0,.5);
+}
+:root[data-theme="light"] {
+  --bg: radial-gradient(circle at 20% 20%,#fff5fc,#ffe6f2);
+  --fg: #1a1a1a;
+  --card-bg: rgba(255,255,255,0.55);
+  --card-border: rgba(0,0,0,0.08);
+  --shadow: 0 10px 30px rgba(0,0,0,.15);
+}
+* { box-sizing: border-box; }
+html, body { margin:0; padding:0; min-height:100vh; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: var(--fg);
+  background: var(--bg);
+  background-size: 400% 400%;
+  animation: bgShift 22s ease infinite;
+  overflow-x: hidden;
+}
+@keyframes bgShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.topbar {
+  position: sticky; top:0; z-index:50;
+  display: flex; gap:.6rem; padding:.7rem 1rem;
+  backdrop-filter: blur(10px);
+  background: rgba(0,0,0,.25);
+  border-bottom: 1px solid var(--card-border);
+}
+:root[data-theme="light"] .topbar { background: rgba(255,255,255,.45); }
+.btn {
+  border: 1px solid var(--card-border);
+  background: var(--card-bg);
+  color: var(--fg);
+  padding: .5rem .9rem;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: .9rem;
+  text-decoration: none;
+  transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+}
+.btn:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(0,0,0,.3); background: var(--accent); color:#000; }
+.title {
+  font-size: clamp(1.6rem, 4vw, 3rem);
+  text-align: center;
+  margin: 1.5rem 1rem .3rem;
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  letter-spacing: .03em;
+}
+.subtitle { text-align:center; opacity:.8; margin: 0 1rem 1.2rem; }
+.gallery {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  padding: 1rem;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+.gallery a {
+  display:block; position:relative;
+  border-radius: 14px; overflow: hidden;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  box-shadow: var(--shadow);
+  cursor: zoom-in;
+  transition: transform .35s cubic-bezier(.2,.7,.2,1.2), box-shadow .3s;
+  animation: tileIn .6s ease both;
+}
+.gallery a:nth-child(odd) { animation-delay: .05s; }
+.gallery a:nth-child(even) { animation-delay: .15s; }
+.gallery a:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 18px 50px rgba(0,0,0,.55), 0 0 0 2px var(--accent);
+}
+.gallery img {
+  width: 100%; height: 220px; object-fit: cover; display:block;
+  transition: transform .6s ease;
+}
+.gallery a:hover img { transform: scale(1.08); }
+@keyframes tileIn {
+  from { opacity:0; transform: translateY(20px) scale(.98); }
+  to   { opacity:1; transform: none; }
+}
+
+.folders {
+  display: grid; gap: 18px;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  padding: 1rem; max-width: 1600px; margin: 0 auto;
+}
+.folder-card {
+  display:flex; flex-direction: column; justify-content: space-between;
+  padding: 1rem 1.2rem; min-height: 140px;
+  border-radius: 18px;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  box-shadow: var(--shadow);
+  text-decoration: none; color: var(--fg);
+  position: relative; overflow: hidden;
+  transition: transform .3s, box-shadow .3s;
+  animation: cardIn .7s ease both;
+}
+.folder-card::before {
+  content:""; position:absolute; inset:-2px;
+  background: linear-gradient(120deg, var(--accent), transparent 40%, var(--accent2));
+  opacity:.0; transition: opacity .4s; z-index:0;
+}
+.folder-card:hover::before { opacity:.25; }
+.folder-card:hover { transform: translateY(-5px) rotate(-.4deg); box-shadow: 0 16px 40px rgba(0,0,0,.45); }
+.folder-card > * { position: relative; z-index:1; }
+.folder-name { font-weight: 700; font-size: 1.15rem; }
+.folder-meta { opacity:.75; font-size:.85rem; margin-top: .4rem; }
+@keyframes cardIn {
+  from { opacity:0; transform: translateY(28px); }
+  to   { opacity:1; transform: none; }
+}
+
+.pager {
+  display:flex; justify-content:center; gap:.4rem; flex-wrap:wrap;
+  padding: 1.5rem 1rem 3rem;
+}
+.pager a, .pager span {
+  padding: .45rem .8rem; border-radius: 8px;
+  border: 1px solid var(--card-border);
+  background: var(--card-bg); color: var(--fg);
+  text-decoration: none; font-size: .9rem;
+}
+.pager .current { background: var(--accent); color:#000; border-color: var(--accent); }
+
+/* lightbox */
+.lightbox {
+  position: fixed; inset:0; background: rgba(0,0,0,.92);
+  display:none; align-items:center; justify-content:center; z-index:1000;
+  padding:2rem; cursor: zoom-out;
+  animation: fadeIn .25s ease;
+}
+.lightbox.active { display:flex; }
+.lightbox img {
+  max-width: 96vw; max-height: 92vh; object-fit: contain;
+  border-radius: 8px; box-shadow: 0 0 60px rgba(0,0,0,.8);
+  animation: zoomIn .3s ease;
+}
+.lightbox .hint { position:absolute; bottom:1rem; left:50%; transform:translateX(-50%);
+  color:#fff; opacity:.7; font-size:.85rem; }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes zoomIn { from { opacity:0; transform: scale(.9); } to { opacity:1; transform:none; } }
+
+/* Theme-specific decorative animations */
+.deco { position: fixed; inset:0; pointer-events:none; z-index:0; }
+.deco span { position:absolute; border-radius:50%; filter: blur(40px); opacity:.45; }
+</style>
+</head>
+<body>
+<nav class="social-menu">
+    <ul>
+      <li><a href="https://fr.pinterest.com/pascal509/mes-tableaux-tous-genre/" target="_blank" rel="noopener">Pinterest</a></li>
+      <li><a href="https://www.flickr.com/photos/delfossepascal" target="_blank" rel="noopener">Flickr</a></li>
+      <li><a href="https://www.tumblr.com/lestoilesdepascal" target="_blank" rel="noopener">Tumblr</a></li>
+      <li><a href="https://x.com/PascalDelfossee" target="_blank" rel="noopener">X</a></li>
+      <li><a href="https://www.youtube.com/c/DelfossePascal" target="_blank" rel="noopener">YouTube</a></li>
+    </ul>
+  </nav>
+<header></header>
+<div class="deco" aria-hidden="true">
+<span style="width:380px;height:380px;background:#ff00d4;top:-100px;left:-80px;animation:pulseA 18s ease-in-out infinite alternate"></span>
+<span style="width:480px;height:480px;background:#00ffe7;bottom:-160px;right:-100px;animation:pulseB 22s ease-in-out infinite alternate"></span>
+<span style="width:260px;height:260px;background:#ff00d4;top:40%;left:50%;animation:pulseC 26s ease-in-out infinite alternate"></span>
+</div>
+<style>
+@keyframes pulseA { from { transform: translate(0,0) scale(1); } to { transform: translate(140px,80px) scale(1.25); } }
+@keyframes pulseB { from { transform: translate(0,0) scale(1); } to { transform: translate(-160px,-90px) scale(1.15); } }
+@keyframes pulseC { from { transform: translate(-50%,-50%) scale(.8); } to { transform: translate(-30%,-70%) scale(1.3); } }
+</style>
+<div class="topbar">
+  <a class="btn" href="../../index.html" title="Accueil">Accueil</a>
+  <a class="btn" href="../index.html" title="Dossier parent">Parent</a>
+  <span style="flex:1"></span>
+  <button class="btn" id="themeToggle" type="button">Clair</button>
+</div>
+<h1 class="title">bridge</h1>
+<p class="subtitle">Thème : Neon</p>
+<section class="gallery">
+<a href="082002B.JPG" data-full="082002B.JPG" title="082002B"><img src="082002B.JPG" alt="082002B" loading="lazy"></a>
+<a href="082013B.JPG" data-full="082013B.JPG" title="082013B"><img src="082013B.JPG" alt="082013B" loading="lazy"></a>
+<a href="144079B.JPG" data-full="144079B.JPG" title="144079B"><img src="144079B.JPG" alt="144079B" loading="lazy"></a>
+<a href="144091B.JPG" data-full="144091B.JPG" title="144091B"><img src="144091B.JPG" alt="144091B" loading="lazy"></a>
+<a href="148062.JPG" data-full="148062.JPG" title="148062"><img src="148062.JPG" alt="148062" loading="lazy"></a>
+<a href="244033.JPG" data-full="244033.JPG" title="244033"><img src="244033.JPG" alt="244033" loading="lazy"></a>
+<a href="244044.JPG" data-full="244044.JPG" title="244044"><img src="244044.JPG" alt="244044" loading="lazy"></a>
+<a href="244095.JPG" data-full="244095.JPG" title="244095"><img src="244095.JPG" alt="244095" loading="lazy"></a>
+<a href="277010.JPG" data-full="277010.JPG" title="277010"><img src="277010.JPG" alt="277010" loading="lazy"></a>
+<a href="292075.JPG" data-full="292075.JPG" title="292075"><img src="292075.JPG" alt="292075" loading="lazy"></a>
+<a href="368003.JPG" data-full="368003.JPG" title="368003"><img src="368003.JPG" alt="368003" loading="lazy"></a>
+<a href="368066.JPG" data-full="368066.JPG" title="368066"><img src="368066.JPG" alt="368066" loading="lazy"></a>
+<a href="368067.JPG" data-full="368067.JPG" title="368067"><img src="368067.JPG" alt="368067" loading="lazy"></a>
+<a href="368079.JPG" data-full="368079.JPG" title="368079"><img src="368079.JPG" alt="368079" loading="lazy"></a>
+<a href="551055.JPG" data-full="551055.JPG" title="551055"><img src="551055.JPG" alt="551055" loading="lazy"></a>
+<a href="551066.JPG" data-full="551066.JPG" title="551066"><img src="551066.JPG" alt="551066" loading="lazy"></a>
+<a href="672088.JPG" data-full="672088.JPG" title="672088"><img src="672088.JPG" alt="672088" loading="lazy"></a>
+<a href="782075.JPG" data-full="782075.JPG" title="782075"><img src="782075.JPG" alt="782075" loading="lazy"></a>
+<a href="792004.JPG" data-full="792004.JPG" title="792004"><img src="792004.JPG" alt="792004" loading="lazy"></a>
+<a href="792005.JPG" data-full="792005.JPG" title="792005"><img src="792005.JPG" alt="792005" loading="lazy"></a>
+<a href="792006.JPG" data-full="792006.JPG" title="792006"><img src="792006.JPG" alt="792006" loading="lazy"></a>
+<a href="792008.JPG" data-full="792008.JPG" title="792008"><img src="792008.JPG" alt="792008" loading="lazy"></a>
+<a href="792009.JPG" data-full="792009.JPG" title="792009"><img src="792009.JPG" alt="792009" loading="lazy"></a>
+<a href="792013.JPG" data-full="792013.JPG" title="792013"><img src="792013.JPG" alt="792013" loading="lazy"></a>
+<a href="792028.JPG" data-full="792028.JPG" title="792028"><img src="792028.JPG" alt="792028" loading="lazy"></a>
+<a href="792029.JPG" data-full="792029.JPG" title="792029"><img src="792029.JPG" alt="792029" loading="lazy"></a>
+<a href="792031.JPG" data-full="792031.JPG" title="792031"><img src="792031.JPG" alt="792031" loading="lazy"></a>
+<a href="792032.JPG" data-full="792032.JPG" title="792032"><img src="792032.JPG" alt="792032" loading="lazy"></a>
+<a href="792035.JPG" data-full="792035.JPG" title="792035"><img src="792035.JPG" alt="792035" loading="lazy"></a>
+<a href="792043.JPG" data-full="792043.JPG" title="792043"><img src="792043.JPG" alt="792043" loading="lazy"></a>
+<a href="792047.JPG" data-full="792047.JPG" title="792047"><img src="792047.JPG" alt="792047" loading="lazy"></a>
+<a href="792052.JPG" data-full="792052.JPG" title="792052"><img src="792052.JPG" alt="792052" loading="lazy"></a>
+<a href="792053.JPG" data-full="792053.JPG" title="792053"><img src="792053.JPG" alt="792053" loading="lazy"></a>
+<a href="792056.JPG" data-full="792056.JPG" title="792056"><img src="792056.JPG" alt="792056" loading="lazy"></a>
+<a href="792057.JPG" data-full="792057.JPG" title="792057"><img src="792057.JPG" alt="792057" loading="lazy"></a>
+<a href="792058.JPG" data-full="792058.JPG" title="792058"><img src="792058.JPG" alt="792058" loading="lazy"></a>
+<a href="792060.JPG" data-full="792060.JPG" title="792060"><img src="792060.JPG" alt="792060" loading="lazy"></a>
+<a href="792064.JPG" data-full="792064.JPG" title="792064"><img src="792064.JPG" alt="792064" loading="lazy"></a>
+<a href="792071.JPG" data-full="792071.JPG" title="792071"><img src="792071.JPG" alt="792071" loading="lazy"></a>
+<a href="792082.JPG" data-full="792082.JPG" title="792082"><img src="792082.JPG" alt="792082" loading="lazy"></a>
+<a href="792090.JPG" data-full="792090.JPG" title="792090"><img src="792090.JPG" alt="792090" loading="lazy"></a>
+<a href="792094.JPG" data-full="792094.JPG" title="792094"><img src="792094.JPG" alt="792094" loading="lazy"></a>
+<a href="792097.JPG" data-full="792097.JPG" title="792097"><img src="792097.JPG" alt="792097" loading="lazy"></a>
+<a href="792098.JPG" data-full="792098.JPG" title="792098"><img src="792098.JPG" alt="792098" loading="lazy"></a>
+<a href="792099.JPG" data-full="792099.JPG" title="792099"><img src="792099.JPG" alt="792099" loading="lazy"></a>
+<a href="798052.JPG" data-full="798052.JPG" title="798052"><img src="798052.JPG" alt="798052" loading="lazy"></a>
+<a href="82001.JPG" data-full="82001.JPG" title="82001"><img src="82001.JPG" alt="82001" loading="lazy"></a>
+<a href="82005.JPG" data-full="82005.JPG" title="82005"><img src="82005.JPG" alt="82005" loading="lazy"></a>
+<a href="82006.JPG" data-full="82006.JPG" title="82006"><img src="82006.JPG" alt="82006" loading="lazy"></a>
+<a href="82007.JPG" data-full="82007.JPG" title="82007"><img src="82007.JPG" alt="82007" loading="lazy"></a>
+<a href="82011.JPG" data-full="82011.JPG" title="82011"><img src="82011.JPG" alt="82011" loading="lazy"></a>
+<a href="82012.JPG" data-full="82012.JPG" title="82012"><img src="82012.JPG" alt="82012" loading="lazy"></a>
+<a href="82013.JPG" data-full="82013.JPG" title="82013"><img src="82013.JPG" alt="82013" loading="lazy"></a>
+<a href="BK0678.JPG" data-full="BK0678.JPG" title="BK0678"><img src="BK0678.JPG" alt="BK0678" loading="lazy"></a>
+</section>
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
+  <img alt="">
+  <span class="hint">Clic ou Échap pour fermer</span>
+</div>
+<script>
+(function(){
+  // Theme toggle
+  const root = document.documentElement;
+  const saved = localStorage.getItem('wp-theme');
+  if(saved) root.setAttribute('data-theme', saved);
+  const btn = document.getElementById('themeToggle');
+  function syncLabel(){ if(!btn) return;
+    btn.textContent = root.getAttribute('data-theme')==='light' ? 'Sombre' : 'Clair';
+  }
+  syncLabel();
+  if(btn) btn.addEventListener('click', () => {
+    const cur = root.getAttribute('data-theme')==='light' ? 'dark':'light';
+    root.setAttribute('data-theme', cur);
+    localStorage.setItem('wp-theme', cur);
+    syncLabel();
+  });
+  // Lightbox
+  const lb = document.getElementById('lightbox');
+  if(lb){
+    const lbImg = lb.querySelector('img');
+    document.querySelectorAll('.gallery a[data-full]').forEach(a => {
+      a.addEventListener('click', e => {
+        e.preventDefault();
+        lbImg.src = a.getAttribute('data-full');
+        lb.classList.add('active');
+        document.body.style.overflow='hidden';
+      });
+    });
+    function close(){
+      lb.classList.remove('active'); lbImg.src=''; document.body.style.overflow='';
+    }
+    lb.addEventListener('click', close);
+    document.addEventListener('keydown', e => { if(e.key==='Escape') close(); });
+  }
+})();
+</script>
+</body>
+</html>

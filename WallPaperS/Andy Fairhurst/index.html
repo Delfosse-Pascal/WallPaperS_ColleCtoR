@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Andy Fairhurst — page 1/2 — WallPaperS</title>
+<link rel="canonical" href="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/">
+<link rel="icon" href="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/Site_Web/favicondepascal.png" type="image/png">
+<link rel="icon" href="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/Site_Web/favicondepascal.ico" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/Site_Web/style.css">
+<script src="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/Site_Web/script.js"></script>
+<script src="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/Site_Web/menu.js" defer></script>
+<link rel="stylesheet" href="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/Site_Web/basedusite.css">
+<script src="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/Site_Web/couleurs.js"></script>
+<style>
+:root {
+  --bg: linear-gradient(135deg,#1a0033,#2a0050,#3d0066);
+  --fg: #f5f5f5;
+  --card-bg: rgba(255,255,255,0.05);
+  --card-border: rgba(255,255,255,0.12);
+  --accent: #ffd700;
+  --accent2: #9d4edd;
+  --shadow: 0 10px 30px rgba(0,0,0,.5);
+}
+:root[data-theme="light"] {
+  --bg: linear-gradient(135deg,#fff3d6,#fae3ff);
+  --fg: #1a1a1a;
+  --card-bg: rgba(255,255,255,0.55);
+  --card-border: rgba(0,0,0,0.08);
+  --shadow: 0 10px 30px rgba(0,0,0,.15);
+}
+* { box-sizing: border-box; }
+html, body { margin:0; padding:0; min-height:100vh; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: var(--fg);
+  background: var(--bg);
+  background-size: 400% 400%;
+  animation: bgShift 22s ease infinite;
+  overflow-x: hidden;
+}
+@keyframes bgShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.topbar {
+  position: sticky; top:0; z-index:50;
+  display: flex; gap:.6rem; padding:.7rem 1rem;
+  backdrop-filter: blur(10px);
+  background: rgba(0,0,0,.25);
+  border-bottom: 1px solid var(--card-border);
+}
+:root[data-theme="light"] .topbar { background: rgba(255,255,255,.45); }
+.btn {
+  border: 1px solid var(--card-border);
+  background: var(--card-bg);
+  color: var(--fg);
+  padding: .5rem .9rem;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: .9rem;
+  text-decoration: none;
+  transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+}
+.btn:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(0,0,0,.3); background: var(--accent); color:#000; }
+.title {
+  font-size: clamp(1.6rem, 4vw, 3rem);
+  text-align: center;
+  margin: 1.5rem 1rem .3rem;
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  letter-spacing: .03em;
+}
+.subtitle { text-align:center; opacity:.8; margin: 0 1rem 1.2rem; }
+.gallery {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  padding: 1rem;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+.gallery a {
+  display:block; position:relative;
+  border-radius: 14px; overflow: hidden;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  box-shadow: var(--shadow);
+  cursor: zoom-in;
+  transition: transform .35s cubic-bezier(.2,.7,.2,1.2), box-shadow .3s;
+  animation: tileIn .6s ease both;
+}
+.gallery a:nth-child(odd) { animation-delay: .05s; }
+.gallery a:nth-child(even) { animation-delay: .15s; }
+.gallery a:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 18px 50px rgba(0,0,0,.55), 0 0 0 2px var(--accent);
+}
+.gallery img {
+  width: 100%; height: 220px; object-fit: cover; display:block;
+  transition: transform .6s ease;
+}
+.gallery a:hover img { transform: scale(1.08); }
+@keyframes tileIn {
+  from { opacity:0; transform: translateY(20px) scale(.98); }
+  to   { opacity:1; transform: none; }
+}
+
+.folders {
+  display: grid; gap: 18px;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  padding: 1rem; max-width: 1600px; margin: 0 auto;
+}
+.folder-card {
+  display:flex; flex-direction: column; justify-content: space-between;
+  padding: 1rem 1.2rem; min-height: 140px;
+  border-radius: 18px;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  box-shadow: var(--shadow);
+  text-decoration: none; color: var(--fg);
+  position: relative; overflow: hidden;
+  transition: transform .3s, box-shadow .3s;
+  animation: cardIn .7s ease both;
+}
+.folder-card::before {
+  content:""; position:absolute; inset:-2px;
+  background: linear-gradient(120deg, var(--accent), transparent 40%, var(--accent2));
+  opacity:.0; transition: opacity .4s; z-index:0;
+}
+.folder-card:hover::before { opacity:.25; }
+.folder-card:hover { transform: translateY(-5px) rotate(-.4deg); box-shadow: 0 16px 40px rgba(0,0,0,.45); }
+.folder-card > * { position: relative; z-index:1; }
+.folder-name { font-weight: 700; font-size: 1.15rem; }
+.folder-meta { opacity:.75; font-size:.85rem; margin-top: .4rem; }
+@keyframes cardIn {
+  from { opacity:0; transform: translateY(28px); }
+  to   { opacity:1; transform: none; }
+}
+
+.pager {
+  display:flex; justify-content:center; gap:.4rem; flex-wrap:wrap;
+  padding: 1.5rem 1rem 3rem;
+}
+.pager a, .pager span {
+  padding: .45rem .8rem; border-radius: 8px;
+  border: 1px solid var(--card-border);
+  background: var(--card-bg); color: var(--fg);
+  text-decoration: none; font-size: .9rem;
+}
+.pager .current { background: var(--accent); color:#000; border-color: var(--accent); }
+
+/* lightbox */
+.lightbox {
+  position: fixed; inset:0; background: rgba(0,0,0,.92);
+  display:none; align-items:center; justify-content:center; z-index:1000;
+  padding:2rem; cursor: zoom-out;
+  animation: fadeIn .25s ease;
+}
+.lightbox.active { display:flex; }
+.lightbox img {
+  max-width: 96vw; max-height: 92vh; object-fit: contain;
+  border-radius: 8px; box-shadow: 0 0 60px rgba(0,0,0,.8);
+  animation: zoomIn .3s ease;
+}
+.lightbox .hint { position:absolute; bottom:1rem; left:50%; transform:translateX(-50%);
+  color:#fff; opacity:.7; font-size:.85rem; }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes zoomIn { from { opacity:0; transform: scale(.9); } to { opacity:1; transform:none; } }
+
+/* Theme-specific decorative animations */
+.deco { position: fixed; inset:0; pointer-events:none; z-index:0; }
+.deco span { position:absolute; border-radius:50%; filter: blur(40px); opacity:.45; }
+</style>
+</head>
+<body>
+<nav class="social-menu">
+    <ul>
+      <li><a href="https://fr.pinterest.com/pascal509/mes-tableaux-tous-genre/" target="_blank" rel="noopener">Pinterest</a></li>
+      <li><a href="https://www.flickr.com/photos/delfossepascal" target="_blank" rel="noopener">Flickr</a></li>
+      <li><a href="https://www.tumblr.com/lestoilesdepascal" target="_blank" rel="noopener">Tumblr</a></li>
+      <li><a href="https://x.com/PascalDelfossee" target="_blank" rel="noopener">X</a></li>
+      <li><a href="https://www.youtube.com/c/DelfossePascal" target="_blank" rel="noopener">YouTube</a></li>
+    </ul>
+  </nav>
+<header></header>
+<div class="deco" aria-hidden="true">
+<span style="width:380px;height:380px;background:#ffd700;top:-100px;left:-80px;animation:shineA 18s ease-in-out infinite alternate"></span>
+<span style="width:480px;height:480px;background:#9d4edd;bottom:-160px;right:-100px;animation:shineB 22s ease-in-out infinite alternate"></span>
+<span style="width:260px;height:260px;background:#ffd700;top:40%;left:50%;animation:shineC 26s ease-in-out infinite alternate"></span>
+</div>
+<style>
+@keyframes shineA { from { transform: translate(0,0) scale(1); } to { transform: translate(140px,80px) scale(1.25); } }
+@keyframes shineB { from { transform: translate(0,0) scale(1); } to { transform: translate(-160px,-90px) scale(1.15); } }
+@keyframes shineC { from { transform: translate(-50%,-50%) scale(.8); } to { transform: translate(-30%,-70%) scale(1.3); } }
+</style>
+<div class="topbar">
+  <a class="btn" href="../../index.html" title="Accueil">Accueil</a>
+  <a class="btn" href="../index.html" title="Dossier parent">Parent</a>
+  <span style="flex:1"></span>
+  <button class="btn" id="themeToggle" type="button">Clair</button>
+</div>
+<h1 class="title">Andy Fairhurst — page 1/2</h1>
+<p class="subtitle">Thème : Royal</p>
+<section class="gallery">
+<a href="02beaa96cc01f43e4aabf76aafc51151.jpg" data-full="02beaa96cc01f43e4aabf76aafc51151.jpg" title="02beaa96cc01f43e4aabf76aafc51151"><img src="02beaa96cc01f43e4aabf76aafc51151.jpg" alt="02beaa96cc01f43e4aabf76aafc51151" loading="lazy"></a>
+<a href="0d54693975af80075f1b43360f7c11c6.jpg" data-full="0d54693975af80075f1b43360f7c11c6.jpg" title="0d54693975af80075f1b43360f7c11c6"><img src="0d54693975af80075f1b43360f7c11c6.jpg" alt="0d54693975af80075f1b43360f7c11c6" loading="lazy"></a>
+<a href="0d54693975af80075f1b43360f7c11c6.tif" data-full="0d54693975af80075f1b43360f7c11c6.tif" title="0d54693975af80075f1b43360f7c11c6"><img src="0d54693975af80075f1b43360f7c11c6.tif" alt="0d54693975af80075f1b43360f7c11c6" loading="lazy"></a>
+<a href="16b8e6281274c2d0ccfcf705df7ad4c8.jpg" data-full="16b8e6281274c2d0ccfcf705df7ad4c8.jpg" title="16b8e6281274c2d0ccfcf705df7ad4c8"><img src="16b8e6281274c2d0ccfcf705df7ad4c8.jpg" alt="16b8e6281274c2d0ccfcf705df7ad4c8" loading="lazy"></a>
+<a href="1971ca5c6340b5f1.jpg" data-full="1971ca5c6340b5f1.jpg" title="1971ca5c6340b5f1"><img src="1971ca5c6340b5f1.jpg" alt="1971ca5c6340b5f1" loading="lazy"></a>
+<a href="2827679700540205bf3c2842100c1f0d.jpg" data-full="2827679700540205bf3c2842100c1f0d.jpg" title="2827679700540205bf3c2842100c1f0d"><img src="2827679700540205bf3c2842100c1f0d.jpg" alt="2827679700540205bf3c2842100c1f0d" loading="lazy"></a>
+<a href="2cbca9fdeee98332b646d14afb5d8ab3.jpg" data-full="2cbca9fdeee98332b646d14afb5d8ab3.jpg" title="2cbca9fdeee98332b646d14afb5d8ab3"><img src="2cbca9fdeee98332b646d14afb5d8ab3.jpg" alt="2cbca9fdeee98332b646d14afb5d8ab3" loading="lazy"></a>
+<a href="2db8a6f4cd495cf13d3773fc053dd1cd-d37kaa5.jpg" data-full="2db8a6f4cd495cf13d3773fc053dd1cd-d37kaa5.jpg" title="2db8a6f4cd495cf13d3773fc053dd1cd-d37kaa5"><img src="2db8a6f4cd495cf13d3773fc053dd1cd-d37kaa5.jpg" alt="2db8a6f4cd495cf13d3773fc053dd1cd-d37kaa5" loading="lazy"></a>
+<a href="2e8b215288ca324bee1dd0de6c78c789.jpg" data-full="2e8b215288ca324bee1dd0de6c78c789.jpg" title="2e8b215288ca324bee1dd0de6c78c789"><img src="2e8b215288ca324bee1dd0de6c78c789.jpg" alt="2e8b215288ca324bee1dd0de6c78c789" loading="lazy"></a>
+<a href="2ef1d7aac335fb5415209e162fb8e8f4-d35v34a.jpg" data-full="2ef1d7aac335fb5415209e162fb8e8f4-d35v34a.jpg" title="2ef1d7aac335fb5415209e162fb8e8f4-d35v34a"><img src="2ef1d7aac335fb5415209e162fb8e8f4-d35v34a.jpg" alt="2ef1d7aac335fb5415209e162fb8e8f4-d35v34a" loading="lazy"></a>
+<a href="2f3f51eab6ec701d49aa43d92bf8233a.jpg" data-full="2f3f51eab6ec701d49aa43d92bf8233a.jpg" title="2f3f51eab6ec701d49aa43d92bf8233a"><img src="2f3f51eab6ec701d49aa43d92bf8233a.jpg" alt="2f3f51eab6ec701d49aa43d92bf8233a" loading="lazy"></a>
+<a href="308d9c6123f49d4bead24845dab85529-d2zql8r.jpg" data-full="308d9c6123f49d4bead24845dab85529-d2zql8r.jpg" title="308d9c6123f49d4bead24845dab85529-d2zql8r"><img src="308d9c6123f49d4bead24845dab85529-d2zql8r.jpg" alt="308d9c6123f49d4bead24845dab85529-d2zql8r" loading="lazy"></a>
+<a href="30_min_Warrior_speedy.jpg" data-full="30_min_Warrior_speedy.jpg" title="30_min_Warrior_speedy"><img src="30_min_Warrior_speedy.jpg" alt="30_min_Warrior_speedy" loading="lazy"></a>
+<a href="33238e90243ab6e7d34e657b07a6d533.jpg" data-full="33238e90243ab6e7d34e657b07a6d533.jpg" title="33238e90243ab6e7d34e657b07a6d533"><img src="33238e90243ab6e7d34e657b07a6d533.jpg" alt="33238e90243ab6e7d34e657b07a6d533" loading="lazy"></a>
+<a href="3827908e531ad2e2ce0a94af509bf81a.jpg" data-full="3827908e531ad2e2ce0a94af509bf81a.jpg" title="3827908e531ad2e2ce0a94af509bf81a"><img src="3827908e531ad2e2ce0a94af509bf81a.jpg" alt="3827908e531ad2e2ce0a94af509bf81a" loading="lazy"></a>
+<a href="3b69f49064ebe454aa2078a7761f55d7.jpg" data-full="3b69f49064ebe454aa2078a7761f55d7.jpg" title="3b69f49064ebe454aa2078a7761f55d7"><img src="3b69f49064ebe454aa2078a7761f55d7.jpg" alt="3b69f49064ebe454aa2078a7761f55d7" loading="lazy"></a>
+<a href="42448d1202432f481f8f7479fcfb05bd-d2xjhcw.jpg" data-full="42448d1202432f481f8f7479fcfb05bd-d2xjhcw.jpg" title="42448d1202432f481f8f7479fcfb05bd-d2xjhcw"><img src="42448d1202432f481f8f7479fcfb05bd-d2xjhcw.jpg" alt="42448d1202432f481f8f7479fcfb05bd-d2xjhcw" loading="lazy"></a>
+<a href="435021ad2299f4a51e51df5618dff719-d34li0n.jpg" data-full="435021ad2299f4a51e51df5618dff719-d34li0n.jpg" title="435021ad2299f4a51e51df5618dff719-d34li0n"><img src="435021ad2299f4a51e51df5618dff719-d34li0n.jpg" alt="435021ad2299f4a51e51df5618dff719-d34li0n" loading="lazy"></a>
+<a href="47f880e4aeee5502cb693cc79f444778.jpg" data-full="47f880e4aeee5502cb693cc79f444778.jpg" title="47f880e4aeee5502cb693cc79f444778"><img src="47f880e4aeee5502cb693cc79f444778.jpg" alt="47f880e4aeee5502cb693cc79f444778" loading="lazy"></a>
+<a href="5035744a92d2106d8f1563a456716879.jpg" data-full="5035744a92d2106d8f1563a456716879.jpg" title="5035744a92d2106d8f1563a456716879"><img src="5035744a92d2106d8f1563a456716879.jpg" alt="5035744a92d2106d8f1563a456716879" loading="lazy"></a>
+<a href="5153a18c153c15013427d14fb4f3c8b4-d30ew3k.jpg" data-full="5153a18c153c15013427d14fb4f3c8b4-d30ew3k.jpg" title="5153a18c153c15013427d14fb4f3c8b4-d30ew3k"><img src="5153a18c153c15013427d14fb4f3c8b4-d30ew3k.jpg" alt="5153a18c153c15013427d14fb4f3c8b4-d30ew3k" loading="lazy"></a>
+<a href="5fb0a9a5039c39188822299d651d012c.jpg" data-full="5fb0a9a5039c39188822299d651d012c.jpg" title="5fb0a9a5039c39188822299d651d012c"><img src="5fb0a9a5039c39188822299d651d012c.jpg" alt="5fb0a9a5039c39188822299d651d012c" loading="lazy"></a>
+<a href="6047662c8faa2c3f258982400d4a48c1.jpg" data-full="6047662c8faa2c3f258982400d4a48c1.jpg" title="6047662c8faa2c3f258982400d4a48c1"><img src="6047662c8faa2c3f258982400d4a48c1.jpg" alt="6047662c8faa2c3f258982400d4a48c1" loading="lazy"></a>
+<a href="64d2634771e18b2b6f2c61bbf1de18b2-d30c23a.jpg" data-full="64d2634771e18b2b6f2c61bbf1de18b2-d30c23a.jpg" title="64d2634771e18b2b6f2c61bbf1de18b2-d30c23a"><img src="64d2634771e18b2b6f2c61bbf1de18b2-d30c23a.jpg" alt="64d2634771e18b2b6f2c61bbf1de18b2-d30c23a" loading="lazy"></a>
+<a href="6fd438f0705eb57344288e2acfc02a09-d31p3fh.jpg" data-full="6fd438f0705eb57344288e2acfc02a09-d31p3fh.jpg" title="6fd438f0705eb57344288e2acfc02a09-d31p3fh"><img src="6fd438f0705eb57344288e2acfc02a09-d31p3fh.jpg" alt="6fd438f0705eb57344288e2acfc02a09-d31p3fh" loading="lazy"></a>
+<a href="791fc307d62b2d87e5c27f444e34b4cd.jpg" data-full="791fc307d62b2d87e5c27f444e34b4cd.jpg" title="791fc307d62b2d87e5c27f444e34b4cd"><img src="791fc307d62b2d87e5c27f444e34b4cd.jpg" alt="791fc307d62b2d87e5c27f444e34b4cd" loading="lazy"></a>
+<a href="7c6f7019c7c44060187c35c31e36ef14.jpg" data-full="7c6f7019c7c44060187c35c31e36ef14.jpg" title="7c6f7019c7c44060187c35c31e36ef14"><img src="7c6f7019c7c44060187c35c31e36ef14.jpg" alt="7c6f7019c7c44060187c35c31e36ef14" loading="lazy"></a>
+<a href="7d71e5d3b5b7edbdd04fcd842ba5848e.jpg" data-full="7d71e5d3b5b7edbdd04fcd842ba5848e.jpg" title="7d71e5d3b5b7edbdd04fcd842ba5848e"><img src="7d71e5d3b5b7edbdd04fcd842ba5848e.jpg" alt="7d71e5d3b5b7edbdd04fcd842ba5848e" loading="lazy"></a>
+<a href="89a06d4eb43d7e7f39194ad5729f2639.jpg" data-full="89a06d4eb43d7e7f39194ad5729f2639.jpg" title="89a06d4eb43d7e7f39194ad5729f2639"><img src="89a06d4eb43d7e7f39194ad5729f2639.jpg" alt="89a06d4eb43d7e7f39194ad5729f2639" loading="lazy"></a>
+<a href="8b3e3afdb7c44c2dfe6ca354039375a0-d39h6bc.jpg" data-full="8b3e3afdb7c44c2dfe6ca354039375a0-d39h6bc.jpg" title="8b3e3afdb7c44c2dfe6ca354039375a0-d39h6bc"><img src="8b3e3afdb7c44c2dfe6ca354039375a0-d39h6bc.jpg" alt="8b3e3afdb7c44c2dfe6ca354039375a0-d39h6bc" loading="lazy"></a>
+<a href="90ab11c88a78e2dafd604dc624dedef4.jpg" data-full="90ab11c88a78e2dafd604dc624dedef4.jpg" title="90ab11c88a78e2dafd604dc624dedef4"><img src="90ab11c88a78e2dafd604dc624dedef4.jpg" alt="90ab11c88a78e2dafd604dc624dedef4" loading="lazy"></a>
+<a href="919441da3f44fe3424c4ca6d5290ba0b.jpg" data-full="919441da3f44fe3424c4ca6d5290ba0b.jpg" title="919441da3f44fe3424c4ca6d5290ba0b"><img src="919441da3f44fe3424c4ca6d5290ba0b.jpg" alt="919441da3f44fe3424c4ca6d5290ba0b" loading="lazy"></a>
+<a href="9b5ff1479ea84fd0.jpg" data-full="9b5ff1479ea84fd0.jpg" title="9b5ff1479ea84fd0"><img src="9b5ff1479ea84fd0.jpg" alt="9b5ff1479ea84fd0" loading="lazy"></a>
+<a href="a3113644424c49d6beb6201211f94526.jpg" data-full="a3113644424c49d6beb6201211f94526.jpg" title="a3113644424c49d6beb6201211f94526"><img src="a3113644424c49d6beb6201211f94526.jpg" alt="a3113644424c49d6beb6201211f94526" loading="lazy"></a>
+<a href="a37c0595d160a5226f43a2e844a3b25b.jpg" data-full="a37c0595d160a5226f43a2e844a3b25b.jpg" title="a37c0595d160a5226f43a2e844a3b25b"><img src="a37c0595d160a5226f43a2e844a3b25b.jpg" alt="a37c0595d160a5226f43a2e844a3b25b" loading="lazy"></a>
+<a href="a9155634ee67916c5040ee129a07093b.jpg" data-full="a9155634ee67916c5040ee129a07093b.jpg" title="a9155634ee67916c5040ee129a07093b"><img src="a9155634ee67916c5040ee129a07093b.jpg" alt="a9155634ee67916c5040ee129a07093b" loading="lazy"></a>
+<a href="alien_of_the_caribbean.jpg" data-full="alien_of_the_caribbean.jpg" title="alien_of_the_caribbean"><img src="alien_of_the_caribbean.jpg" alt="alien_of_the_caribbean" loading="lazy"></a>
+<a href="Alien_Redneck.jpg" data-full="Alien_Redneck.jpg" title="Alien_Redneck"><img src="Alien_Redneck.jpg" alt="Alien_Redneck" loading="lazy"></a>
+<a href="Aliens_Pepper_And_Wanda___U_A_.jpg" data-full="Aliens_Pepper_And_Wanda___U_A_.jpg" title="Aliens_Pepper_And_Wanda___U_A_"><img src="Aliens_Pepper_And_Wanda___U_A_.jpg" alt="Aliens_Pepper_And_Wanda___U_A_" loading="lazy"></a>
+<a href="another_fallen_angel.jpg" data-full="another_fallen_angel.jpg" title="another_fallen_angel"><img src="another_fallen_angel.jpg" alt="another_fallen_angel" loading="lazy"></a>
+<a href="Aqua.jpg" data-full="Aqua.jpg" title="Aqua"><img src="Aqua.jpg" alt="Aqua" loading="lazy"></a>
+<a href="b14e6b9e1c8f121f92df14d3da1d126d-d30lm93.jpg" data-full="b14e6b9e1c8f121f92df14d3da1d126d-d30lm93.jpg" title="b14e6b9e1c8f121f92df14d3da1d126d-d30lm93"><img src="b14e6b9e1c8f121f92df14d3da1d126d-d30lm93.jpg" alt="b14e6b9e1c8f121f92df14d3da1d126d-d30lm93" loading="lazy"></a>
+<a href="b31a2c1c80d290db852fa1d07a24b4f2.jpg" data-full="b31a2c1c80d290db852fa1d07a24b4f2.jpg" title="b31a2c1c80d290db852fa1d07a24b4f2"><img src="b31a2c1c80d290db852fa1d07a24b4f2.jpg" alt="b31a2c1c80d290db852fa1d07a24b4f2" loading="lazy"></a>
+<a href="b7b15fa69af7df22c49d6ad860af96e2.jpg" data-full="b7b15fa69af7df22c49d6ad860af96e2.jpg" title="b7b15fa69af7df22c49d6ad860af96e2"><img src="b7b15fa69af7df22c49d6ad860af96e2.jpg" alt="b7b15fa69af7df22c49d6ad860af96e2" loading="lazy"></a>
+<a href="b88b67364d702c9d1ac5a1fa59eb316b-d1a4po2.jpg" data-full="b88b67364d702c9d1ac5a1fa59eb316b-d1a4po2.jpg" title="b88b67364d702c9d1ac5a1fa59eb316b-d1a4po2"><img src="b88b67364d702c9d1ac5a1fa59eb316b-d1a4po2.jpg" alt="b88b67364d702c9d1ac5a1fa59eb316b-d1a4po2" loading="lazy"></a>
+<a href="b986e53ccc28cfdfaa19b3460eb39cce.jpg" data-full="b986e53ccc28cfdfaa19b3460eb39cce.jpg" title="b986e53ccc28cfdfaa19b3460eb39cce"><img src="b986e53ccc28cfdfaa19b3460eb39cce.jpg" alt="b986e53ccc28cfdfaa19b3460eb39cce" loading="lazy"></a>
+<a href="b9ac9b70eac12caec150a5254fee0787.jpg" data-full="b9ac9b70eac12caec150a5254fee0787.jpg" title="b9ac9b70eac12caec150a5254fee0787"><img src="b9ac9b70eac12caec150a5254fee0787.jpg" alt="b9ac9b70eac12caec150a5254fee0787" loading="lazy"></a>
+<a href="Batman__Avenging_Angel.jpg" data-full="Batman__Avenging_Angel.jpg" title="Batman__Avenging_Angel"><img src="Batman__Avenging_Angel.jpg" alt="Batman__Avenging_Angel" loading="lazy"></a>
+<a href="Bioshock.jpg" data-full="Bioshock.jpg" title="Bioshock"><img src="Bioshock.jpg" alt="Bioshock" loading="lazy"></a>
+<a href="Bitch_Out_Of_Hell___08.jpg" data-full="Bitch_Out_Of_Hell___08.jpg" title="Bitch_Out_Of_Hell___08"><img src="Bitch_Out_Of_Hell___08.jpg" alt="Bitch_Out_Of_Hell___08" loading="lazy"></a>
+<a href="Bonnie_And_Bonny_09.jpg" data-full="Bonnie_And_Bonny_09.jpg" title="Bonnie_And_Bonny_09"><img src="Bonnie_And_Bonny_09.jpg" alt="Bonnie_And_Bonny_09" loading="lazy"></a>
+<a href="c3600cb17a79e7965fcecfe95a98cb2b-d2yrjb4.jpg" data-full="c3600cb17a79e7965fcecfe95a98cb2b-d2yrjb4.jpg" title="c3600cb17a79e7965fcecfe95a98cb2b-d2yrjb4"><img src="c3600cb17a79e7965fcecfe95a98cb2b-d2yrjb4.jpg" alt="c3600cb17a79e7965fcecfe95a98cb2b-d2yrjb4" loading="lazy"></a>
+<a href="c78345398b956cb7ec59f1494cf35690.jpg" data-full="c78345398b956cb7ec59f1494cf35690.jpg" title="c78345398b956cb7ec59f1494cf35690"><img src="c78345398b956cb7ec59f1494cf35690.jpg" alt="c78345398b956cb7ec59f1494cf35690" loading="lazy"></a>
+<a href="c9425583975f630d7a2970b40f685c2b.jpg" data-full="c9425583975f630d7a2970b40f685c2b.jpg" title="c9425583975f630d7a2970b40f685c2b"><img src="c9425583975f630d7a2970b40f685c2b.jpg" alt="c9425583975f630d7a2970b40f685c2b" loading="lazy"></a>
+<a href="Captain_Hook_Colouring_page.jpg" data-full="Captain_Hook_Colouring_page.jpg" title="Captain_Hook_Colouring_page"><img src="Captain_Hook_Colouring_page.jpg" alt="Captain_Hook_Colouring_page" loading="lazy"></a>
+<a href="Catwoman.jpg" data-full="Catwoman.jpg" title="Catwoman"><img src="Catwoman.jpg" alt="Catwoman" loading="lazy"></a>
+<a href="d2e1e8530a982099e3a793c34ae5e741.jpg" data-full="d2e1e8530a982099e3a793c34ae5e741.jpg" title="d2e1e8530a982099e3a793c34ae5e741"><img src="d2e1e8530a982099e3a793c34ae5e741.jpg" alt="d2e1e8530a982099e3a793c34ae5e741" loading="lazy"></a>
+<a href="d625f24f6c2db7dcd03847f3fd7cf675.jpg" data-full="d625f24f6c2db7dcd03847f3fd7cf675.jpg" title="d625f24f6c2db7dcd03847f3fd7cf675"><img src="d625f24f6c2db7dcd03847f3fd7cf675.jpg" alt="d625f24f6c2db7dcd03847f3fd7cf675" loading="lazy"></a>
+<a href="d715067224df934b51250018cd185fd6.jpg" data-full="d715067224df934b51250018cd185fd6.jpg" title="d715067224df934b51250018cd185fd6"><img src="d715067224df934b51250018cd185fd6.jpg" alt="d715067224df934b51250018cd185fd6" loading="lazy"></a>
+<a href="Demon_Days_II.jpg" data-full="Demon_Days_II.jpg" title="Demon_Days_II"><img src="Demon_Days_II.jpg" alt="Demon_Days_II" loading="lazy"></a>
+</section><nav class="pager" aria-label="Pagination">
+<span class="current">1</span>
+<a href="page-2.html">2</a>
+<a href="page-2.html">Suiv &raquo;</a>
+</nav>
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
+  <img alt="">
+  <span class="hint">Clic ou Échap pour fermer</span>
+</div>
+<script>
+(function(){
+  // Theme toggle
+  const root = document.documentElement;
+  const saved = localStorage.getItem('wp-theme');
+  if(saved) root.setAttribute('data-theme', saved);
+  const btn = document.getElementById('themeToggle');
+  function syncLabel(){ if(!btn) return;
+    btn.textContent = root.getAttribute('data-theme')==='light' ? 'Sombre' : 'Clair';
+  }
+  syncLabel();
+  if(btn) btn.addEventListener('click', () => {
+    const cur = root.getAttribute('data-theme')==='light' ? 'dark':'light';
+    root.setAttribute('data-theme', cur);
+    localStorage.setItem('wp-theme', cur);
+    syncLabel();
+  });
+  // Lightbox
+  const lb = document.getElementById('lightbox');
+  if(lb){
+    const lbImg = lb.querySelector('img');
+    document.querySelectorAll('.gallery a[data-full]').forEach(a => {
+      a.addEventListener('click', e => {
+        e.preventDefault();
+        lbImg.src = a.getAttribute('data-full');
+        lb.classList.add('active');
+        document.body.style.overflow='hidden';
+      });
+    });
+    function close(){
+      lb.classList.remove('active'); lbImg.src=''; document.body.style.overflow='';
+    }
+    lb.addEventListener('click', close);
+    document.addEventListener('keydown', e => { if(e.key==='Escape') close(); });
+  }
+})();
+</script>
+</body>
+</html>

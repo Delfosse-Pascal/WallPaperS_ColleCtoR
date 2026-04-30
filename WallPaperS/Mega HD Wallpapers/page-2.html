@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mega HD Wallpapers — page 2/5 — WallPaperS</title>
+<link rel="canonical" href="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/">
+<link rel="icon" href="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/Site_Web/favicondepascal.png" type="image/png">
+<link rel="icon" href="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/Site_Web/favicondepascal.ico" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/Site_Web/style.css">
+<script src="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/Site_Web/script.js"></script>
+<script src="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/Site_Web/menu.js" defer></script>
+<link rel="stylesheet" href="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/Site_Web/basedusite.css">
+<script src="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/Site_Web/couleurs.js"></script>
+<style>
+:root {
+  --bg: linear-gradient(135deg,#001f3f,#003366,#005c99);
+  --fg: #f5f5f5;
+  --card-bg: rgba(255,255,255,0.05);
+  --card-border: rgba(255,255,255,0.12);
+  --accent: #00b4d8;
+  --accent2: #90e0ef;
+  --shadow: 0 10px 30px rgba(0,0,0,.5);
+}
+:root[data-theme="light"] {
+  --bg: linear-gradient(135deg,#cfe9ff,#e6f7ff);
+  --fg: #1a1a1a;
+  --card-bg: rgba(255,255,255,0.55);
+  --card-border: rgba(0,0,0,0.08);
+  --shadow: 0 10px 30px rgba(0,0,0,.15);
+}
+* { box-sizing: border-box; }
+html, body { margin:0; padding:0; min-height:100vh; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: var(--fg);
+  background: var(--bg);
+  background-size: 400% 400%;
+  animation: bgShift 22s ease infinite;
+  overflow-x: hidden;
+}
+@keyframes bgShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.topbar {
+  position: sticky; top:0; z-index:50;
+  display: flex; gap:.6rem; padding:.7rem 1rem;
+  backdrop-filter: blur(10px);
+  background: rgba(0,0,0,.25);
+  border-bottom: 1px solid var(--card-border);
+}
+:root[data-theme="light"] .topbar { background: rgba(255,255,255,.45); }
+.btn {
+  border: 1px solid var(--card-border);
+  background: var(--card-bg);
+  color: var(--fg);
+  padding: .5rem .9rem;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: .9rem;
+  text-decoration: none;
+  transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+}
+.btn:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(0,0,0,.3); background: var(--accent); color:#000; }
+.title {
+  font-size: clamp(1.6rem, 4vw, 3rem);
+  text-align: center;
+  margin: 1.5rem 1rem .3rem;
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  letter-spacing: .03em;
+}
+.subtitle { text-align:center; opacity:.8; margin: 0 1rem 1.2rem; }
+.gallery {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  padding: 1rem;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+.gallery a {
+  display:block; position:relative;
+  border-radius: 14px; overflow: hidden;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  box-shadow: var(--shadow);
+  cursor: zoom-in;
+  transition: transform .35s cubic-bezier(.2,.7,.2,1.2), box-shadow .3s;
+  animation: tileIn .6s ease both;
+}
+.gallery a:nth-child(odd) { animation-delay: .05s; }
+.gallery a:nth-child(even) { animation-delay: .15s; }
+.gallery a:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 18px 50px rgba(0,0,0,.55), 0 0 0 2px var(--accent);
+}
+.gallery img {
+  width: 100%; height: 220px; object-fit: cover; display:block;
+  transition: transform .6s ease;
+}
+.gallery a:hover img { transform: scale(1.08); }
+@keyframes tileIn {
+  from { opacity:0; transform: translateY(20px) scale(.98); }
+  to   { opacity:1; transform: none; }
+}
+
+.folders {
+  display: grid; gap: 18px;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  padding: 1rem; max-width: 1600px; margin: 0 auto;
+}
+.folder-card {
+  display:flex; flex-direction: column; justify-content: space-between;
+  padding: 1rem 1.2rem; min-height: 140px;
+  border-radius: 18px;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  box-shadow: var(--shadow);
+  text-decoration: none; color: var(--fg);
+  position: relative; overflow: hidden;
+  transition: transform .3s, box-shadow .3s;
+  animation: cardIn .7s ease both;
+}
+.folder-card::before {
+  content:""; position:absolute; inset:-2px;
+  background: linear-gradient(120deg, var(--accent), transparent 40%, var(--accent2));
+  opacity:.0; transition: opacity .4s; z-index:0;
+}
+.folder-card:hover::before { opacity:.25; }
+.folder-card:hover { transform: translateY(-5px) rotate(-.4deg); box-shadow: 0 16px 40px rgba(0,0,0,.45); }
+.folder-card > * { position: relative; z-index:1; }
+.folder-name { font-weight: 700; font-size: 1.15rem; }
+.folder-meta { opacity:.75; font-size:.85rem; margin-top: .4rem; }
+@keyframes cardIn {
+  from { opacity:0; transform: translateY(28px); }
+  to   { opacity:1; transform: none; }
+}
+
+.pager {
+  display:flex; justify-content:center; gap:.4rem; flex-wrap:wrap;
+  padding: 1.5rem 1rem 3rem;
+}
+.pager a, .pager span {
+  padding: .45rem .8rem; border-radius: 8px;
+  border: 1px solid var(--card-border);
+  background: var(--card-bg); color: var(--fg);
+  text-decoration: none; font-size: .9rem;
+}
+.pager .current { background: var(--accent); color:#000; border-color: var(--accent); }
+
+/* lightbox */
+.lightbox {
+  position: fixed; inset:0; background: rgba(0,0,0,.92);
+  display:none; align-items:center; justify-content:center; z-index:1000;
+  padding:2rem; cursor: zoom-out;
+  animation: fadeIn .25s ease;
+}
+.lightbox.active { display:flex; }
+.lightbox img {
+  max-width: 96vw; max-height: 92vh; object-fit: contain;
+  border-radius: 8px; box-shadow: 0 0 60px rgba(0,0,0,.8);
+  animation: zoomIn .3s ease;
+}
+.lightbox .hint { position:absolute; bottom:1rem; left:50%; transform:translateX(-50%);
+  color:#fff; opacity:.7; font-size:.85rem; }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes zoomIn { from { opacity:0; transform: scale(.9); } to { opacity:1; transform:none; } }
+
+/* Theme-specific decorative animations */
+.deco { position: fixed; inset:0; pointer-events:none; z-index:0; }
+.deco span { position:absolute; border-radius:50%; filter: blur(40px); opacity:.45; }
+</style>
+</head>
+<body>
+<nav class="social-menu">
+    <ul>
+      <li><a href="https://fr.pinterest.com/pascal509/mes-tableaux-tous-genre/" target="_blank" rel="noopener">Pinterest</a></li>
+      <li><a href="https://www.flickr.com/photos/delfossepascal" target="_blank" rel="noopener">Flickr</a></li>
+      <li><a href="https://www.tumblr.com/lestoilesdepascal" target="_blank" rel="noopener">Tumblr</a></li>
+      <li><a href="https://x.com/PascalDelfossee" target="_blank" rel="noopener">X</a></li>
+      <li><a href="https://www.youtube.com/c/DelfossePascal" target="_blank" rel="noopener">YouTube</a></li>
+    </ul>
+  </nav>
+<header></header>
+<div class="deco" aria-hidden="true">
+<span style="width:380px;height:380px;background:#00b4d8;top:-100px;left:-80px;animation:waveA 18s ease-in-out infinite alternate"></span>
+<span style="width:480px;height:480px;background:#90e0ef;bottom:-160px;right:-100px;animation:waveB 22s ease-in-out infinite alternate"></span>
+<span style="width:260px;height:260px;background:#00b4d8;top:40%;left:50%;animation:waveC 26s ease-in-out infinite alternate"></span>
+</div>
+<style>
+@keyframes waveA { from { transform: translate(0,0) scale(1); } to { transform: translate(140px,80px) scale(1.25); } }
+@keyframes waveB { from { transform: translate(0,0) scale(1); } to { transform: translate(-160px,-90px) scale(1.15); } }
+@keyframes waveC { from { transform: translate(-50%,-50%) scale(.8); } to { transform: translate(-30%,-70%) scale(1.3); } }
+</style>
+<div class="topbar">
+  <a class="btn" href="../../index.html" title="Accueil">Accueil</a>
+  <a class="btn" href="../index.html" title="Dossier parent">Parent</a>
+  <span style="flex:1"></span>
+  <button class="btn" id="themeToggle" type="button">Clair</button>
+</div>
+<h1 class="title">Mega HD Wallpapers — page 2/5</h1>
+<p class="subtitle">Thème : Ocean</p>
+<section class="gallery">
+<a href="Mega%20HD%20Wallpapers%20%28152%29.jpg" data-full="Mega%20HD%20Wallpapers%20%28152%29.jpg" title="Mega HD Wallpapers (152)"><img src="Mega%20HD%20Wallpapers%20%28152%29.jpg" alt="Mega HD Wallpapers (152)" loading="lazy"></a>
+<a href="Mega%20HD%20Wallpapers%20%28153%29.jpg" data-full="Mega%20HD%20Wallpapers%20%28153%29.jpg" title="Mega HD Wallpapers (153)"><img src="Mega%20HD%20Wallpapers%20%28153%29.jpg" alt="Mega HD Wallpapers (153)" loading="lazy"></a>
+<a href="Mega%20HD%20Wallpapers%20%28154%29.jpg" data-full="Mega%20HD%20Wallpapers%20%28154%29.jpg" title="Mega HD Wallpapers (154)"><img src="Mega%20HD%20Wallpapers%20%28154%29.jpg" alt="Mega HD Wallpapers (154)" loading="lazy"></a>
+<a href="Mega%20HD%20Wallpapers%20%28155%29.jpg" data-full="Mega%20HD%20Wallpapers%20%28155%29.jpg" title="Mega HD Wallpapers (155)"><img src="Mega%20HD%20Wallpapers%20%28155%29.jpg" alt="Mega HD Wallpapers (155)" loading="lazy"></a>
+<a href="Mega%20HD%20Wallpapers%20%28156%29.jpg" data-full="Mega%20HD%20Wallpapers%20%28156%29.jpg" title="Mega HD Wallpapers (156)"><img src="Mega%20HD%20Wallpapers%20%28156%29.jpg" alt="Mega HD Wallpapers (156)" loading="lazy"></a>
+<a href="Mega%20HD%20Wallpapers%20%28157%29.jpg" data-full="Mega%20HD%20Wallpapers%20%28157%29.jpg" title="Mega HD Wallpapers (157)"><img src="Mega%20HD%20Wallpapers%20%28157%29.jpg" alt="Mega HD Wallpapers (157)" loading="lazy"></a>
+<a href="Mega%20HD%20Wallpapers%20%28158%29.jpg" data-full="Mega%20HD%20Wallpapers%20%28158%29.jpg" title="Mega HD Wallpapers (158)"><img src="Mega%20HD%20Wallpapers%20%28158%29.jpg" alt="Mega HD Wallpapers (158)" loading="lazy"></a>
+<a href="Mega%20HD%20Wallpapers%20%28159%29.jpg" data-full="Mega%20HD%20Wallpapers%20%28159%29.jpg" title="Mega HD Wallpapers (159)"><img src="Mega%20HD%20Wallpapers%20%28159%29.jpg" alt="Mega HD Wallpapers (159)" loading="lazy"></a>
+<a href="Mega%20HD%20Wallpapers%20%2816%29.jpg" data-full="Mega%20HD%20Wallpapers%20%2816%29.jpg" title="Mega HD Wallpapers (16)"><img src="Mega%20HD%20Wallpapers%20%2816%29.jpg" alt="Mega HD Wallpapers (16)" loading="lazy"></a>
+<a href="Mega%20HD%20Wallpapers%20%28160%29.jpg" data-full="Mega%20HD%20Wallpapers%20%28160%29.jpg" title="Mega HD Wallpapers (160)"><img src="Mega%20HD%20Wallpapers%20%28160%29.jpg" alt="Mega HD Wallpapers (160)" loading="lazy"></a>
+<a href="Mega%20HD%20Wallpapers%20%28161%29.jpg" data-full="Mega%20HD%20Wallpapers%20%28161%29.jpg" title="Mega HD Wallpapers (161)"><img src="Mega%20HD%20Wallpapers%20%28161%29.jpg" alt="Mega HD Wallpapers (161)" loading="lazy"></a>
+<a href="Mega%20HD%20Wallpapers%20%28162%29.jpg" data-full="Mega%20HD%20Wallpapers%20%28162%29.jpg" title="Mega HD Wallpapers (162)"><img src="Mega%20HD%20Wallpapers%20%28162%29.jpg" alt="Mega HD Wallpapers (162)" loading="lazy"></a>
+<a href="Mega%20HD%20Wallpapers%20%28163%29.jpg" data-full="Mega%20HD%20Wallpapers%20%28163%29.jpg" title="Mega HD Wallpapers (163)"><img src="Mega%20HD%20Wallpapers%20%28163%29.jpg" alt="Mega HD Wallpapers (163)" loading="lazy"></a>
+<a href="Mega%20HD%20Wallpapers%20%28164%29.jpg" data-full="Mega%20HD%20Wallpapers%20%28164%29.jpg" title="Mega HD Wallpapers (164)"><img src="Mega%20HD%20Wallpapers%20%28164%29.jpg" alt="Mega HD Wallpapers (164)" loading="lazy"></a>
+<a href="Mega%20HD%20Wallpapers%20%28165%29.jpg" data-full="Mega%20HD%20Wallpapers%20%28165%29.jpg" title="Mega HD Wallpapers (165)"><img src="Mega%20HD%20Wallpapers%20%28165%29.jpg" alt="Mega HD Wallpapers (165)" loading="lazy"></a>
+<a href="Mega%20HD%20Wallpapers%20%28166%29.jpg" data-full="Mega%20HD%20Wallpapers%20%28166%29.jpg" title="Mega HD Wallpapers (166)"><img src="Mega%20HD%20Wallpapers%20%28166%29.jpg" alt="Mega HD Wallpapers (166)" loading="lazy"></a>
+<a href="Mega%20HD%20Wallpapers%20%28167%29.jpg" data-full="Mega%20HD%20Wallpapers%20%28167%29.jpg" title="Mega HD Wallpapers (167)"><img src="Mega%20HD%20Wallpapers%20%28167%29.jpg" alt="Mega HD Wallpapers (167)" loading="lazy"></a>
+<a href="Mega%20HD%20Wallpapers%20%28168%29.jpg" data-full="Mega%20HD%20Wallpapers%20%28168%29.jpg" title="Mega HD Wallpapers (168)"><img src="Mega%20HD%20Wallpapers%20%28168%29.jpg" alt="Mega HD Wallpapers (168)" loading="lazy"></a>
+<a href="Mega%20HD%20Wallpapers%20%28169%29.jpg" data-full="Mega%20HD%20Wallpapers%20%28169%29.jpg" title="Mega HD Wallpapers (169)"><img src="Mega%20HD%20Wallpapers%20%28169%29.jpg" alt="Mega HD Wallpapers (169)" loading="lazy"></a>
+<a href="Mega%20HD%20Wallpapers%20%2817%29.jpg" data-full="Mega%20HD%20Wallpapers%20%2817%29.jpg" title="Mega HD Wallpapers (17)"><img src="Mega%20HD%20Wallpapers%20%2817%29.jpg" alt="Mega HD Wallpapers (17)" loading="lazy"></a>
+<a href="Mega%20HD%20Wallpapers%20%28170%29.jpg" data-full="Mega%20HD%20Wallpapers%20%28170%29.jpg" title="Mega HD Wallpapers (170)"><img src="Mega%20HD%20Wallpapers%20%28170%29.jpg" alt="Mega HD Wallpapers (170)" loading="lazy"></a>
+<a href="Mega%20HD%20Wallpapers%20%28171%29.jpg" data-full="Mega%20HD%20Wallpapers%20%28171%29.jpg" title="Mega HD Wallpapers (171)"><img src="Mega%20HD%20Wallpapers%20%28171%29.jpg" alt="Mega HD Wallpapers (171)" loading="lazy"></a>
+<a href="Mega%20HD%20Wallpapers%20%28172%29.jpg" data-full="Mega%20HD%20Wallpapers%20%28172%29.jpg" title="Mega HD Wallpapers (172)"><img src="Mega%20HD%20Wallpapers%20%28172%29.jpg" alt="Mega HD Wallpapers (172)" loading="lazy"></a>
+<a href="Mega%20HD%20Wallpapers%20%28173%29.jpg" data-full="Mega%20HD%20Wallpapers%20%28173%29.jpg" title="Mega HD Wallpapers (173)"><img src="Mega%20HD%20Wallpapers%20%28173%29.jpg" alt="Mega HD Wallpapers (173)" loading="lazy"></a>
+<a href="Mega%20HD%20Wallpapers%20%28174%29.jpg" data-full="Mega%20HD%20Wallpapers%20%28174%29.jpg" title="Mega HD Wallpapers (174)"><img src="Mega%20HD%20Wallpapers%20%28174%29.jpg" alt="Mega HD Wallpapers (174)" loading="lazy"></a>
+<a href="Mega%20HD%20Wallpapers%20%28175%29.jpg" data-full="Mega%20HD%20Wallpapers%20%28175%29.jpg" title="Mega HD Wallpapers (175)"><img src="Mega%20HD%20Wallpapers%20%28175%29.jpg" alt="Mega HD Wallpapers (175)" loading="lazy"></a>
+<a href="Mega%20HD%20Wallpapers%20%28176%29.jpg" data-full="Mega%20HD%20Wallpapers%20%28176%29.jpg" title="Mega HD Wallpapers (176)"><img src="Mega%20HD%20Wallpapers%20%28176%29.jpg" alt="Mega HD Wallpapers (176)" loading="lazy"></a>
+<a href="Mega%20HD%20Wallpapers%20%28177%29.jpg" data-full="Mega%20HD%20Wallpapers%20%28177%29.jpg" title="Mega HD Wallpapers (177)"><img src="Mega%20HD%20Wallpapers%20%28177%29.jpg" alt="Mega HD Wallpapers (177)" loading="lazy"></a>
+<a href="Mega%20HD%20Wallpapers%20%28178%29.jpg" data-full="Mega%20HD%20Wallpapers%20%28178%29.jpg" title="Mega HD Wallpapers (178)"><img src="Mega%20HD%20Wallpapers%20%28178%29.jpg" alt="Mega HD Wallpapers (178)" loading="lazy"></a>
+<a href="Mega%20HD%20Wallpapers%20%28179%29.jpg" data-full="Mega%20HD%20Wallpapers%20%28179%29.jpg" title="Mega HD Wallpapers (179)"><img src="Mega%20HD%20Wallpapers%20%28179%29.jpg" alt="Mega HD Wallpapers (179)" loading="lazy"></a>
+<a href="Mega%20HD%20Wallpapers%20%2818%29.jpg" data-full="Mega%20HD%20Wallpapers%20%2818%29.jpg" title="Mega HD Wallpapers (18)"><img src="Mega%20HD%20Wallpapers%20%2818%29.jpg" alt="Mega HD Wallpapers (18)" loading="lazy"></a>
+<a href="Mega%20HD%20Wallpapers%20%28180%29.jpg" data-full="Mega%20HD%20Wallpapers%20%28180%29.jpg" title="Mega HD Wallpapers (180)"><img src="Mega%20HD%20Wallpapers%20%28180%29.jpg" alt="Mega HD Wallpapers (180)" loading="lazy"></a>
+<a href="Mega%20HD%20Wallpapers%20%28181%29.jpg" data-full="Mega%20HD%20Wallpapers%20%28181%29.jpg" title="Mega HD Wallpapers (181)"><img src="Mega%20HD%20Wallpapers%20%28181%29.jpg" alt="Mega HD Wallpapers (181)" loading="lazy"></a>
+<a href="Mega%20HD%20Wallpapers%20%28182%29.jpg" data-full="Mega%20HD%20Wallpapers%20%28182%29.jpg" title="Mega HD Wallpapers (182)"><img src="Mega%20HD%20Wallpapers%20%28182%29.jpg" alt="Mega HD Wallpapers (182)" loading="lazy"></a>
+<a href="Mega%20HD%20Wallpapers%20%28183%29.jpg" data-full="Mega%20HD%20Wallpapers%20%28183%29.jpg" title="Mega HD Wallpapers (183)"><img src="Mega%20HD%20Wallpapers%20%28183%29.jpg" alt="Mega HD Wallpapers (183)" loading="lazy"></a>
+<a href="Mega%20HD%20Wallpapers%20%28184%29.jpg" data-full="Mega%20HD%20Wallpapers%20%28184%29.jpg" title="Mega HD Wallpapers (184)"><img src="Mega%20HD%20Wallpapers%20%28184%29.jpg" alt="Mega HD Wallpapers (184)" loading="lazy"></a>
+<a href="Mega%20HD%20Wallpapers%20%28185%29.jpg" data-full="Mega%20HD%20Wallpapers%20%28185%29.jpg" title="Mega HD Wallpapers (185)"><img src="Mega%20HD%20Wallpapers%20%28185%29.jpg" alt="Mega HD Wallpapers (185)" loading="lazy"></a>
+<a href="Mega%20HD%20Wallpapers%20%28186%29.jpg" data-full="Mega%20HD%20Wallpapers%20%28186%29.jpg" title="Mega HD Wallpapers (186)"><img src="Mega%20HD%20Wallpapers%20%28186%29.jpg" alt="Mega HD Wallpapers (186)" loading="lazy"></a>
+<a href="Mega%20HD%20Wallpapers%20%28187%29.jpg" data-full="Mega%20HD%20Wallpapers%20%28187%29.jpg" title="Mega HD Wallpapers (187)"><img src="Mega%20HD%20Wallpapers%20%28187%29.jpg" alt="Mega HD Wallpapers (187)" loading="lazy"></a>
+<a href="Mega%20HD%20Wallpapers%20%28188%29.jpg" data-full="Mega%20HD%20Wallpapers%20%28188%29.jpg" title="Mega HD Wallpapers (188)"><img src="Mega%20HD%20Wallpapers%20%28188%29.jpg" alt="Mega HD Wallpapers (188)" loading="lazy"></a>
+<a href="Mega%20HD%20Wallpapers%20%28189%29.jpg" data-full="Mega%20HD%20Wallpapers%20%28189%29.jpg" title="Mega HD Wallpapers (189)"><img src="Mega%20HD%20Wallpapers%20%28189%29.jpg" alt="Mega HD Wallpapers (189)" loading="lazy"></a>
+<a href="Mega%20HD%20Wallpapers%20%2819%29.jpg" data-full="Mega%20HD%20Wallpapers%20%2819%29.jpg" title="Mega HD Wallpapers (19)"><img src="Mega%20HD%20Wallpapers%20%2819%29.jpg" alt="Mega HD Wallpapers (19)" loading="lazy"></a>
+<a href="Mega%20HD%20Wallpapers%20%28190%29.jpg" data-full="Mega%20HD%20Wallpapers%20%28190%29.jpg" title="Mega HD Wallpapers (190)"><img src="Mega%20HD%20Wallpapers%20%28190%29.jpg" alt="Mega HD Wallpapers (190)" loading="lazy"></a>
+<a href="Mega%20HD%20Wallpapers%20%28191%29.jpg" data-full="Mega%20HD%20Wallpapers%20%28191%29.jpg" title="Mega HD Wallpapers (191)"><img src="Mega%20HD%20Wallpapers%20%28191%29.jpg" alt="Mega HD Wallpapers (191)" loading="lazy"></a>
+<a href="Mega%20HD%20Wallpapers%20%28192%29.jpg" data-full="Mega%20HD%20Wallpapers%20%28192%29.jpg" title="Mega HD Wallpapers (192)"><img src="Mega%20HD%20Wallpapers%20%28192%29.jpg" alt="Mega HD Wallpapers (192)" loading="lazy"></a>
+<a href="Mega%20HD%20Wallpapers%20%28193%29.jpg" data-full="Mega%20HD%20Wallpapers%20%28193%29.jpg" title="Mega HD Wallpapers (193)"><img src="Mega%20HD%20Wallpapers%20%28193%29.jpg" alt="Mega HD Wallpapers (193)" loading="lazy"></a>
+<a href="Mega%20HD%20Wallpapers%20%28194%29.jpg" data-full="Mega%20HD%20Wallpapers%20%28194%29.jpg" title="Mega HD Wallpapers (194)"><img src="Mega%20HD%20Wallpapers%20%28194%29.jpg" alt="Mega HD Wallpapers (194)" loading="lazy"></a>
+<a href="Mega%20HD%20Wallpapers%20%28195%29.jpg" data-full="Mega%20HD%20Wallpapers%20%28195%29.jpg" title="Mega HD Wallpapers (195)"><img src="Mega%20HD%20Wallpapers%20%28195%29.jpg" alt="Mega HD Wallpapers (195)" loading="lazy"></a>
+<a href="Mega%20HD%20Wallpapers%20%28196%29.jpg" data-full="Mega%20HD%20Wallpapers%20%28196%29.jpg" title="Mega HD Wallpapers (196)"><img src="Mega%20HD%20Wallpapers%20%28196%29.jpg" alt="Mega HD Wallpapers (196)" loading="lazy"></a>
+<a href="Mega%20HD%20Wallpapers%20%28197%29.jpg" data-full="Mega%20HD%20Wallpapers%20%28197%29.jpg" title="Mega HD Wallpapers (197)"><img src="Mega%20HD%20Wallpapers%20%28197%29.jpg" alt="Mega HD Wallpapers (197)" loading="lazy"></a>
+<a href="Mega%20HD%20Wallpapers%20%28198%29.jpg" data-full="Mega%20HD%20Wallpapers%20%28198%29.jpg" title="Mega HD Wallpapers (198)"><img src="Mega%20HD%20Wallpapers%20%28198%29.jpg" alt="Mega HD Wallpapers (198)" loading="lazy"></a>
+<a href="Mega%20HD%20Wallpapers%20%28199%29.jpg" data-full="Mega%20HD%20Wallpapers%20%28199%29.jpg" title="Mega HD Wallpapers (199)"><img src="Mega%20HD%20Wallpapers%20%28199%29.jpg" alt="Mega HD Wallpapers (199)" loading="lazy"></a>
+<a href="Mega%20HD%20Wallpapers%20%282%29.jpg" data-full="Mega%20HD%20Wallpapers%20%282%29.jpg" title="Mega HD Wallpapers (2)"><img src="Mega%20HD%20Wallpapers%20%282%29.jpg" alt="Mega HD Wallpapers (2)" loading="lazy"></a>
+<a href="Mega%20HD%20Wallpapers%20%282%29.png" data-full="Mega%20HD%20Wallpapers%20%282%29.png" title="Mega HD Wallpapers (2)"><img src="Mega%20HD%20Wallpapers%20%282%29.png" alt="Mega HD Wallpapers (2)" loading="lazy"></a>
+<a href="Mega%20HD%20Wallpapers%20%2820%29.jpg" data-full="Mega%20HD%20Wallpapers%20%2820%29.jpg" title="Mega HD Wallpapers (20)"><img src="Mega%20HD%20Wallpapers%20%2820%29.jpg" alt="Mega HD Wallpapers (20)" loading="lazy"></a>
+<a href="Mega%20HD%20Wallpapers%20%28200%29.jpg" data-full="Mega%20HD%20Wallpapers%20%28200%29.jpg" title="Mega HD Wallpapers (200)"><img src="Mega%20HD%20Wallpapers%20%28200%29.jpg" alt="Mega HD Wallpapers (200)" loading="lazy"></a>
+<a href="Mega%20HD%20Wallpapers%20%28201%29.jpg" data-full="Mega%20HD%20Wallpapers%20%28201%29.jpg" title="Mega HD Wallpapers (201)"><img src="Mega%20HD%20Wallpapers%20%28201%29.jpg" alt="Mega HD Wallpapers (201)" loading="lazy"></a>
+<a href="Mega%20HD%20Wallpapers%20%28202%29.jpg" data-full="Mega%20HD%20Wallpapers%20%28202%29.jpg" title="Mega HD Wallpapers (202)"><img src="Mega%20HD%20Wallpapers%20%28202%29.jpg" alt="Mega HD Wallpapers (202)" loading="lazy"></a>
+<a href="Mega%20HD%20Wallpapers%20%28203%29.jpg" data-full="Mega%20HD%20Wallpapers%20%28203%29.jpg" title="Mega HD Wallpapers (203)"><img src="Mega%20HD%20Wallpapers%20%28203%29.jpg" alt="Mega HD Wallpapers (203)" loading="lazy"></a>
+<a href="Mega%20HD%20Wallpapers%20%28204%29.jpg" data-full="Mega%20HD%20Wallpapers%20%28204%29.jpg" title="Mega HD Wallpapers (204)"><img src="Mega%20HD%20Wallpapers%20%28204%29.jpg" alt="Mega HD Wallpapers (204)" loading="lazy"></a>
+</section><nav class="pager" aria-label="Pagination">
+<a href="index.html">&laquo; Préc</a>
+<a href="index.html">1</a>
+<span class="current">2</span>
+<a href="page-3.html">3</a>
+<a href="page-4.html">4</a>
+<a href="page-5.html">5</a>
+<a href="page-3.html">Suiv &raquo;</a>
+</nav>
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
+  <img alt="">
+  <span class="hint">Clic ou Échap pour fermer</span>
+</div>
+<script>
+(function(){
+  // Theme toggle
+  const root = document.documentElement;
+  const saved = localStorage.getItem('wp-theme');
+  if(saved) root.setAttribute('data-theme', saved);
+  const btn = document.getElementById('themeToggle');
+  function syncLabel(){ if(!btn) return;
+    btn.textContent = root.getAttribute('data-theme')==='light' ? 'Sombre' : 'Clair';
+  }
+  syncLabel();
+  if(btn) btn.addEventListener('click', () => {
+    const cur = root.getAttribute('data-theme')==='light' ? 'dark':'light';
+    root.setAttribute('data-theme', cur);
+    localStorage.setItem('wp-theme', cur);
+    syncLabel();
+  });
+  // Lightbox
+  const lb = document.getElementById('lightbox');
+  if(lb){
+    const lbImg = lb.querySelector('img');
+    document.querySelectorAll('.gallery a[data-full]').forEach(a => {
+      a.addEventListener('click', e => {
+        e.preventDefault();
+        lbImg.src = a.getAttribute('data-full');
+        lb.classList.add('active');
+        document.body.style.overflow='hidden';
+      });
+    });
+    function close(){
+      lb.classList.remove('active'); lbImg.src=''; document.body.style.overflow='';
+    }
+    lb.addEventListener('click', close);
+    document.addEventListener('keydown', e => { if(e.key==='Escape') close(); });
+  }
+})();
+</script>
+</body>
+</html>

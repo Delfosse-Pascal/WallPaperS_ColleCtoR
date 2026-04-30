@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>maldives — WallPaperS</title>
+<link rel="canonical" href="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/">
+<link rel="icon" href="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/Site_Web/favicondepascal.png" type="image/png">
+<link rel="icon" href="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/Site_Web/favicondepascal.ico" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/Site_Web/style.css">
+<script src="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/Site_Web/script.js"></script>
+<script src="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/Site_Web/menu.js" defer></script>
+<link rel="stylesheet" href="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/Site_Web/basedusite.css">
+<script src="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/Site_Web/couleurs.js"></script>
+<style>
+:root {
+  --bg: linear-gradient(135deg,#1a0000,#440000,#8b0000);
+  --fg: #f5f5f5;
+  --card-bg: rgba(255,255,255,0.05);
+  --card-border: rgba(255,255,255,0.12);
+  --accent: #ff4500;
+  --accent2: #ffaa00;
+  --shadow: 0 10px 30px rgba(0,0,0,.5);
+}
+:root[data-theme="light"] {
+  --bg: linear-gradient(135deg,#ffd1cf,#ffe0c2);
+  --fg: #1a1a1a;
+  --card-bg: rgba(255,255,255,0.55);
+  --card-border: rgba(0,0,0,0.08);
+  --shadow: 0 10px 30px rgba(0,0,0,.15);
+}
+* { box-sizing: border-box; }
+html, body { margin:0; padding:0; min-height:100vh; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: var(--fg);
+  background: var(--bg);
+  background-size: 400% 400%;
+  animation: bgShift 22s ease infinite;
+  overflow-x: hidden;
+}
+@keyframes bgShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.topbar {
+  position: sticky; top:0; z-index:50;
+  display: flex; gap:.6rem; padding:.7rem 1rem;
+  backdrop-filter: blur(10px);
+  background: rgba(0,0,0,.25);
+  border-bottom: 1px solid var(--card-border);
+}
+:root[data-theme="light"] .topbar { background: rgba(255,255,255,.45); }
+.btn {
+  border: 1px solid var(--card-border);
+  background: var(--card-bg);
+  color: var(--fg);
+  padding: .5rem .9rem;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: .9rem;
+  text-decoration: none;
+  transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+}
+.btn:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(0,0,0,.3); background: var(--accent); color:#000; }
+.title {
+  font-size: clamp(1.6rem, 4vw, 3rem);
+  text-align: center;
+  margin: 1.5rem 1rem .3rem;
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  letter-spacing: .03em;
+}
+.subtitle { text-align:center; opacity:.8; margin: 0 1rem 1.2rem; }
+.gallery {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  padding: 1rem;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+.gallery a {
+  display:block; position:relative;
+  border-radius: 14px; overflow: hidden;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  box-shadow: var(--shadow);
+  cursor: zoom-in;
+  transition: transform .35s cubic-bezier(.2,.7,.2,1.2), box-shadow .3s;
+  animation: tileIn .6s ease both;
+}
+.gallery a:nth-child(odd) { animation-delay: .05s; }
+.gallery a:nth-child(even) { animation-delay: .15s; }
+.gallery a:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 18px 50px rgba(0,0,0,.55), 0 0 0 2px var(--accent);
+}
+.gallery img {
+  width: 100%; height: 220px; object-fit: cover; display:block;
+  transition: transform .6s ease;
+}
+.gallery a:hover img { transform: scale(1.08); }
+@keyframes tileIn {
+  from { opacity:0; transform: translateY(20px) scale(.98); }
+  to   { opacity:1; transform: none; }
+}
+
+.folders {
+  display: grid; gap: 18px;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  padding: 1rem; max-width: 1600px; margin: 0 auto;
+}
+.folder-card {
+  display:flex; flex-direction: column; justify-content: space-between;
+  padding: 1rem 1.2rem; min-height: 140px;
+  border-radius: 18px;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  box-shadow: var(--shadow);
+  text-decoration: none; color: var(--fg);
+  position: relative; overflow: hidden;
+  transition: transform .3s, box-shadow .3s;
+  animation: cardIn .7s ease both;
+}
+.folder-card::before {
+  content:""; position:absolute; inset:-2px;
+  background: linear-gradient(120deg, var(--accent), transparent 40%, var(--accent2));
+  opacity:.0; transition: opacity .4s; z-index:0;
+}
+.folder-card:hover::before { opacity:.25; }
+.folder-card:hover { transform: translateY(-5px) rotate(-.4deg); box-shadow: 0 16px 40px rgba(0,0,0,.45); }
+.folder-card > * { position: relative; z-index:1; }
+.folder-name { font-weight: 700; font-size: 1.15rem; }
+.folder-meta { opacity:.75; font-size:.85rem; margin-top: .4rem; }
+@keyframes cardIn {
+  from { opacity:0; transform: translateY(28px); }
+  to   { opacity:1; transform: none; }
+}
+
+.pager {
+  display:flex; justify-content:center; gap:.4rem; flex-wrap:wrap;
+  padding: 1.5rem 1rem 3rem;
+}
+.pager a, .pager span {
+  padding: .45rem .8rem; border-radius: 8px;
+  border: 1px solid var(--card-border);
+  background: var(--card-bg); color: var(--fg);
+  text-decoration: none; font-size: .9rem;
+}
+.pager .current { background: var(--accent); color:#000; border-color: var(--accent); }
+
+/* lightbox */
+.lightbox {
+  position: fixed; inset:0; background: rgba(0,0,0,.92);
+  display:none; align-items:center; justify-content:center; z-index:1000;
+  padding:2rem; cursor: zoom-out;
+  animation: fadeIn .25s ease;
+}
+.lightbox.active { display:flex; }
+.lightbox img {
+  max-width: 96vw; max-height: 92vh; object-fit: contain;
+  border-radius: 8px; box-shadow: 0 0 60px rgba(0,0,0,.8);
+  animation: zoomIn .3s ease;
+}
+.lightbox .hint { position:absolute; bottom:1rem; left:50%; transform:translateX(-50%);
+  color:#fff; opacity:.7; font-size:.85rem; }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes zoomIn { from { opacity:0; transform: scale(.9); } to { opacity:1; transform:none; } }
+
+/* Theme-specific decorative animations */
+.deco { position: fixed; inset:0; pointer-events:none; z-index:0; }
+.deco span { position:absolute; border-radius:50%; filter: blur(40px); opacity:.45; }
+</style>
+</head>
+<body>
+<nav class="social-menu">
+    <ul>
+      <li><a href="https://fr.pinterest.com/pascal509/mes-tableaux-tous-genre/" target="_blank" rel="noopener">Pinterest</a></li>
+      <li><a href="https://www.flickr.com/photos/delfossepascal" target="_blank" rel="noopener">Flickr</a></li>
+      <li><a href="https://www.tumblr.com/lestoilesdepascal" target="_blank" rel="noopener">Tumblr</a></li>
+      <li><a href="https://x.com/PascalDelfossee" target="_blank" rel="noopener">X</a></li>
+      <li><a href="https://www.youtube.com/c/DelfossePascal" target="_blank" rel="noopener">YouTube</a></li>
+    </ul>
+  </nav>
+<header></header>
+<div class="deco" aria-hidden="true">
+<span style="width:380px;height:380px;background:#ff4500;top:-100px;left:-80px;animation:emberA 18s ease-in-out infinite alternate"></span>
+<span style="width:480px;height:480px;background:#ffaa00;bottom:-160px;right:-100px;animation:emberB 22s ease-in-out infinite alternate"></span>
+<span style="width:260px;height:260px;background:#ff4500;top:40%;left:50%;animation:emberC 26s ease-in-out infinite alternate"></span>
+</div>
+<style>
+@keyframes emberA { from { transform: translate(0,0) scale(1); } to { transform: translate(140px,80px) scale(1.25); } }
+@keyframes emberB { from { transform: translate(0,0) scale(1); } to { transform: translate(-160px,-90px) scale(1.15); } }
+@keyframes emberC { from { transform: translate(-50%,-50%) scale(.8); } to { transform: translate(-30%,-70%) scale(1.3); } }
+</style>
+<div class="topbar">
+  <a class="btn" href="../../index.html" title="Accueil">Accueil</a>
+  <a class="btn" href="../index.html" title="Dossier parent">Parent</a>
+  <span style="flex:1"></span>
+  <button class="btn" id="themeToggle" type="button">Clair</button>
+</div>
+<h1 class="title">maldives</h1>
+<p class="subtitle">Thème : Lava</p>
+<section class="gallery">
+<a href="DSC_0107_Medium.jpg" data-full="DSC_0107_Medium.jpg" title="DSC_0107_Medium"><img src="DSC_0107_Medium.jpg" alt="DSC_0107_Medium" loading="lazy"></a>
+<a href="DSC_0111_Medium.jpg" data-full="DSC_0111_Medium.jpg" title="DSC_0111_Medium"><img src="DSC_0111_Medium.jpg" alt="DSC_0111_Medium" loading="lazy"></a>
+<a href="DSC_0113_Medium.jpg" data-full="DSC_0113_Medium.jpg" title="DSC_0113_Medium"><img src="DSC_0113_Medium.jpg" alt="DSC_0113_Medium" loading="lazy"></a>
+<a href="DSC_0114_Medium.jpg" data-full="DSC_0114_Medium.jpg" title="DSC_0114_Medium"><img src="DSC_0114_Medium.jpg" alt="DSC_0114_Medium" loading="lazy"></a>
+<a href="DSC_0115_Medium.jpg" data-full="DSC_0115_Medium.jpg" title="DSC_0115_Medium"><img src="DSC_0115_Medium.jpg" alt="DSC_0115_Medium" loading="lazy"></a>
+<a href="DSC_0116_Medium.jpg" data-full="DSC_0116_Medium.jpg" title="DSC_0116_Medium"><img src="DSC_0116_Medium.jpg" alt="DSC_0116_Medium" loading="lazy"></a>
+<a href="DSC_0117_Medium.jpg" data-full="DSC_0117_Medium.jpg" title="DSC_0117_Medium"><img src="DSC_0117_Medium.jpg" alt="DSC_0117_Medium" loading="lazy"></a>
+<a href="DSC_0120_Medium.jpg" data-full="DSC_0120_Medium.jpg" title="DSC_0120_Medium"><img src="DSC_0120_Medium.jpg" alt="DSC_0120_Medium" loading="lazy"></a>
+<a href="DSC_0121_Medium.jpg" data-full="DSC_0121_Medium.jpg" title="DSC_0121_Medium"><img src="DSC_0121_Medium.jpg" alt="DSC_0121_Medium" loading="lazy"></a>
+<a href="DSC_0122_Medium.jpg" data-full="DSC_0122_Medium.jpg" title="DSC_0122_Medium"><img src="DSC_0122_Medium.jpg" alt="DSC_0122_Medium" loading="lazy"></a>
+<a href="DSC_0123_Medium.jpg" data-full="DSC_0123_Medium.jpg" title="DSC_0123_Medium"><img src="DSC_0123_Medium.jpg" alt="DSC_0123_Medium" loading="lazy"></a>
+<a href="DSC_0125_Medium.jpg" data-full="DSC_0125_Medium.jpg" title="DSC_0125_Medium"><img src="DSC_0125_Medium.jpg" alt="DSC_0125_Medium" loading="lazy"></a>
+<a href="DSC_0127_Medium.jpg" data-full="DSC_0127_Medium.jpg" title="DSC_0127_Medium"><img src="DSC_0127_Medium.jpg" alt="DSC_0127_Medium" loading="lazy"></a>
+<a href="DSC_0144_Medium.jpg" data-full="DSC_0144_Medium.jpg" title="DSC_0144_Medium"><img src="DSC_0144_Medium.jpg" alt="DSC_0144_Medium" loading="lazy"></a>
+<a href="DSC_0152_Medium.jpg" data-full="DSC_0152_Medium.jpg" title="DSC_0152_Medium"><img src="DSC_0152_Medium.jpg" alt="DSC_0152_Medium" loading="lazy"></a>
+<a href="DSC_0157_Medium.jpg" data-full="DSC_0157_Medium.jpg" title="DSC_0157_Medium"><img src="DSC_0157_Medium.jpg" alt="DSC_0157_Medium" loading="lazy"></a>
+<a href="DSC_0169_Medium.jpg" data-full="DSC_0169_Medium.jpg" title="DSC_0169_Medium"><img src="DSC_0169_Medium.jpg" alt="DSC_0169_Medium" loading="lazy"></a>
+<a href="DSC_0172_Medium.jpg" data-full="DSC_0172_Medium.jpg" title="DSC_0172_Medium"><img src="DSC_0172_Medium.jpg" alt="DSC_0172_Medium" loading="lazy"></a>
+<a href="DSC_0173_Medium.jpg" data-full="DSC_0173_Medium.jpg" title="DSC_0173_Medium"><img src="DSC_0173_Medium.jpg" alt="DSC_0173_Medium" loading="lazy"></a>
+<a href="DSC_0174_Medium.jpg" data-full="DSC_0174_Medium.jpg" title="DSC_0174_Medium"><img src="DSC_0174_Medium.jpg" alt="DSC_0174_Medium" loading="lazy"></a>
+<a href="DSC_0175_Medium.jpg" data-full="DSC_0175_Medium.jpg" title="DSC_0175_Medium"><img src="DSC_0175_Medium.jpg" alt="DSC_0175_Medium" loading="lazy"></a>
+<a href="DSC_0176_Medium.jpg" data-full="DSC_0176_Medium.jpg" title="DSC_0176_Medium"><img src="DSC_0176_Medium.jpg" alt="DSC_0176_Medium" loading="lazy"></a>
+<a href="DSC_0177_Medium.jpg" data-full="DSC_0177_Medium.jpg" title="DSC_0177_Medium"><img src="DSC_0177_Medium.jpg" alt="DSC_0177_Medium" loading="lazy"></a>
+<a href="DSC_0178_Medium.jpg" data-full="DSC_0178_Medium.jpg" title="DSC_0178_Medium"><img src="DSC_0178_Medium.jpg" alt="DSC_0178_Medium" loading="lazy"></a>
+<a href="DSC_0190_Medium.jpg" data-full="DSC_0190_Medium.jpg" title="DSC_0190_Medium"><img src="DSC_0190_Medium.jpg" alt="DSC_0190_Medium" loading="lazy"></a>
+<a href="DSC_0201_Medium.jpg" data-full="DSC_0201_Medium.jpg" title="DSC_0201_Medium"><img src="DSC_0201_Medium.jpg" alt="DSC_0201_Medium" loading="lazy"></a>
+<a href="DSC_0203_Medium.jpg" data-full="DSC_0203_Medium.jpg" title="DSC_0203_Medium"><img src="DSC_0203_Medium.jpg" alt="DSC_0203_Medium" loading="lazy"></a>
+<a href="DSC_0204_Medium.jpg" data-full="DSC_0204_Medium.jpg" title="DSC_0204_Medium"><img src="DSC_0204_Medium.jpg" alt="DSC_0204_Medium" loading="lazy"></a>
+<a href="DSC_0209_Medium.jpg" data-full="DSC_0209_Medium.jpg" title="DSC_0209_Medium"><img src="DSC_0209_Medium.jpg" alt="DSC_0209_Medium" loading="lazy"></a>
+<a href="DSC_0210_Medium.jpg" data-full="DSC_0210_Medium.jpg" title="DSC_0210_Medium"><img src="DSC_0210_Medium.jpg" alt="DSC_0210_Medium" loading="lazy"></a>
+<a href="DSC_0211_Medium.jpg" data-full="DSC_0211_Medium.jpg" title="DSC_0211_Medium"><img src="DSC_0211_Medium.jpg" alt="DSC_0211_Medium" loading="lazy"></a>
+<a href="DSC_0213_Medium.jpg" data-full="DSC_0213_Medium.jpg" title="DSC_0213_Medium"><img src="DSC_0213_Medium.jpg" alt="DSC_0213_Medium" loading="lazy"></a>
+<a href="DSC_0216_Medium.jpg" data-full="DSC_0216_Medium.jpg" title="DSC_0216_Medium"><img src="DSC_0216_Medium.jpg" alt="DSC_0216_Medium" loading="lazy"></a>
+<a href="DSC_0217_Medium.jpg" data-full="DSC_0217_Medium.jpg" title="DSC_0217_Medium"><img src="DSC_0217_Medium.jpg" alt="DSC_0217_Medium" loading="lazy"></a>
+<a href="DSC_0224_Medium.jpg" data-full="DSC_0224_Medium.jpg" title="DSC_0224_Medium"><img src="DSC_0224_Medium.jpg" alt="DSC_0224_Medium" loading="lazy"></a>
+<a href="DSC_0233_Medium.jpg" data-full="DSC_0233_Medium.jpg" title="DSC_0233_Medium"><img src="DSC_0233_Medium.jpg" alt="DSC_0233_Medium" loading="lazy"></a>
+<a href="DSC_0237_Medium.jpg" data-full="DSC_0237_Medium.jpg" title="DSC_0237_Medium"><img src="DSC_0237_Medium.jpg" alt="DSC_0237_Medium" loading="lazy"></a>
+<a href="DSC_0251_Medium.jpg" data-full="DSC_0251_Medium.jpg" title="DSC_0251_Medium"><img src="DSC_0251_Medium.jpg" alt="DSC_0251_Medium" loading="lazy"></a>
+<a href="DSC_0267_Medium.jpg" data-full="DSC_0267_Medium.jpg" title="DSC_0267_Medium"><img src="DSC_0267_Medium.jpg" alt="DSC_0267_Medium" loading="lazy"></a>
+<a href="DSC_0280_Medium.jpg" data-full="DSC_0280_Medium.jpg" title="DSC_0280_Medium"><img src="DSC_0280_Medium.jpg" alt="DSC_0280_Medium" loading="lazy"></a>
+<a href="DSC_0287_Medium.jpg" data-full="DSC_0287_Medium.jpg" title="DSC_0287_Medium"><img src="DSC_0287_Medium.jpg" alt="DSC_0287_Medium" loading="lazy"></a>
+<a href="DSC_0291_Medium.jpg" data-full="DSC_0291_Medium.jpg" title="DSC_0291_Medium"><img src="DSC_0291_Medium.jpg" alt="DSC_0291_Medium" loading="lazy"></a>
+<a href="DSC_0296_Medium.jpg" data-full="DSC_0296_Medium.jpg" title="DSC_0296_Medium"><img src="DSC_0296_Medium.jpg" alt="DSC_0296_Medium" loading="lazy"></a>
+<a href="DSC_0305_Medium.jpg" data-full="DSC_0305_Medium.jpg" title="DSC_0305_Medium"><img src="DSC_0305_Medium.jpg" alt="DSC_0305_Medium" loading="lazy"></a>
+<a href="DSC_0330_Medium.jpg" data-full="DSC_0330_Medium.jpg" title="DSC_0330_Medium"><img src="DSC_0330_Medium.jpg" alt="DSC_0330_Medium" loading="lazy"></a>
+<a href="Maldives_Boat.jpg" data-full="Maldives_Boat.jpg" title="Maldives_Boat"><img src="Maldives_Boat.jpg" alt="Maldives_Boat" loading="lazy"></a>
+</section>
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
+  <img alt="">
+  <span class="hint">Clic ou Échap pour fermer</span>
+</div>
+<script>
+(function(){
+  // Theme toggle
+  const root = document.documentElement;
+  const saved = localStorage.getItem('wp-theme');
+  if(saved) root.setAttribute('data-theme', saved);
+  const btn = document.getElementById('themeToggle');
+  function syncLabel(){ if(!btn) return;
+    btn.textContent = root.getAttribute('data-theme')==='light' ? 'Sombre' : 'Clair';
+  }
+  syncLabel();
+  if(btn) btn.addEventListener('click', () => {
+    const cur = root.getAttribute('data-theme')==='light' ? 'dark':'light';
+    root.setAttribute('data-theme', cur);
+    localStorage.setItem('wp-theme', cur);
+    syncLabel();
+  });
+  // Lightbox
+  const lb = document.getElementById('lightbox');
+  if(lb){
+    const lbImg = lb.querySelector('img');
+    document.querySelectorAll('.gallery a[data-full]').forEach(a => {
+      a.addEventListener('click', e => {
+        e.preventDefault();
+        lbImg.src = a.getAttribute('data-full');
+        lb.classList.add('active');
+        document.body.style.overflow='hidden';
+      });
+    });
+    function close(){
+      lb.classList.remove('active'); lbImg.src=''; document.body.style.overflow='';
+    }
+    lb.addEventListener('click', close);
+    document.addEventListener('keydown', e => { if(e.key==='Escape') close(); });
+  }
+})();
+</script>
+</body>
+</html>

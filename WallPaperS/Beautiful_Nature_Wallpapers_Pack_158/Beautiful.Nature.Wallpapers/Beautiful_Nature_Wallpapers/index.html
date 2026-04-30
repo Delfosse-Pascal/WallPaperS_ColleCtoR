@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Beautiful_Nature_Wallpapers — WallPaperS</title>
+<link rel="canonical" href="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/">
+<link rel="icon" href="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/Site_Web/favicondepascal.png" type="image/png">
+<link rel="icon" href="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/Site_Web/favicondepascal.ico" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/Site_Web/style.css">
+<script src="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/Site_Web/script.js"></script>
+<script src="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/Site_Web/menu.js" defer></script>
+<link rel="stylesheet" href="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/Site_Web/basedusite.css">
+<script src="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/Site_Web/couleurs.js"></script>
+<style>
+:root {
+  --bg: linear-gradient(135deg,#1a0033,#2a0050,#3d0066);
+  --fg: #f5f5f5;
+  --card-bg: rgba(255,255,255,0.05);
+  --card-border: rgba(255,255,255,0.12);
+  --accent: #ffd700;
+  --accent2: #9d4edd;
+  --shadow: 0 10px 30px rgba(0,0,0,.5);
+}
+:root[data-theme="light"] {
+  --bg: linear-gradient(135deg,#fff3d6,#fae3ff);
+  --fg: #1a1a1a;
+  --card-bg: rgba(255,255,255,0.55);
+  --card-border: rgba(0,0,0,0.08);
+  --shadow: 0 10px 30px rgba(0,0,0,.15);
+}
+* { box-sizing: border-box; }
+html, body { margin:0; padding:0; min-height:100vh; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: var(--fg);
+  background: var(--bg);
+  background-size: 400% 400%;
+  animation: bgShift 22s ease infinite;
+  overflow-x: hidden;
+}
+@keyframes bgShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.topbar {
+  position: sticky; top:0; z-index:50;
+  display: flex; gap:.6rem; padding:.7rem 1rem;
+  backdrop-filter: blur(10px);
+  background: rgba(0,0,0,.25);
+  border-bottom: 1px solid var(--card-border);
+}
+:root[data-theme="light"] .topbar { background: rgba(255,255,255,.45); }
+.btn {
+  border: 1px solid var(--card-border);
+  background: var(--card-bg);
+  color: var(--fg);
+  padding: .5rem .9rem;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: .9rem;
+  text-decoration: none;
+  transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+}
+.btn:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(0,0,0,.3); background: var(--accent); color:#000; }
+.title {
+  font-size: clamp(1.6rem, 4vw, 3rem);
+  text-align: center;
+  margin: 1.5rem 1rem .3rem;
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  letter-spacing: .03em;
+}
+.subtitle { text-align:center; opacity:.8; margin: 0 1rem 1.2rem; }
+.gallery {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  padding: 1rem;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+.gallery a {
+  display:block; position:relative;
+  border-radius: 14px; overflow: hidden;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  box-shadow: var(--shadow);
+  cursor: zoom-in;
+  transition: transform .35s cubic-bezier(.2,.7,.2,1.2), box-shadow .3s;
+  animation: tileIn .6s ease both;
+}
+.gallery a:nth-child(odd) { animation-delay: .05s; }
+.gallery a:nth-child(even) { animation-delay: .15s; }
+.gallery a:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 18px 50px rgba(0,0,0,.55), 0 0 0 2px var(--accent);
+}
+.gallery img {
+  width: 100%; height: 220px; object-fit: cover; display:block;
+  transition: transform .6s ease;
+}
+.gallery a:hover img { transform: scale(1.08); }
+@keyframes tileIn {
+  from { opacity:0; transform: translateY(20px) scale(.98); }
+  to   { opacity:1; transform: none; }
+}
+
+.folders {
+  display: grid; gap: 18px;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  padding: 1rem; max-width: 1600px; margin: 0 auto;
+}
+.folder-card {
+  display:flex; flex-direction: column; justify-content: space-between;
+  padding: 1rem 1.2rem; min-height: 140px;
+  border-radius: 18px;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  box-shadow: var(--shadow);
+  text-decoration: none; color: var(--fg);
+  position: relative; overflow: hidden;
+  transition: transform .3s, box-shadow .3s;
+  animation: cardIn .7s ease both;
+}
+.folder-card::before {
+  content:""; position:absolute; inset:-2px;
+  background: linear-gradient(120deg, var(--accent), transparent 40%, var(--accent2));
+  opacity:.0; transition: opacity .4s; z-index:0;
+}
+.folder-card:hover::before { opacity:.25; }
+.folder-card:hover { transform: translateY(-5px) rotate(-.4deg); box-shadow: 0 16px 40px rgba(0,0,0,.45); }
+.folder-card > * { position: relative; z-index:1; }
+.folder-name { font-weight: 700; font-size: 1.15rem; }
+.folder-meta { opacity:.75; font-size:.85rem; margin-top: .4rem; }
+@keyframes cardIn {
+  from { opacity:0; transform: translateY(28px); }
+  to   { opacity:1; transform: none; }
+}
+
+.pager {
+  display:flex; justify-content:center; gap:.4rem; flex-wrap:wrap;
+  padding: 1.5rem 1rem 3rem;
+}
+.pager a, .pager span {
+  padding: .45rem .8rem; border-radius: 8px;
+  border: 1px solid var(--card-border);
+  background: var(--card-bg); color: var(--fg);
+  text-decoration: none; font-size: .9rem;
+}
+.pager .current { background: var(--accent); color:#000; border-color: var(--accent); }
+
+/* lightbox */
+.lightbox {
+  position: fixed; inset:0; background: rgba(0,0,0,.92);
+  display:none; align-items:center; justify-content:center; z-index:1000;
+  padding:2rem; cursor: zoom-out;
+  animation: fadeIn .25s ease;
+}
+.lightbox.active { display:flex; }
+.lightbox img {
+  max-width: 96vw; max-height: 92vh; object-fit: contain;
+  border-radius: 8px; box-shadow: 0 0 60px rgba(0,0,0,.8);
+  animation: zoomIn .3s ease;
+}
+.lightbox .hint { position:absolute; bottom:1rem; left:50%; transform:translateX(-50%);
+  color:#fff; opacity:.7; font-size:.85rem; }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes zoomIn { from { opacity:0; transform: scale(.9); } to { opacity:1; transform:none; } }
+
+/* Theme-specific decorative animations */
+.deco { position: fixed; inset:0; pointer-events:none; z-index:0; }
+.deco span { position:absolute; border-radius:50%; filter: blur(40px); opacity:.45; }
+</style>
+</head>
+<body>
+<nav class="social-menu">
+    <ul>
+      <li><a href="https://fr.pinterest.com/pascal509/mes-tableaux-tous-genre/" target="_blank" rel="noopener">Pinterest</a></li>
+      <li><a href="https://www.flickr.com/photos/delfossepascal" target="_blank" rel="noopener">Flickr</a></li>
+      <li><a href="https://www.tumblr.com/lestoilesdepascal" target="_blank" rel="noopener">Tumblr</a></li>
+      <li><a href="https://x.com/PascalDelfossee" target="_blank" rel="noopener">X</a></li>
+      <li><a href="https://www.youtube.com/c/DelfossePascal" target="_blank" rel="noopener">YouTube</a></li>
+    </ul>
+  </nav>
+<header></header>
+<div class="deco" aria-hidden="true">
+<span style="width:380px;height:380px;background:#ffd700;top:-100px;left:-80px;animation:shineA 18s ease-in-out infinite alternate"></span>
+<span style="width:480px;height:480px;background:#9d4edd;bottom:-160px;right:-100px;animation:shineB 22s ease-in-out infinite alternate"></span>
+<span style="width:260px;height:260px;background:#ffd700;top:40%;left:50%;animation:shineC 26s ease-in-out infinite alternate"></span>
+</div>
+<style>
+@keyframes shineA { from { transform: translate(0,0) scale(1); } to { transform: translate(140px,80px) scale(1.25); } }
+@keyframes shineB { from { transform: translate(0,0) scale(1); } to { transform: translate(-160px,-90px) scale(1.15); } }
+@keyframes shineC { from { transform: translate(-50%,-50%) scale(.8); } to { transform: translate(-30%,-70%) scale(1.3); } }
+</style>
+<div class="topbar">
+  <a class="btn" href="../../../../index.html" title="Accueil">Accueil</a>
+  <a class="btn" href="../index.html" title="Dossier parent">Parent</a>
+  <span style="flex:1"></span>
+  <button class="btn" id="themeToggle" type="button">Clair</button>
+</div>
+<h1 class="title">Beautiful_Nature_Wallpapers</h1>
+<p class="subtitle">Thème : Royal</p>
+<section class="gallery">
+<a href="01.jpg" data-full="01.jpg" title="01"><img src="01.jpg" alt="01" loading="lazy"></a>
+<a href="02.jpg" data-full="02.jpg" title="02"><img src="02.jpg" alt="02" loading="lazy"></a>
+<a href="03.jpg" data-full="03.jpg" title="03"><img src="03.jpg" alt="03" loading="lazy"></a>
+<a href="04.jpg" data-full="04.jpg" title="04"><img src="04.jpg" alt="04" loading="lazy"></a>
+<a href="05.jpg" data-full="05.jpg" title="05"><img src="05.jpg" alt="05" loading="lazy"></a>
+<a href="06.jpg" data-full="06.jpg" title="06"><img src="06.jpg" alt="06" loading="lazy"></a>
+<a href="07.jpg" data-full="07.jpg" title="07"><img src="07.jpg" alt="07" loading="lazy"></a>
+<a href="08.jpg" data-full="08.jpg" title="08"><img src="08.jpg" alt="08" loading="lazy"></a>
+<a href="09.JPG" data-full="09.JPG" title="09"><img src="09.JPG" alt="09" loading="lazy"></a>
+<a href="10.jpg" data-full="10.jpg" title="10"><img src="10.jpg" alt="10" loading="lazy"></a>
+<a href="11.jpg" data-full="11.jpg" title="11"><img src="11.jpg" alt="11" loading="lazy"></a>
+<a href="12.jpg" data-full="12.jpg" title="12"><img src="12.jpg" alt="12" loading="lazy"></a>
+<a href="13.jpg" data-full="13.jpg" title="13"><img src="13.jpg" alt="13" loading="lazy"></a>
+<a href="14.jpg" data-full="14.jpg" title="14"><img src="14.jpg" alt="14" loading="lazy"></a>
+<a href="15.jpg" data-full="15.jpg" title="15"><img src="15.jpg" alt="15" loading="lazy"></a>
+<a href="16.jpg" data-full="16.jpg" title="16"><img src="16.jpg" alt="16" loading="lazy"></a>
+<a href="17.jpg" data-full="17.jpg" title="17"><img src="17.jpg" alt="17" loading="lazy"></a>
+<a href="18.jpg" data-full="18.jpg" title="18"><img src="18.jpg" alt="18" loading="lazy"></a>
+<a href="19.jpg" data-full="19.jpg" title="19"><img src="19.jpg" alt="19" loading="lazy"></a>
+<a href="20.JPG" data-full="20.JPG" title="20"><img src="20.JPG" alt="20" loading="lazy"></a>
+<a href="21.jpg" data-full="21.jpg" title="21"><img src="21.jpg" alt="21" loading="lazy"></a>
+<a href="22.jpg" data-full="22.jpg" title="22"><img src="22.jpg" alt="22" loading="lazy"></a>
+<a href="23.jpg" data-full="23.jpg" title="23"><img src="23.jpg" alt="23" loading="lazy"></a>
+<a href="24.jpg" data-full="24.jpg" title="24"><img src="24.jpg" alt="24" loading="lazy"></a>
+<a href="25.jpg" data-full="25.jpg" title="25"><img src="25.jpg" alt="25" loading="lazy"></a>
+<a href="26.jpg" data-full="26.jpg" title="26"><img src="26.jpg" alt="26" loading="lazy"></a>
+<a href="27.JPG" data-full="27.JPG" title="27"><img src="27.JPG" alt="27" loading="lazy"></a>
+<a href="28.jpg" data-full="28.jpg" title="28"><img src="28.jpg" alt="28" loading="lazy"></a>
+<a href="29.jpg" data-full="29.jpg" title="29"><img src="29.jpg" alt="29" loading="lazy"></a>
+<a href="30.jpg" data-full="30.jpg" title="30"><img src="30.jpg" alt="30" loading="lazy"></a>
+<a href="31.jpg" data-full="31.jpg" title="31"><img src="31.jpg" alt="31" loading="lazy"></a>
+<a href="32.jpg" data-full="32.jpg" title="32"><img src="32.jpg" alt="32" loading="lazy"></a>
+<a href="33.jpg" data-full="33.jpg" title="33"><img src="33.jpg" alt="33" loading="lazy"></a>
+<a href="34.jpg" data-full="34.jpg" title="34"><img src="34.jpg" alt="34" loading="lazy"></a>
+<a href="35.jpg" data-full="35.jpg" title="35"><img src="35.jpg" alt="35" loading="lazy"></a>
+<a href="36.jpg" data-full="36.jpg" title="36"><img src="36.jpg" alt="36" loading="lazy"></a>
+<a href="37.jpg" data-full="37.jpg" title="37"><img src="37.jpg" alt="37" loading="lazy"></a>
+<a href="38.jpg" data-full="38.jpg" title="38"><img src="38.jpg" alt="38" loading="lazy"></a>
+<a href="39.jpg" data-full="39.jpg" title="39"><img src="39.jpg" alt="39" loading="lazy"></a>
+<a href="40.jpg" data-full="40.jpg" title="40"><img src="40.jpg" alt="40" loading="lazy"></a>
+<a href="41.jpg" data-full="41.jpg" title="41"><img src="41.jpg" alt="41" loading="lazy"></a>
+<a href="42.jpg" data-full="42.jpg" title="42"><img src="42.jpg" alt="42" loading="lazy"></a>
+<a href="43.jpg" data-full="43.jpg" title="43"><img src="43.jpg" alt="43" loading="lazy"></a>
+<a href="44.jpg" data-full="44.jpg" title="44"><img src="44.jpg" alt="44" loading="lazy"></a>
+<a href="45.jpg" data-full="45.jpg" title="45"><img src="45.jpg" alt="45" loading="lazy"></a>
+<a href="46.jpg" data-full="46.jpg" title="46"><img src="46.jpg" alt="46" loading="lazy"></a>
+<a href="47.JPG" data-full="47.JPG" title="47"><img src="47.JPG" alt="47" loading="lazy"></a>
+<a href="48.JPG" data-full="48.JPG" title="48"><img src="48.JPG" alt="48" loading="lazy"></a>
+<a href="49.JPG" data-full="49.JPG" title="49"><img src="49.JPG" alt="49" loading="lazy"></a>
+</section>
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
+  <img alt="">
+  <span class="hint">Clic ou Échap pour fermer</span>
+</div>
+<script>
+(function(){
+  // Theme toggle
+  const root = document.documentElement;
+  const saved = localStorage.getItem('wp-theme');
+  if(saved) root.setAttribute('data-theme', saved);
+  const btn = document.getElementById('themeToggle');
+  function syncLabel(){ if(!btn) return;
+    btn.textContent = root.getAttribute('data-theme')==='light' ? 'Sombre' : 'Clair';
+  }
+  syncLabel();
+  if(btn) btn.addEventListener('click', () => {
+    const cur = root.getAttribute('data-theme')==='light' ? 'dark':'light';
+    root.setAttribute('data-theme', cur);
+    localStorage.setItem('wp-theme', cur);
+    syncLabel();
+  });
+  // Lightbox
+  const lb = document.getElementById('lightbox');
+  if(lb){
+    const lbImg = lb.querySelector('img');
+    document.querySelectorAll('.gallery a[data-full]').forEach(a => {
+      a.addEventListener('click', e => {
+        e.preventDefault();
+        lbImg.src = a.getAttribute('data-full');
+        lb.classList.add('active');
+        document.body.style.overflow='hidden';
+      });
+    });
+    function close(){
+      lb.classList.remove('active'); lbImg.src=''; document.body.style.overflow='';
+    }
+    lb.addEventListener('click', close);
+    document.addEventListener('keydown', e => { if(e.key==='Escape') close(); });
+  }
+})();
+</script>
+</body>
+</html>
