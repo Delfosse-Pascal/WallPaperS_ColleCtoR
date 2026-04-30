@@ -520,26 +520,235 @@ def write_folder_pages(folder: Path) -> None:
         out.write_text(page, encoding="utf-8")
 
 
-def write_root_index() -> None:
-    drawers = list_subfolders(SCAN_ROOT)
-    cards = []
-    for d in drawers:
-        cnt = folder_image_count_recursive(d)
+ROOT_EXTRA_CSS = """
+.hero {
+  position: relative; z-index: 1;
+  padding: 5rem 1.5rem 3rem;
+  text-align: center;
+  overflow: hidden;
+}
+.hero h1 {
+  font-size: clamp(2.4rem, 7vw, 5.5rem);
+  margin: 0 0 .5rem;
+  background: linear-gradient(90deg, var(--accent), var(--accent2), var(--accent));
+  background-size: 200% 100%;
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  animation: shimmer 6s linear infinite;
+  letter-spacing: -.02em;
+  font-weight: 800;
+}
+@keyframes shimmer { from { background-position: 0% 0%; } to { background-position: 200% 0%; } }
+.hero .lead {
+  font-size: clamp(1rem, 1.8vw, 1.35rem);
+  max-width: 760px; margin: 0 auto 1.4rem; opacity:.9; line-height: 1.55;
+}
+.badge-free {
+  display: inline-block; padding: .55rem 1.3rem;
+  background: linear-gradient(120deg, var(--accent), var(--accent2));
+  color:#000; font-weight: 700; border-radius: 999px;
+  letter-spacing: .08em; text-transform: uppercase;
+  box-shadow: 0 8px 28px rgba(0,0,0,.35);
+  animation: floatY 4s ease-in-out infinite;
+}
+@keyframes floatY { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+
+.stats {
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem;
+  padding: .5rem 1rem 2rem;
+}
+.stat {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  padding: 1rem 1.6rem; border-radius: 14px;
+  min-width: 150px; text-align: center;
+  backdrop-filter: blur(6px);
+  animation: cardIn .8s ease both;
+}
+.stat .num {
+  font-size: 2rem; font-weight: 800;
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.stat .lbl { font-size: .85rem; opacity:.75; text-transform: uppercase; letter-spacing: .1em; }
+
+.intro {
+  max-width: 880px; margin: 0 auto 2.5rem; padding: 1.5rem;
+  text-align: center; line-height: 1.7;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 18px;
+  backdrop-filter: blur(8px);
+}
+.intro strong { color: var(--accent); }
+
+.mosaic {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 18px;
+  padding: 0 1rem 4rem;
+  max-width: 1700px; margin: 0 auto;
+}
+.tile {
+  position: relative; display: block; overflow: hidden;
+  border-radius: 18px; min-height: 240px;
+  text-decoration: none; color: #fff;
+  background: #111 center/cover no-repeat;
+  box-shadow: var(--shadow);
+  transform-origin: center;
+  transition: transform .5s cubic-bezier(.2,.7,.2,1.2), box-shadow .4s;
+  animation: tileIn .8s ease both;
+}
+.tile.tall { grid-row: span 2; min-height: 500px; }
+.tile.wide { grid-column: span 2; }
+@media (max-width: 700px) {
+  .tile.wide { grid-column: span 1; }
+  .tile.tall { grid-row: span 1; min-height: 240px; }
+}
+.tile::before {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 30%, rgba(0,0,0,.85) 100%);
+  transition: opacity .4s;
+}
+.tile::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(120deg, var(--accent), transparent 60%);
+  mix-blend-mode: overlay; opacity: 0;
+  transition: opacity .5s;
+}
+.tile:hover { transform: translateY(-8px) scale(1.02); box-shadow: 0 24px 60px rgba(0,0,0,.55); }
+.tile:hover::after { opacity: .55; }
+.tile-label {
+  position: absolute; left: 0; right: 0; bottom: 0;
+  padding: 1rem 1.2rem; z-index: 2;
+}
+.tile-label h3 {
+  margin: 0 0 .3rem; font-size: 1.15rem;
+  text-shadow: 0 2px 12px rgba(0,0,0,.7);
+}
+.tile-label .meta {
+  font-size: .8rem; opacity: .9;
+  display:flex; gap: .5rem; align-items: center;
+}
+.tile-label .meta .pill {
+  background: var(--accent); color: #000;
+  padding: .15rem .55rem; border-radius: 999px; font-weight: 700;
+}
+.tile .free-tag {
+  position: absolute; top: .9rem; right: .9rem; z-index: 2;
+  background: rgba(255,255,255,.18); backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,.35);
+  color: #fff; padding: .25rem .7rem; border-radius: 999px;
+  font-size: .7rem; letter-spacing: .12em; text-transform: uppercase; font-weight: 700;
+}
+
+.section-title {
+  text-align: center; font-size: 1.4rem;
+  margin: 1rem auto 1.4rem; opacity: .85;
+  letter-spacing: .08em; text-transform: uppercase;
+}
+"""
+
+
+def build_root_page(theme: dict, drawers_with_data: list[tuple[Path, int, Path | None]]) -> str:
+    """Custom hero+mosaic layout for root, distinct from per-folder pages."""
+    css = build_css(theme) + ROOT_EXTRA_CSS
+    deco = deco_html(theme)
+    total_imgs = sum(c for _, c, _ in drawers_with_data)
+    total_drawers = len(drawers_with_data)
+
+    # Mosaic with size variations for visual interest
+    tiles = []
+    big_indices = {0, 4, 7, 12, 18}  # tall feature tiles
+    wide_indices = {2, 9, 15}        # wide feature tiles
+    for i, (d, cnt, preview) in enumerate(drawers_with_data):
+        cls = "tile"
+        if i in big_indices:
+            cls += " tall"
+        elif i in wide_indices:
+            cls += " wide"
         link = "WallPaperS/" + url_q(d.name) + "/index.html"
         name = html.escape(d.name)
-        cards.append(
-            f'<a class="folder-card" href="{link}">'
-            f'<div class="folder-name">{name}</div>'
-            f'<div class="folder-meta">{cnt} image{"s" if cnt != 1 else ""}</div>'
-            f"</a>"
+        if preview is not None:
+            preview_rel = "WallPaperS/" + url_q(d.name) + "/" + url_q(
+                str(preview.relative_to(d)).replace("\\", "/")
+            )
+            bg_style = f'background-image:url("{preview_rel}");'
+        else:
+            bg_style = ""
+        tiles.append(
+            f'<a class="{cls}" href="{link}" style="{bg_style}">'
+            f'<span class="free-tag">Gratuit</span>'
+            f'<div class="tile-label">'
+            f'<h3>{name}</h3>'
+            f'<div class="meta"><span class="pill">{cnt}</span> fonds d\'écran HD</div>'
+            f"</div></a>"
         )
-    body = (
-        '<section class="folders">\n' + "\n".join(cards) + "\n</section>"
-        if cards
-        else '<p style="text-align:center;opacity:.7">Aucun tiroir trouvé.</p>'
-    )
+    mosaic = '<section class="mosaic">\n' + "\n".join(tiles) + "\n</section>"
+
+    hero = f"""
+<section class="hero">
+  <span class="badge-free">100% Gratuit · Téléchargement libre</span>
+  <h1>WallPaperS Collector</h1>
+  <p class="lead">
+    Une collection soigneusement organisée de <strong>{total_imgs}</strong> fonds d'écran HD,
+    répartie dans <strong>{total_drawers}</strong> tiroirs thématiques. Paysages, art numérique,
+    nature, anime, abstraits, voyages — il y en a pour tous les goûts, et tout est <strong>libre d'accès</strong>.
+  </p>
+</section>
+<section class="stats" aria-label="Statistiques">
+  <div class="stat"><div class="num">{total_imgs}</div><div class="lbl">Wallpapers</div></div>
+  <div class="stat"><div class="num">{total_drawers}</div><div class="lbl">Tiroirs</div></div>
+  <div class="stat"><div class="num">100%</div><div class="lbl">Gratuit</div></div>
+  <div class="stat"><div class="num">HD</div><div class="lbl">Qualité</div></div>
+</section>
+<div class="intro">
+  Cliquez sur un tiroir pour parcourir sa galerie. Dans chaque galerie, cliquez sur une image
+  pour l'afficher en plein écran (touche <strong>Échap</strong> pour fermer).
+  Tous les fonds d'écran sont <strong>gratuits</strong> et destinés à un usage personnel.
+</div>
+<h2 class="section-title">Explorer les tiroirs</h2>
+{mosaic}
+"""
+
+    return f"""<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WallPaperS Collector — {total_imgs} fonds d'écran HD gratuits</title>
+<meta name="description" content="Collection gratuite de {total_imgs} fonds d'écran HD organisés en {total_drawers} tiroirs thématiques.">
+{BOILERPLATE_HEAD}
+<style>{css}</style>
+</head>
+<body>
+{BOILERPLATE_BODY}
+{deco}
+<div class="topbar">
+  <span style="flex:1"></span>
+  <button class="btn" id="themeToggle" type="button">Clair</button>
+</div>
+{hero}
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
+  <img alt="">
+  <span class="hint">Clic ou Échap pour fermer</span>
+</div>
+<script>{JS_COMMON}</script>
+</body>
+</html>
+"""
+
+
+def write_root_index() -> None:
+    drawers = list_subfolders(SCAN_ROOT)
+    drawers_with_data: list[tuple[Path, int, Path | None]] = []
+    for d in drawers:
+        cnt = folder_image_count_recursive(d)
+        if cnt == 0:
+            continue  # skip empty drawers
+        preview = find_preview_image(d)
+        drawers_with_data.append((d, cnt, preview))
     theme = pick_theme("__ROOT__")
-    page = build_page("WallPaperS Collector", ROOT, theme, body, is_root=True)
+    page = build_root_page(theme, drawers_with_data)
     (ROOT / "index.html").write_text(page, encoding="utf-8")
 
 

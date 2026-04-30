@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>WallPaperS Collector — WallPaperS</title>
+<title>WallPaperS Collector — 3766 fonds d'écran HD gratuits</title>
+<meta name="description" content="Collection gratuite de 3766 fonds d'écran HD organisés en 34 tiroirs thématiques.">
 <link rel="canonical" href="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/">
 <link rel="icon" href="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/Site_Web/favicondepascal.png" type="image/png">
 <link rel="icon" href="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/Site_Web/favicondepascal.ico" type="image/x-icon">
@@ -172,6 +173,132 @@ body {
 /* Theme-specific decorative animations */
 .deco { position: fixed; inset:0; pointer-events:none; z-index:0; }
 .deco span { position:absolute; border-radius:50%; filter: blur(40px); opacity:.45; }
+
+.hero {
+  position: relative; z-index: 1;
+  padding: 5rem 1.5rem 3rem;
+  text-align: center;
+  overflow: hidden;
+}
+.hero h1 {
+  font-size: clamp(2.4rem, 7vw, 5.5rem);
+  margin: 0 0 .5rem;
+  background: linear-gradient(90deg, var(--accent), var(--accent2), var(--accent));
+  background-size: 200% 100%;
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  animation: shimmer 6s linear infinite;
+  letter-spacing: -.02em;
+  font-weight: 800;
+}
+@keyframes shimmer { from { background-position: 0% 0%; } to { background-position: 200% 0%; } }
+.hero .lead {
+  font-size: clamp(1rem, 1.8vw, 1.35rem);
+  max-width: 760px; margin: 0 auto 1.4rem; opacity:.9; line-height: 1.55;
+}
+.badge-free {
+  display: inline-block; padding: .55rem 1.3rem;
+  background: linear-gradient(120deg, var(--accent), var(--accent2));
+  color:#000; font-weight: 700; border-radius: 999px;
+  letter-spacing: .08em; text-transform: uppercase;
+  box-shadow: 0 8px 28px rgba(0,0,0,.35);
+  animation: floatY 4s ease-in-out infinite;
+}
+@keyframes floatY { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+
+.stats {
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem;
+  padding: .5rem 1rem 2rem;
+}
+.stat {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  padding: 1rem 1.6rem; border-radius: 14px;
+  min-width: 150px; text-align: center;
+  backdrop-filter: blur(6px);
+  animation: cardIn .8s ease both;
+}
+.stat .num {
+  font-size: 2rem; font-weight: 800;
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.stat .lbl { font-size: .85rem; opacity:.75; text-transform: uppercase; letter-spacing: .1em; }
+
+.intro {
+  max-width: 880px; margin: 0 auto 2.5rem; padding: 1.5rem;
+  text-align: center; line-height: 1.7;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 18px;
+  backdrop-filter: blur(8px);
+}
+.intro strong { color: var(--accent); }
+
+.mosaic {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 18px;
+  padding: 0 1rem 4rem;
+  max-width: 1700px; margin: 0 auto;
+}
+.tile {
+  position: relative; display: block; overflow: hidden;
+  border-radius: 18px; min-height: 240px;
+  text-decoration: none; color: #fff;
+  background: #111 center/cover no-repeat;
+  box-shadow: var(--shadow);
+  transform-origin: center;
+  transition: transform .5s cubic-bezier(.2,.7,.2,1.2), box-shadow .4s;
+  animation: tileIn .8s ease both;
+}
+.tile.tall { grid-row: span 2; min-height: 500px; }
+.tile.wide { grid-column: span 2; }
+@media (max-width: 700px) {
+  .tile.wide { grid-column: span 1; }
+  .tile.tall { grid-row: span 1; min-height: 240px; }
+}
+.tile::before {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 30%, rgba(0,0,0,.85) 100%);
+  transition: opacity .4s;
+}
+.tile::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(120deg, var(--accent), transparent 60%);
+  mix-blend-mode: overlay; opacity: 0;
+  transition: opacity .5s;
+}
+.tile:hover { transform: translateY(-8px) scale(1.02); box-shadow: 0 24px 60px rgba(0,0,0,.55); }
+.tile:hover::after { opacity: .55; }
+.tile-label {
+  position: absolute; left: 0; right: 0; bottom: 0;
+  padding: 1rem 1.2rem; z-index: 2;
+}
+.tile-label h3 {
+  margin: 0 0 .3rem; font-size: 1.15rem;
+  text-shadow: 0 2px 12px rgba(0,0,0,.7);
+}
+.tile-label .meta {
+  font-size: .8rem; opacity: .9;
+  display:flex; gap: .5rem; align-items: center;
+}
+.tile-label .meta .pill {
+  background: var(--accent); color: #000;
+  padding: .15rem .55rem; border-radius: 999px; font-weight: 700;
+}
+.tile .free-tag {
+  position: absolute; top: .9rem; right: .9rem; z-index: 2;
+  background: rgba(255,255,255,.18); backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,.35);
+  color: #fff; padding: .25rem .7rem; border-radius: 999px;
+  font-size: .7rem; letter-spacing: .12em; text-transform: uppercase; font-weight: 700;
+}
+
+.section-title {
+  text-align: center; font-size: 1.4rem;
+  margin: 1rem auto 1.4rem; opacity: .85;
+  letter-spacing: .08em; text-transform: uppercase;
+}
 </style>
 </head>
 <body>
@@ -196,50 +323,68 @@ body {
 @keyframes auroraC { from { transform: translate(-50%,-50%) scale(.8); } to { transform: translate(-30%,-70%) scale(1.3); } }
 </style>
 <div class="topbar">
-  
-  
   <span style="flex:1"></span>
   <button class="btn" id="themeToggle" type="button">Clair</button>
 </div>
-<h1 class="title">WallPaperS Collector</h1>
-<p class="subtitle">Thème : Aurora</p>
-<section class="folders">
-<a class="folder-card" href="WallPaperS/1680x1050/index.html"><div class="folder-name">1680x1050</div><div class="folder-meta">28 images</div></a>
-<a class="folder-card" href="WallPaperS/181%20fonds%20d%20ecrans%20disney/index.html"><div class="folder-name">181 fonds d ecrans disney</div><div class="folder-meta">181 images</div></a>
-<a class="folder-card" href="WallPaperS/Andy%20Fairhurst/index.html"><div class="folder-name">Andy Fairhurst</div><div class="folder-meta">113 images</div></a>
-<a class="folder-card" href="WallPaperS/Animepapers%20Pack02/index.html"><div class="folder-name">Animepapers Pack02</div><div class="folder-meta">28 images</div></a>
-<a class="folder-card" href="WallPaperS/Antarctica/index.html"><div class="folder-name">Antarctica</div><div class="folder-meta">40 images</div></a>
-<a class="folder-card" href="WallPaperS/Antarctica_3200_1600/index.html"><div class="folder-name">Antarctica_3200_1600</div><div class="folder-meta">40 images</div></a>
-<a class="folder-card" href="WallPaperS/art_girls/index.html"><div class="folder-name">art_girls</div><div class="folder-meta">51 images</div></a>
-<a class="folder-card" href="WallPaperS/artiste23/index.html"><div class="folder-name">artiste23</div><div class="folder-meta">296 images</div></a>
-<a class="folder-card" href="WallPaperS/Artwork_and_Wallpapers_Collection/index.html"><div class="folder-name">Artwork_and_Wallpapers_Collection</div><div class="folder-meta">24 images</div></a>
-<a class="folder-card" href="WallPaperS/Artwork_and_Wallpapers_Collection_2/index.html"><div class="folder-name">Artwork_and_Wallpapers_Collection_2</div><div class="folder-meta">25 images</div></a>
-<a class="folder-card" href="WallPaperS/Australia/index.html"><div class="folder-name">Australia</div><div class="folder-meta">15 images</div></a>
-<a class="folder-card" href="WallPaperS/Austria/index.html"><div class="folder-name">Austria</div><div class="folder-meta">13 images</div></a>
-<a class="folder-card" href="WallPaperS/Beaches/index.html"><div class="folder-name">Beaches</div><div class="folder-meta">153 images</div></a>
-<a class="folder-card" href="WallPaperS/Beautiful%20France%20Wallpapers%20HD/index.html"><div class="folder-name">Beautiful France Wallpapers HD</div><div class="folder-meta">55 images</div></a>
-<a class="folder-card" href="WallPaperS/Beautiful.Nature.Wallpapers/index.html"><div class="folder-name">Beautiful.Nature.Wallpapers</div><div class="folder-meta">0 images</div></a>
-<a class="folder-card" href="WallPaperS/Beautiful_Abstract_Wall/index.html"><div class="folder-name">Beautiful_Abstract_Wall</div><div class="folder-meta">43 images</div></a>
-<a class="folder-card" href="WallPaperS/Beautiful_Mixed_Wallpapers_Pack_197/index.html"><div class="folder-name">Beautiful_Mixed_Wallpapers_Pack_197</div><div class="folder-meta">137 images</div></a>
-<a class="folder-card" href="WallPaperS/Beautiful_Nature_Wallpapers_Pack_158/index.html"><div class="folder-name">Beautiful_Nature_Wallpapers_Pack_158</div><div class="folder-meta">49 images</div></a>
-<a class="folder-card" href="WallPaperS/bridge/index.html"><div class="folder-name">bridge</div><div class="folder-meta">54 images</div></a>
-<a class="folder-card" href="WallPaperS/Bridges/index.html"><div class="folder-name">Bridges</div><div class="folder-meta">16 images</div></a>
-<a class="folder-card" href="WallPaperS/Canyons/index.html"><div class="folder-name">Canyons</div><div class="folder-meta">10 images</div></a>
-<a class="folder-card" href="WallPaperS/Collection_1%20HD/index.html"><div class="folder-name">Collection_1 HD</div><div class="folder-meta">100 images</div></a>
-<a class="folder-card" href="WallPaperS/Collection_10%20HD/index.html"><div class="folder-name">Collection_10 HD</div><div class="folder-meta">100 images</div></a>
-<a class="folder-card" href="WallPaperS/Collection_11%20HD/index.html"><div class="folder-name">Collection_11 HD</div><div class="folder-meta">100 images</div></a>
-<a class="folder-card" href="WallPaperS/Collection_2%20HD/index.html"><div class="folder-name">Collection_2 HD</div><div class="folder-meta">100 images</div></a>
-<a class="folder-card" href="WallPaperS/Collection_3%20HD/index.html"><div class="folder-name">Collection_3 HD</div><div class="folder-meta">100 images</div></a>
-<a class="folder-card" href="WallPaperS/Collection_4%20HD/index.html"><div class="folder-name">Collection_4 HD</div><div class="folder-meta">100 images</div></a>
-<a class="folder-card" href="WallPaperS/Collection_5%20HD/index.html"><div class="folder-name">Collection_5 HD</div><div class="folder-meta">100 images</div></a>
-<a class="folder-card" href="WallPaperS/Collection_6%20HD/index.html"><div class="folder-name">Collection_6 HD</div><div class="folder-meta">100 images</div></a>
-<a class="folder-card" href="WallPaperS/Collection_7%20HD/index.html"><div class="folder-name">Collection_7 HD</div><div class="folder-meta">100 images</div></a>
-<a class="folder-card" href="WallPaperS/Collection_8%20HD/index.html"><div class="folder-name">Collection_8 HD</div><div class="folder-meta">100 images</div></a>
-<a class="folder-card" href="WallPaperS/Collection_9%20HD/index.html"><div class="folder-name">Collection_9 HD</div><div class="folder-meta">100 images</div></a>
-<a class="folder-card" href="WallPaperS/diverse/index.html"><div class="folder-name">diverse</div><div class="folder-meta">951 images</div></a>
-<a class="folder-card" href="WallPaperS/maldives/index.html"><div class="folder-name">maldives</div><div class="folder-meta">46 images</div></a>
-<a class="folder-card" href="WallPaperS/Mega%20HD%20Wallpapers/index.html"><div class="folder-name">Mega HD Wallpapers</div><div class="folder-meta">298 images</div></a>
+
+<section class="hero">
+  <span class="badge-free">100% Gratuit · Téléchargement libre</span>
+  <h1>WallPaperS Collector</h1>
+  <p class="lead">
+    Une collection soigneusement organisée de <strong>3766</strong> fonds d'écran HD,
+    répartie dans <strong>34</strong> tiroirs thématiques. Paysages, art numérique,
+    nature, anime, abstraits, voyages — il y en a pour tous les goûts, et tout est <strong>libre d'accès</strong>.
+  </p>
 </section>
+<section class="stats" aria-label="Statistiques">
+  <div class="stat"><div class="num">3766</div><div class="lbl">Wallpapers</div></div>
+  <div class="stat"><div class="num">34</div><div class="lbl">Tiroirs</div></div>
+  <div class="stat"><div class="num">100%</div><div class="lbl">Gratuit</div></div>
+  <div class="stat"><div class="num">HD</div><div class="lbl">Qualité</div></div>
+</section>
+<div class="intro">
+  Cliquez sur un tiroir pour parcourir sa galerie. Dans chaque galerie, cliquez sur une image
+  pour l'afficher en plein écran (touche <strong>Échap</strong> pour fermer).
+  Tous les fonds d'écran sont <strong>gratuits</strong> et destinés à un usage personnel.
+</div>
+<h2 class="section-title">Explorer les tiroirs</h2>
+<section class="mosaic">
+<a class="tile tall" href="WallPaperS/1680x1050/index.html" style="background-image:url("WallPaperS/1680x1050/Fantastic1.jpg");"><span class="free-tag">Gratuit</span><div class="tile-label"><h3>1680x1050</h3><div class="meta"><span class="pill">28</span> fonds d'écran HD</div></div></a>
+<a class="tile" href="WallPaperS/181%20fonds%20d%20ecrans%20disney/index.html" style="background-image:url("WallPaperS/181%20fonds%20d%20ecrans%20disney/disney-fond-ecran-aladdin01.jpg");"><span class="free-tag">Gratuit</span><div class="tile-label"><h3>181 fonds d ecrans disney</h3><div class="meta"><span class="pill">181</span> fonds d'écran HD</div></div></a>
+<a class="tile wide" href="WallPaperS/Andy%20Fairhurst/index.html" style="background-image:url("WallPaperS/Andy%20Fairhurst/02beaa96cc01f43e4aabf76aafc51151.jpg");"><span class="free-tag">Gratuit</span><div class="tile-label"><h3>Andy Fairhurst</h3><div class="meta"><span class="pill">113</span> fonds d'écran HD</div></div></a>
+<a class="tile" href="WallPaperS/Animepapers%20Pack02/index.html" style="background-image:url("WallPaperS/Animepapers%20Pack02/1114046064447.jpg");"><span class="free-tag">Gratuit</span><div class="tile-label"><h3>Animepapers Pack02</h3><div class="meta"><span class="pill">28</span> fonds d'écran HD</div></div></a>
+<a class="tile tall" href="WallPaperS/Antarctica/index.html" style="background-image:url("WallPaperS/Antarctica/Antarctica%20%281%29.jpg");"><span class="free-tag">Gratuit</span><div class="tile-label"><h3>Antarctica</h3><div class="meta"><span class="pill">40</span> fonds d'écran HD</div></div></a>
+<a class="tile" href="WallPaperS/Antarctica_3200_1600/index.html" style="background-image:url("WallPaperS/Antarctica_3200_1600/Antarctica%20%281%29.jpg");"><span class="free-tag">Gratuit</span><div class="tile-label"><h3>Antarctica_3200_1600</h3><div class="meta"><span class="pill">40</span> fonds d'écran HD</div></div></a>
+<a class="tile" href="WallPaperS/art_girls/index.html" style="background-image:url("WallPaperS/art_girls/u26_1064.jpg");"><span class="free-tag">Gratuit</span><div class="tile-label"><h3>art_girls</h3><div class="meta"><span class="pill">51</span> fonds d'écran HD</div></div></a>
+<a class="tile tall" href="WallPaperS/artiste23/index.html" style="background-image:url("WallPaperS/artiste23/0%20%281%29.jpg");"><span class="free-tag">Gratuit</span><div class="tile-label"><h3>artiste23</h3><div class="meta"><span class="pill">296</span> fonds d'écran HD</div></div></a>
+<a class="tile" href="WallPaperS/Artwork_and_Wallpapers_Collection/index.html" style="background-image:url("WallPaperS/Artwork_and_Wallpapers_Collection/CG%20Artwork%20Wallpapers%20Collection-4%2000.jpg");"><span class="free-tag">Gratuit</span><div class="tile-label"><h3>Artwork_and_Wallpapers_Collection</h3><div class="meta"><span class="pill">24</span> fonds d'écran HD</div></div></a>
+<a class="tile wide" href="WallPaperS/Artwork_and_Wallpapers_Collection_2/index.html" style="background-image:url("WallPaperS/Artwork_and_Wallpapers_Collection_2/CG%20Artwork%20Wallpapers%20Collection-3%2000.jpg");"><span class="free-tag">Gratuit</span><div class="tile-label"><h3>Artwork_and_Wallpapers_Collection_2</h3><div class="meta"><span class="pill">25</span> fonds d'écran HD</div></div></a>
+<a class="tile" href="WallPaperS/Australia/index.html" style="background-image:url("WallPaperS/Australia/Bungle%20Bungle%20Massif%2C%20Kimberly%20Plains%2C%20Purnululu%20National%20Park%2C%20Australia.jpg");"><span class="free-tag">Gratuit</span><div class="tile-label"><h3>Australia</h3><div class="meta"><span class="pill">15</span> fonds d'écran HD</div></div></a>
+<a class="tile" href="WallPaperS/Austria/index.html" style="background-image:url("WallPaperS/Austria/Alpine%20Marmot%2C%20Hohe%20Tauern%20National%20Park%2C%20Austria.jpg");"><span class="free-tag">Gratuit</span><div class="tile-label"><h3>Austria</h3><div class="meta"><span class="pill">13</span> fonds d'écran HD</div></div></a>
+<a class="tile tall" href="WallPaperS/Beaches/index.html" style="background-image:url("WallPaperS/Beaches/Aitutaki%2C%20Cook%20Islands%20-%201600x1200%20-%20ID%2043804%5Bwww.DragonW.net%5D.jpg");"><span class="free-tag">Gratuit</span><div class="tile-label"><h3>Beaches</h3><div class="meta"><span class="pill">153</span> fonds d'écran HD</div></div></a>
+<a class="tile" href="WallPaperS/Beautiful%20France%20Wallpapers%20HD/index.html" style="background-image:url("WallPaperS/Beautiful%20France%20Wallpapers%20HD/Beautiful%20France%20Wallpapers%20HD/1.jpg");"><span class="free-tag">Gratuit</span><div class="tile-label"><h3>Beautiful France Wallpapers HD</h3><div class="meta"><span class="pill">55</span> fonds d'écran HD</div></div></a>
+<a class="tile" href="WallPaperS/Beautiful_Abstract_Wall/index.html" style="background-image:url("WallPaperS/Beautiful_Abstract_Wall/Beautiful%20Abstract%20Wall/1.jpg");"><span class="free-tag">Gratuit</span><div class="tile-label"><h3>Beautiful_Abstract_Wall</h3><div class="meta"><span class="pill">43</span> fonds d'écran HD</div></div></a>
+<a class="tile wide" href="WallPaperS/Beautiful_Mixed_Wallpapers_Pack_197/index.html" style="background-image:url("WallPaperS/Beautiful_Mixed_Wallpapers_Pack_197/wall/1%20%281%29.jpg");"><span class="free-tag">Gratuit</span><div class="tile-label"><h3>Beautiful_Mixed_Wallpapers_Pack_197</h3><div class="meta"><span class="pill">137</span> fonds d'écran HD</div></div></a>
+<a class="tile" href="WallPaperS/Beautiful_Nature_Wallpapers_Pack_158/index.html" style="background-image:url("WallPaperS/Beautiful_Nature_Wallpapers_Pack_158/Beautiful.Nature.Wallpapers/Beautiful_Nature_Wallpapers/01.jpg");"><span class="free-tag">Gratuit</span><div class="tile-label"><h3>Beautiful_Nature_Wallpapers_Pack_158</h3><div class="meta"><span class="pill">49</span> fonds d'écran HD</div></div></a>
+<a class="tile" href="WallPaperS/bridge/index.html" style="background-image:url("WallPaperS/bridge/082002B.JPG");"><span class="free-tag">Gratuit</span><div class="tile-label"><h3>bridge</h3><div class="meta"><span class="pill">54</span> fonds d'écran HD</div></div></a>
+<a class="tile tall" href="WallPaperS/Bridges/index.html" style="background-image:url("WallPaperS/Bridges/Cedar%20Covered%20Bridge%2C%20Winterset%2C%20Iowa.jpg");"><span class="free-tag">Gratuit</span><div class="tile-label"><h3>Bridges</h3><div class="meta"><span class="pill">16</span> fonds d'écran HD</div></div></a>
+<a class="tile" href="WallPaperS/Canyons/index.html" style="background-image:url("WallPaperS/Canyons/Antelope%20Canyon%2C%20Page%2C%20Arizona.jpg");"><span class="free-tag">Gratuit</span><div class="tile-label"><h3>Canyons</h3><div class="meta"><span class="pill">10</span> fonds d'écran HD</div></div></a>
+<a class="tile" href="WallPaperS/Collection_1%20HD/index.html" style="background-image:url("WallPaperS/Collection_1%20HD/Collection_1%20%281%29.jpg");"><span class="free-tag">Gratuit</span><div class="tile-label"><h3>Collection_1 HD</h3><div class="meta"><span class="pill">100</span> fonds d'écran HD</div></div></a>
+<a class="tile" href="WallPaperS/Collection_10%20HD/index.html" style="background-image:url("WallPaperS/Collection_10%20HD/Collection_10%20%281%29.jpg");"><span class="free-tag">Gratuit</span><div class="tile-label"><h3>Collection_10 HD</h3><div class="meta"><span class="pill">100</span> fonds d'écran HD</div></div></a>
+<a class="tile" href="WallPaperS/Collection_11%20HD/index.html" style="background-image:url("WallPaperS/Collection_11%20HD/Collection_11%20%281%29.jpg");"><span class="free-tag">Gratuit</span><div class="tile-label"><h3>Collection_11 HD</h3><div class="meta"><span class="pill">100</span> fonds d'écran HD</div></div></a>
+<a class="tile" href="WallPaperS/Collection_2%20HD/index.html" style="background-image:url("WallPaperS/Collection_2%20HD/Collection_2%20%281%29.jpg");"><span class="free-tag">Gratuit</span><div class="tile-label"><h3>Collection_2 HD</h3><div class="meta"><span class="pill">100</span> fonds d'écran HD</div></div></a>
+<a class="tile" href="WallPaperS/Collection_3%20HD/index.html" style="background-image:url("WallPaperS/Collection_3%20HD/Collection_3%20%281%29.jpg");"><span class="free-tag">Gratuit</span><div class="tile-label"><h3>Collection_3 HD</h3><div class="meta"><span class="pill">100</span> fonds d'écran HD</div></div></a>
+<a class="tile" href="WallPaperS/Collection_4%20HD/index.html" style="background-image:url("WallPaperS/Collection_4%20HD/Collection_4%20%281%29.jpg");"><span class="free-tag">Gratuit</span><div class="tile-label"><h3>Collection_4 HD</h3><div class="meta"><span class="pill">100</span> fonds d'écran HD</div></div></a>
+<a class="tile" href="WallPaperS/Collection_5%20HD/index.html" style="background-image:url("WallPaperS/Collection_5%20HD/Collection_5%20%281%29.jpg");"><span class="free-tag">Gratuit</span><div class="tile-label"><h3>Collection_5 HD</h3><div class="meta"><span class="pill">100</span> fonds d'écran HD</div></div></a>
+<a class="tile" href="WallPaperS/Collection_6%20HD/index.html" style="background-image:url("WallPaperS/Collection_6%20HD/Collection_6%20%281%29.jpg");"><span class="free-tag">Gratuit</span><div class="tile-label"><h3>Collection_6 HD</h3><div class="meta"><span class="pill">100</span> fonds d'écran HD</div></div></a>
+<a class="tile" href="WallPaperS/Collection_7%20HD/index.html" style="background-image:url("WallPaperS/Collection_7%20HD/Collection_7%20%281%29.jpg");"><span class="free-tag">Gratuit</span><div class="tile-label"><h3>Collection_7 HD</h3><div class="meta"><span class="pill">100</span> fonds d'écran HD</div></div></a>
+<a class="tile" href="WallPaperS/Collection_8%20HD/index.html" style="background-image:url("WallPaperS/Collection_8%20HD/Collection_8%20%281%29.jpg");"><span class="free-tag">Gratuit</span><div class="tile-label"><h3>Collection_8 HD</h3><div class="meta"><span class="pill">100</span> fonds d'écran HD</div></div></a>
+<a class="tile" href="WallPaperS/Collection_9%20HD/index.html" style="background-image:url("WallPaperS/Collection_9%20HD/Collection_9%20%281%29.jpg");"><span class="free-tag">Gratuit</span><div class="tile-label"><h3>Collection_9 HD</h3><div class="meta"><span class="pill">100</span> fonds d'écran HD</div></div></a>
+<a class="tile" href="WallPaperS/diverse/index.html" style="background-image:url("WallPaperS/diverse/a1%20%281%29.jpg");"><span class="free-tag">Gratuit</span><div class="tile-label"><h3>diverse</h3><div class="meta"><span class="pill">951</span> fonds d'écran HD</div></div></a>
+<a class="tile" href="WallPaperS/maldives/index.html" style="background-image:url("WallPaperS/maldives/DSC_0107_Medium.jpg");"><span class="free-tag">Gratuit</span><div class="tile-label"><h3>maldives</h3><div class="meta"><span class="pill">46</span> fonds d'écran HD</div></div></a>
+<a class="tile" href="WallPaperS/Mega%20HD%20Wallpapers/index.html" style="background-image:url("WallPaperS/Mega%20HD%20Wallpapers/Mega%20HD%20Wallpapers%20%281%29.jpg");"><span class="free-tag">Gratuit</span><div class="tile-label"><h3>Mega HD Wallpapers</h3><div class="meta"><span class="pill">298</span> fonds d'écran HD</div></div></a>
+</section>
+
 <div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
   <img alt="">
   <span class="hint">Clic ou Échap pour fermer</span>
