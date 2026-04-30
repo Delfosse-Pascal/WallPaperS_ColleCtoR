@@ -592,11 +592,25 @@ ROOT_EXTRA_CSS = """
   position: relative; display: block; overflow: hidden;
   border-radius: 18px; min-height: 240px;
   text-decoration: none; color: #fff;
-  background: #111 center/cover no-repeat;
+  background-color: #2a0500;
+  background-image:
+    radial-gradient(circle at 30% 20%, #ffd24a 0%, transparent 35%),
+    radial-gradient(circle at 70% 60%, #ff6a00 0%, transparent 45%),
+    radial-gradient(circle at 50% 100%, #ff1f00 0%, transparent 55%),
+    linear-gradient(160deg, #ff8a00 0%, #e52e00 35%, #6a0a00 80%, #1a0000 100%);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   box-shadow: var(--shadow);
   transform-origin: center;
   transition: transform .5s cubic-bezier(.2,.7,.2,1.2), box-shadow .4s;
-  animation: tileIn .8s ease both;
+  animation: tileIn .8s ease both, fireFlicker 7s ease-in-out infinite;
+}
+@keyframes fireFlicker {
+  0%,100% { filter: hue-rotate(0deg) saturate(1); }
+  25% { filter: hue-rotate(-8deg) saturate(1.15); }
+  50% { filter: hue-rotate(6deg) saturate(1.1); }
+  75% { filter: hue-rotate(-4deg) saturate(1.2); }
 }
 .tile.tall { grid-row: span 2; min-height: 500px; }
 .tile.wide { grid-column: span 2; }
@@ -672,7 +686,15 @@ def build_root_page(theme: dict, drawers_with_data: list[tuple[Path, int, Path |
             preview_rel = "WallPaperS/" + url_q(d.name) + "/" + url_q(
                 str(preview.relative_to(d)).replace("\\", "/")
             )
-            bg_style = f'background-image:url("{preview_rel}");'
+            # Use single quotes inside HTML double-quoted attribute to avoid breaking the parser.
+            # Layer the preview ON TOP of the fire gradient so the gradient shows through gaps / on load.
+            bg_style = (
+                f"background-image:url('{preview_rel}'),"
+                "radial-gradient(circle at 30% 20%, #ffd24a 0%, transparent 35%),"
+                "radial-gradient(circle at 70% 60%, #ff6a00 0%, transparent 45%),"
+                "radial-gradient(circle at 50% 100%, #ff1f00 0%, transparent 55%),"
+                "linear-gradient(160deg, #ff8a00 0%, #e52e00 35%, #6a0a00 80%, #1a0000 100%);"
+            )
         else:
             bg_style = ""
         tiles.append(
